@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4693753E1D94785A00EE68C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693753D1D94785A00EE68C1 /* AppDelegate.swift */; };
+		469375431D94785A00EE68C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469375411D94785A00EE68C1 /* Main.storyboard */; };
+		469375451D94785A00EE68C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469375441D94785A00EE68C1 /* Assets.xcassets */; };
+		469375481D94785A00EE68C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469375461D94785A00EE68C1 /* LaunchScreen.storyboard */; };
+		469375531D94785A00EE68C1 /* RedmineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375521D94785A00EE68C1 /* RedmineTests.swift */; };
+		4693755E1D94785A00EE68C1 /* RedmineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693755D1D94785A00EE68C1 /* RedmineUITests.swift */; };
+		4693756E1D94796300EE68C1 /* ATELoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693756D1D94796300EE68C1 /* ATELoginViewController.swift */; };
+		469375711D94797E00EE68C1 /* ATEUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375701D94797E00EE68C1 /* ATEUser.swift */; };
+		469375751D947A0A00EE68C1 /* ATEProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375741D947A0A00EE68C1 /* ATEProjectListViewController.swift */; };
+		469375771D947A2800EE68C1 /* ATEProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375761D947A2800EE68C1 /* ATEProjectDetailViewController.swift */; };
+		469375791D947A4000EE68C1 /* ATEIssueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375781D947A4000EE68C1 /* ATEIssueDetailViewController.swift */; };
+		4693757C1D947D5600EE68C1 /* ATELoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693757B1D947D5600EE68C1 /* ATELoginProvider.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4693754F1D94785A00EE68C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 469375321D94785A00EE68C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 469375391D94785A00EE68C1;
+			remoteInfo = Redmine;
+		};
+		4693755A1D94785A00EE68C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 469375321D94785A00EE68C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 469375391D94785A00EE68C1;
+			remoteInfo = Redmine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4693753A1D94785A00EE68C1 /* Redmine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Redmine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4693753D1D94785A00EE68C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		469375421D94785A00EE68C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		469375441D94785A00EE68C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		469375471D94785A00EE68C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		469375491D94785A00EE68C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4693754E1D94785A00EE68C1 /* RedmineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedmineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		469375521D94785A00EE68C1 /* RedmineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedmineTests.swift; sourceTree = "<group>"; };
+		469375541D94785A00EE68C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		469375591D94785A00EE68C1 /* RedmineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedmineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4693755D1D94785A00EE68C1 /* RedmineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedmineUITests.swift; sourceTree = "<group>"; };
+		4693755F1D94785A00EE68C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4693756D1D94796300EE68C1 /* ATELoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATELoginViewController.swift; sourceTree = "<group>"; };
+		469375701D94797E00EE68C1 /* ATEUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATEUser.swift; sourceTree = "<group>"; };
+		469375741D947A0A00EE68C1 /* ATEProjectListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATEProjectListViewController.swift; sourceTree = "<group>"; };
+		469375761D947A2800EE68C1 /* ATEProjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATEProjectDetailViewController.swift; sourceTree = "<group>"; };
+		469375781D947A4000EE68C1 /* ATEIssueDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATEIssueDetailViewController.swift; sourceTree = "<group>"; };
+		4693757B1D947D5600EE68C1 /* ATELoginProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATELoginProvider.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		469375371D94785A00EE68C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4693754B1D94785A00EE68C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		469375561D94785A00EE68C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		469375311D94785A00EE68C1 = {
+			isa = PBXGroup;
+			children = (
+				4693753C1D94785A00EE68C1 /* Redmine */,
+				469375511D94785A00EE68C1 /* RedmineTests */,
+				4693755C1D94785A00EE68C1 /* RedmineUITests */,
+				4693753B1D94785A00EE68C1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4693753B1D94785A00EE68C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4693753A1D94785A00EE68C1 /* Redmine.app */,
+				4693754E1D94785A00EE68C1 /* RedmineTests.xctest */,
+				469375591D94785A00EE68C1 /* RedmineUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4693753C1D94785A00EE68C1 /* Redmine */ = {
+			isa = PBXGroup;
+			children = (
+				4693756B1D94791200EE68C1 /* views */,
+				4693753D1D94785A00EE68C1 /* AppDelegate.swift */,
+				469375411D94785A00EE68C1 /* Main.storyboard */,
+				469375441D94785A00EE68C1 /* Assets.xcassets */,
+				469375461D94785A00EE68C1 /* LaunchScreen.storyboard */,
+				469375491D94785A00EE68C1 /* Info.plist */,
+			);
+			path = Redmine;
+			sourceTree = "<group>";
+		};
+		469375511D94785A00EE68C1 /* RedmineTests */ = {
+			isa = PBXGroup;
+			children = (
+				469375521D94785A00EE68C1 /* RedmineTests.swift */,
+				469375541D94785A00EE68C1 /* Info.plist */,
+			);
+			path = RedmineTests;
+			sourceTree = "<group>";
+		};
+		4693755C1D94785A00EE68C1 /* RedmineUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4693755D1D94785A00EE68C1 /* RedmineUITests.swift */,
+				4693755F1D94785A00EE68C1 /* Info.plist */,
+			);
+			path = RedmineUITests;
+			sourceTree = "<group>";
+		};
+		4693756B1D94791200EE68C1 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				469375731D9479BB00EE68C1 /* issue */,
+				4693756C1D94791D00EE68C1 /* login */,
+				469375721D94799E00EE68C1 /* project */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		4693756C1D94791D00EE68C1 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				4693756F1D94796B00EE68C1 /* api */,
+				4693757A1D947D3500EE68C1 /* provider */,
+				4693756D1D94796300EE68C1 /* ATELoginViewController.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		4693756F1D94796B00EE68C1 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				469375701D94797E00EE68C1 /* ATEUser.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		469375721D94799E00EE68C1 /* project */ = {
+			isa = PBXGroup;
+			children = (
+				469375741D947A0A00EE68C1 /* ATEProjectListViewController.swift */,
+				469375761D947A2800EE68C1 /* ATEProjectDetailViewController.swift */,
+			);
+			path = project;
+			sourceTree = "<group>";
+		};
+		469375731D9479BB00EE68C1 /* issue */ = {
+			isa = PBXGroup;
+			children = (
+				469375781D947A4000EE68C1 /* ATEIssueDetailViewController.swift */,
+			);
+			path = issue;
+			sourceTree = "<group>";
+		};
+		4693757A1D947D3500EE68C1 /* provider */ = {
+			isa = PBXGroup;
+			children = (
+				4693757B1D947D5600EE68C1 /* ATELoginProvider.swift */,
+			);
+			path = provider;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		469375391D94785A00EE68C1 /* Redmine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 469375621D94785A00EE68C1 /* Build configuration list for PBXNativeTarget "Redmine" */;
+			buildPhases = (
+				469375361D94785A00EE68C1 /* Sources */,
+				469375371D94785A00EE68C1 /* Frameworks */,
+				469375381D94785A00EE68C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Redmine;
+			productName = Redmine;
+			productReference = 4693753A1D94785A00EE68C1 /* Redmine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4693754D1D94785A00EE68C1 /* RedmineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 469375651D94785A00EE68C1 /* Build configuration list for PBXNativeTarget "RedmineTests" */;
+			buildPhases = (
+				4693754A1D94785A00EE68C1 /* Sources */,
+				4693754B1D94785A00EE68C1 /* Frameworks */,
+				4693754C1D94785A00EE68C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				469375501D94785A00EE68C1 /* PBXTargetDependency */,
+			);
+			name = RedmineTests;
+			productName = RedmineTests;
+			productReference = 4693754E1D94785A00EE68C1 /* RedmineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		469375581D94785A00EE68C1 /* RedmineUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 469375681D94785A00EE68C1 /* Build configuration list for PBXNativeTarget "RedmineUITests" */;
+			buildPhases = (
+				469375551D94785A00EE68C1 /* Sources */,
+				469375561D94785A00EE68C1 /* Frameworks */,
+				469375571D94785A00EE68C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4693755B1D94785A00EE68C1 /* PBXTargetDependency */,
+			);
+			name = RedmineUITests;
+			productName = RedmineUITests;
+			productReference = 469375591D94785A00EE68C1 /* RedmineUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		469375321D94785A00EE68C1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Atenea;
+				TargetAttributes = {
+					469375391D94785A00EE68C1 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					4693754D1D94785A00EE68C1 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 469375391D94785A00EE68C1;
+					};
+					469375581D94785A00EE68C1 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 469375391D94785A00EE68C1;
+					};
+				};
+			};
+			buildConfigurationList = 469375351D94785A00EE68C1 /* Build configuration list for PBXProject "Redmine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 469375311D94785A00EE68C1;
+			productRefGroup = 4693753B1D94785A00EE68C1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				469375391D94785A00EE68C1 /* Redmine */,
+				4693754D1D94785A00EE68C1 /* RedmineTests */,
+				469375581D94785A00EE68C1 /* RedmineUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		469375381D94785A00EE68C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				469375481D94785A00EE68C1 /* LaunchScreen.storyboard in Resources */,
+				469375451D94785A00EE68C1 /* Assets.xcassets in Resources */,
+				469375431D94785A00EE68C1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4693754C1D94785A00EE68C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		469375571D94785A00EE68C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		469375361D94785A00EE68C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				469375751D947A0A00EE68C1 /* ATEProjectListViewController.swift in Sources */,
+				469375711D94797E00EE68C1 /* ATEUser.swift in Sources */,
+				4693756E1D94796300EE68C1 /* ATELoginViewController.swift in Sources */,
+				4693757C1D947D5600EE68C1 /* ATELoginProvider.swift in Sources */,
+				469375771D947A2800EE68C1 /* ATEProjectDetailViewController.swift in Sources */,
+				469375791D947A4000EE68C1 /* ATEIssueDetailViewController.swift in Sources */,
+				4693753E1D94785A00EE68C1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4693754A1D94785A00EE68C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				469375531D94785A00EE68C1 /* RedmineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		469375551D94785A00EE68C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4693755E1D94785A00EE68C1 /* RedmineUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		469375501D94785A00EE68C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 469375391D94785A00EE68C1 /* Redmine */;
+			targetProxy = 4693754F1D94785A00EE68C1 /* PBXContainerItemProxy */;
+		};
+		4693755B1D94785A00EE68C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 469375391D94785A00EE68C1 /* Redmine */;
+			targetProxy = 4693755A1D94785A00EE68C1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		469375411D94785A00EE68C1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				469375421D94785A00EE68C1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		469375461D94785A00EE68C1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				469375471D94785A00EE68C1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		469375601D94785A00EE68C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		469375611D94785A00EE68C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		469375631D94785A00EE68C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Redmine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = es.atenea.redmine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		469375641D94785A00EE68C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Redmine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = es.atenea.redmine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		469375661D94785A00EE68C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RedmineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = es.eldiario.app.RedmineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Redmine.app/Redmine";
+			};
+			name = Debug;
+		};
+		469375671D94785A00EE68C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RedmineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = es.eldiario.app.RedmineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Redmine.app/Redmine";
+			};
+			name = Release;
+		};
+		469375691D94785A00EE68C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = RedmineUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = es.eldiario.app.RedmineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Redmine;
+			};
+			name = Debug;
+		};
+		4693756A1D94785A00EE68C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = RedmineUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = es.eldiario.app.RedmineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Redmine;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		469375351D94785A00EE68C1 /* Build configuration list for PBXProject "Redmine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				469375601D94785A00EE68C1 /* Debug */,
+				469375611D94785A00EE68C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		469375621D94785A00EE68C1 /* Build configuration list for PBXNativeTarget "Redmine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				469375631D94785A00EE68C1 /* Debug */,
+				469375641D94785A00EE68C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		469375651D94785A00EE68C1 /* Build configuration list for PBXNativeTarget "RedmineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				469375661D94785A00EE68C1 /* Debug */,
+				469375671D94785A00EE68C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		469375681D94785A00EE68C1 /* Build configuration list for PBXNativeTarget "RedmineUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				469375691D94785A00EE68C1 /* Debug */,
+				4693756A1D94785A00EE68C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 469375321D94785A00EE68C1 /* Project object */;
+}
