@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4605B9471D99947200F7B6B8 /* ATESignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605B9461D99947200F7B6B8 /* ATESignUpViewController.swift */; };
+		4605B94B1D99A03000F7B6B8 /* pallette.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4605B94A1D99A03000F7B6B8 /* pallette.plist */; };
 		4693753E1D94785A00EE68C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693753D1D94785A00EE68C1 /* AppDelegate.swift */; };
 		469375431D94785A00EE68C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469375411D94785A00EE68C1 /* Main.storyboard */; };
 		469375451D94785A00EE68C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469375441D94785A00EE68C1 /* Assets.xcassets */; };
@@ -14,7 +16,7 @@
 		469375531D94785A00EE68C1 /* RedmineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375521D94785A00EE68C1 /* RedmineTests.swift */; };
 		4693755E1D94785A00EE68C1 /* RedmineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693755D1D94785A00EE68C1 /* RedmineUITests.swift */; };
 		4693756E1D94796300EE68C1 /* ATELoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693756D1D94796300EE68C1 /* ATELoginViewController.swift */; };
-		469375711D94797E00EE68C1 /* ATEUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375701D94797E00EE68C1 /* ATEUser.swift */; };
+		469375711D94797E00EE68C1 /* ATEAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375701D94797E00EE68C1 /* ATEAccount.swift */; };
 		469375751D947A0A00EE68C1 /* ATEProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375741D947A0A00EE68C1 /* ATEProjectListViewController.swift */; };
 		469375771D947A2800EE68C1 /* ATEProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375761D947A2800EE68C1 /* ATEProjectDetailViewController.swift */; };
 		469375791D947A4000EE68C1 /* ATEIssueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375781D947A4000EE68C1 /* ATEIssueDetailViewController.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4605B9461D99947200F7B6B8 /* ATESignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATESignUpViewController.swift; sourceTree = "<group>"; };
+		4605B94A1D99A03000F7B6B8 /* pallette.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pallette.plist; sourceTree = "<group>"; };
 		4693753A1D94785A00EE68C1 /* Redmine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Redmine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4693753D1D94785A00EE68C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		469375421D94785A00EE68C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,7 +56,7 @@
 		4693755D1D94785A00EE68C1 /* RedmineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedmineUITests.swift; sourceTree = "<group>"; };
 		4693755F1D94785A00EE68C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4693756D1D94796300EE68C1 /* ATELoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATELoginViewController.swift; sourceTree = "<group>"; };
-		469375701D94797E00EE68C1 /* ATEUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATEUser.swift; sourceTree = "<group>"; };
+		469375701D94797E00EE68C1 /* ATEAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATEAccount.swift; sourceTree = "<group>"; };
 		469375741D947A0A00EE68C1 /* ATEProjectListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATEProjectListViewController.swift; sourceTree = "<group>"; };
 		469375761D947A2800EE68C1 /* ATEProjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATEProjectDetailViewController.swift; sourceTree = "<group>"; };
 		469375781D947A4000EE68C1 /* ATEIssueDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATEIssueDetailViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +88,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4605B9451D99944800F7B6B8 /* register */ = {
+			isa = PBXGroup;
+			children = (
+				4605B9461D99947200F7B6B8 /* ATESignUpViewController.swift */,
+			);
+			path = register;
+			sourceTree = "<group>";
+		};
+		4605B9481D999FF700F7B6B8 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				4605B9491D99A00B00F7B6B8 /* files */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		4605B9491D99A00B00F7B6B8 /* files */ = {
+			isa = PBXGroup;
+			children = (
+				4605B94A1D99A03000F7B6B8 /* pallette.plist */,
+			);
+			path = files;
+			sourceTree = "<group>";
+		};
 		469375311D94785A00EE68C1 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +135,7 @@
 		4693753C1D94785A00EE68C1 /* Redmine */ = {
 			isa = PBXGroup;
 			children = (
+				4605B9481D999FF700F7B6B8 /* resources */,
 				4693756B1D94791200EE68C1 /* views */,
 				4693753D1D94785A00EE68C1 /* AppDelegate.swift */,
 				469375411D94785A00EE68C1 /* Main.storyboard */,
@@ -141,6 +170,7 @@
 				469375731D9479BB00EE68C1 /* issue */,
 				4693756C1D94791D00EE68C1 /* login */,
 				469375721D94799E00EE68C1 /* project */,
+				4605B9451D99944800F7B6B8 /* register */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -158,7 +188,7 @@
 		4693756F1D94796B00EE68C1 /* api */ = {
 			isa = PBXGroup;
 			children = (
-				469375701D94797E00EE68C1 /* ATEUser.swift */,
+				469375701D94797E00EE68C1 /* ATEAccount.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -298,6 +328,7 @@
 				469375481D94785A00EE68C1 /* LaunchScreen.storyboard in Resources */,
 				469375451D94785A00EE68C1 /* Assets.xcassets in Resources */,
 				469375431D94785A00EE68C1 /* Main.storyboard in Resources */,
+				4605B94B1D99A03000F7B6B8 /* pallette.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,12 +354,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				469375751D947A0A00EE68C1 /* ATEProjectListViewController.swift in Sources */,
-				469375711D94797E00EE68C1 /* ATEUser.swift in Sources */,
+				469375711D94797E00EE68C1 /* ATEAccount.swift in Sources */,
 				4693756E1D94796300EE68C1 /* ATELoginViewController.swift in Sources */,
 				4693757C1D947D5600EE68C1 /* ATELoginProvider.swift in Sources */,
 				469375771D947A2800EE68C1 /* ATEProjectDetailViewController.swift in Sources */,
 				469375791D947A4000EE68C1 /* ATEIssueDetailViewController.swift in Sources */,
 				4693753E1D94785A00EE68C1 /* AppDelegate.swift in Sources */,
+				4605B9471D99947200F7B6B8 /* ATESignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

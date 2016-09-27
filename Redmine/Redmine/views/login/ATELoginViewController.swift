@@ -13,9 +13,16 @@ class ATELoginViewController: UIViewController {
     @IBOutlet weak var usernameTextField : UITextField!
     @IBOutlet weak var passwordTextField : UITextField!
     
+    var account : ATEAccount?
+    
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        configureView()
     }
     
     override func didReceiveMemoryWarning() {
@@ -24,73 +31,48 @@ class ATELoginViewController: UIViewController {
     
     // MARK: Actions
     @IBAction func actionLogin (sender : AnyObject) {
-        // TODO: Mostrar loading
-        if (!isValidUsername(username: usernameTextField.text)) {
-            showInvalidUsernameError()
-            return
+        if account != nil {
+            checkAccountBeforeNavigate(account: account!, callback: { (loginOk : Bool) in
+                navigateToProjectList()
+            })
         }
-        
-        if (!isValidPassword(password: passwordTextField.text)) {
-            showInvalidPasswordError()
-            return
-        }
-        
-        login(user: usernameTextField.text!, token: passwordTextField.text!)
     }
     
-    // MARK: Internal (Login checker)
-    private func isValidUsername (username : String?) -> Bool {
-        // TODO: Implementar
-        return true
+    @IBAction func actionSingUp (sender : AnyObject) {
+        navigateToSignUp()
     }
     
-    private func isValidPassword (password : String?) -> Bool {
-        // TODO: Implementar
-        return true
+    @IBAction func actionDisplayAccounts (sender : AnyObject) {
+        // TODO: Display user accounts (for multiple account management. Not available at this time)
     }
     
-    // MARK: Internal (Navigation)
-    private func navigateToHome () {
-        performSegue(withIdentifier: "login_to_projectlist", sender: nil)
-    }
-    
-    // MARK: Internal (Errors)
+    // MARK: View (Errors)
     private func showLoginError (errorType type : ATELoginErrorType) {
         // TODO: Implementar
     }
     
-    private func showInvalidUsernameError () {
-        // TODO: Implementar
+    // MARK: Presenter ()
+    private func checkAccountBeforeNavigate (account : ATEAccount, callback : (Bool) -> ()) {
+        // TODO: At today we don't check that the data introduce by the user is
+        // ok. At future, system will call to project list at this point, if service
+        // returns a 403, then the account will be invalid.
+        
+        callback(true)
     }
     
-    private func showInvalidPasswordError () {
-        // TODO: Implementar
+    private func configureView () {
+        // If no account exists. Remove the login box to include only the option
+        // for creating new account. In other case display login box with the
+        // account name
     }
     
-    // MARK: Internal (Http - Services)
-    private func login (user : String, token : String) {
-        let provider : ATELoginProvider = ATELoginProvider()
-        provider.login(
-            withUsername: user,
-            andToken: token,
-            onSuccess: { (user : ATEUser) in
-                navigateToHome()
-            },
-            onError: { (error : ATELoginErrorType) in
-                showLoginError(errorType: error)
-            }
-        )
+    // MARK: Wireframe (Navigation)
+    private func navigateToProjectList () {
+        performSegue(withIdentifier: "login_to_projectlist", sender: nil)
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-
-
+    private func navigateToSignUp () {
+        performSegue(withIdentifier: "login_to_signup", sender: nil)
+    }
+    
 }

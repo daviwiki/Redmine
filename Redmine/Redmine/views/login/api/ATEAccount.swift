@@ -8,6 +8,10 @@
 
 import UIKit
 
-class ATEUser: NSObject {
+class ATEAccount : NSObject {
 
+    var name : String = ""
+    var host : String = ""
+    var token : String = ""
+    
 }
