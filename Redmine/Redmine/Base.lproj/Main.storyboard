@@ -10,9 +10,15 @@
         <scene sceneID="ivy-9p-6Jf">
             <objects>
                 <navigationController id="JxK-Df-ogX" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dFJ-9x-lIm">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="dFJ-9x-lIm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.1137254902" green="0.91372549020000005" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.1137254902" green="0.91372549020000005" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ecR-Rs-HrL">
                         <rect key="frame" x="0.0" y="524" width="320" height="44"/>
@@ -35,7 +41,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ozv-YU-Ubp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pxY-ZL-KV1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l0n-Zo-Anq" userLabel="View - Select account container">
@@ -130,6 +136,7 @@
                             <constraint firstItem="ozv-YU-Ubp" firstAttribute="top" secondItem="eQg-Bc-K6z" secondAttribute="bottom" constant="16" id="NRK-VA-wiF"/>
                             <constraint firstItem="F6E-ee-mmP" firstAttribute="top" secondItem="l0n-Zo-Anq" secondAttribute="bottom" constant="32" id="PKi-iY-3CV"/>
                             <constraint firstItem="eQg-Bc-K6z" firstAttribute="centerX" secondItem="pxY-ZL-KV1" secondAttribute="centerX" id="VkZ-jA-co2"/>
+                            <constraint firstItem="l0n-Zo-Anq" firstAttribute="centerX" secondItem="pxY-ZL-KV1" secondAttribute="centerX" id="e7a-qz-nQ2"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="l0n-Zo-Anq" secondAttribute="trailing" constant="32" id="qkz-dK-8q4"/>
                         </constraints>
                     </view>
@@ -152,7 +159,7 @@
                         <viewControllerLayoutGuide type="bottom" id="aJg-5a-xRC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2Ea-EB-WPR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7hE-1V-f9k" userLabel="View - data box">
@@ -185,7 +192,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v9o-NZ-MEs">
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Account url" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mdh-ug-1up" userLabel="TextField - Account url">
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="0.87" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -210,7 +217,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7U-vh-ZcZ">
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Account Api Key" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="svx-Gf-YCx" userLabel="TextField - Account api key">
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="0.87" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -254,7 +261,7 @@
                                     <constraint firstAttribute="width" constant="120" id="jLb-M4-XQV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="SignUp!">
+                                <state key="normal" title="Create">
                                     <color key="titleColor" red="0.1137254902" green="0.91372549020000005" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -282,7 +289,7 @@
                         <viewControllerLayoutGuide type="bottom" id="lOi-2f-NU5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kcd-ch-Dh6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.80784313730000001" green="0.0" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>

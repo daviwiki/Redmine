@@ -10,9 +10,14 @@ import UIKit
 
 class ATESignUpViewController: UIViewController {
 
+    private var accountStorage : AccountStorage?
+    
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureView()
+        
+        accountStorage = CoreDataModelManager.getInstance().getAccountStorageManager()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,24 +26,37 @@ class ATESignUpViewController: UIViewController {
     
     // MARK: View
     private func configureView () {
-        
+        self.title = "Create Account"
     }
     
     // MARK: Presenters - Interactor
-    private func accountExists (name : String) -> Bool {
-        return true
+    private func storeAccount (name : String, host : String, token : String) {
+        // TODO: ¿Comprobar en el futuro si guardar solo una vez que se haya 
+        // comprobado un proceso de login valido ?
+        
+        let account = Account()
+        account.name = name
+        account.host = host
+        account.token = token
+        
+        if (accountExists(account: account)) {
+            // TODO: Avisar al usuario. No se puede guardar una cuenta ya existente
+            print("[SignUpViewController] - Account already exists with name \(name)")
+            return
+        }
+        
+        persistAccount(account: account)
+        print("[SignUpViewController] - Account saves successfully \(name)")
     }
     
-    private func storeAccount (name : String, host : String, key : String) {
-        
-    }
-    
-    private func persistAccount (name : String, host : String, key : String) {
-        
+    private func accountExists (account : Account) -> Bool {
+        let accounts = accountStorage?.getAccounts()
+        let index = accounts?.index(of: account)
+        return index != nil
     }
     
     // MARK: Storage
-    private func storeAccount (account : ATEAccount ) {
-        
+    private func persistAccount (account : Account) {
+        accountStorage?.saveAccount(account: account)
     }
 }

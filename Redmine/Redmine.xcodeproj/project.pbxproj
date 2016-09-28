@@ -16,11 +16,15 @@
 		469375531D94785A00EE68C1 /* RedmineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375521D94785A00EE68C1 /* RedmineTests.swift */; };
 		4693755E1D94785A00EE68C1 /* RedmineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693755D1D94785A00EE68C1 /* RedmineUITests.swift */; };
 		4693756E1D94796300EE68C1 /* ATELoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693756D1D94796300EE68C1 /* ATELoginViewController.swift */; };
-		469375711D94797E00EE68C1 /* ATEAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375701D94797E00EE68C1 /* ATEAccount.swift */; };
 		469375751D947A0A00EE68C1 /* ATEProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375741D947A0A00EE68C1 /* ATEProjectListViewController.swift */; };
 		469375771D947A2800EE68C1 /* ATEProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375761D947A2800EE68C1 /* ATEProjectDetailViewController.swift */; };
 		469375791D947A4000EE68C1 /* ATEIssueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375781D947A4000EE68C1 /* ATEIssueDetailViewController.swift */; };
 		4693757C1D947D5600EE68C1 /* ATELoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693757B1D947D5600EE68C1 /* ATELoginProvider.swift */; };
+		469E1D631D9C3E5C00FE5987 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E1D621D9C3E5C00FE5987 /* Account.swift */; };
+		469E1D671D9C401500FE5987 /* AccountCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E1D661D9C401500FE5987 /* AccountCoreData.swift */; };
+		469E1D6A1D9C40D900FE5987 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 469E1D681D9C40D900FE5987 /* Model.xcdatamodeld */; };
+		469E1D6E1D9C45B600FE5987 /* CoreDataModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E1D6D1D9C45B600FE5987 /* CoreDataModelManager.swift */; };
+		469E1D701D9C5AC000FE5987 /* AccountStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E1D6F1D9C5AC000FE5987 /* AccountStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,11 +60,15 @@
 		4693755D1D94785A00EE68C1 /* RedmineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedmineUITests.swift; sourceTree = "<group>"; };
 		4693755F1D94785A00EE68C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4693756D1D94796300EE68C1 /* ATELoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATELoginViewController.swift; sourceTree = "<group>"; };
-		469375701D94797E00EE68C1 /* ATEAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATEAccount.swift; sourceTree = "<group>"; };
 		469375741D947A0A00EE68C1 /* ATEProjectListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATEProjectListViewController.swift; sourceTree = "<group>"; };
 		469375761D947A2800EE68C1 /* ATEProjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATEProjectDetailViewController.swift; sourceTree = "<group>"; };
 		469375781D947A4000EE68C1 /* ATEIssueDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATEIssueDetailViewController.swift; sourceTree = "<group>"; };
 		4693757B1D947D5600EE68C1 /* ATELoginProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATELoginProvider.swift; sourceTree = "<group>"; };
+		469E1D621D9C3E5C00FE5987 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		469E1D661D9C401500FE5987 /* AccountCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCoreData.swift; sourceTree = "<group>"; };
+		469E1D691D9C40D900FE5987 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		469E1D6D1D9C45B600FE5987 /* CoreDataModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataModelManager.swift; sourceTree = "<group>"; };
+		469E1D6F1D9C5AC000FE5987 /* AccountStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +99,9 @@
 		4605B9451D99944800F7B6B8 /* register */ = {
 			isa = PBXGroup;
 			children = (
+				469E1D651D9C3FE800FE5987 /* storage */,
+				469E1D611D9C3E3A00FE5987 /* api */,
+				469E1D6F1D9C5AC000FE5987 /* AccountStorage.swift */,
 				4605B9461D99947200F7B6B8 /* ATESignUpViewController.swift */,
 			);
 			path = register;
@@ -137,6 +148,7 @@
 			children = (
 				4605B9481D999FF700F7B6B8 /* resources */,
 				4693756B1D94791200EE68C1 /* views */,
+				469E1D641D9C3F8900FE5987 /* model */,
 				4693753D1D94785A00EE68C1 /* AppDelegate.swift */,
 				469375411D94785A00EE68C1 /* Main.storyboard */,
 				469375441D94785A00EE68C1 /* Assets.xcassets */,
@@ -178,19 +190,10 @@
 		4693756C1D94791D00EE68C1 /* login */ = {
 			isa = PBXGroup;
 			children = (
-				4693756F1D94796B00EE68C1 /* api */,
 				4693757A1D947D3500EE68C1 /* provider */,
 				4693756D1D94796300EE68C1 /* ATELoginViewController.swift */,
 			);
 			path = login;
-			sourceTree = "<group>";
-		};
-		4693756F1D94796B00EE68C1 /* api */ = {
-			isa = PBXGroup;
-			children = (
-				469375701D94797E00EE68C1 /* ATEAccount.swift */,
-			);
-			path = api;
 			sourceTree = "<group>";
 		};
 		469375721D94799E00EE68C1 /* project */ = {
@@ -216,6 +219,31 @@
 				4693757B1D947D5600EE68C1 /* ATELoginProvider.swift */,
 			);
 			path = provider;
+			sourceTree = "<group>";
+		};
+		469E1D611D9C3E3A00FE5987 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				469E1D621D9C3E5C00FE5987 /* Account.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		469E1D641D9C3F8900FE5987 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				469E1D6D1D9C45B600FE5987 /* CoreDataModelManager.swift */,
+				469E1D681D9C40D900FE5987 /* Model.xcdatamodeld */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		469E1D651D9C3FE800FE5987 /* storage */ = {
+			isa = PBXGroup;
+			children = (
+				469E1D661D9C401500FE5987 /* AccountCoreData.swift */,
+			);
+			path = storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,13 +382,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				469375751D947A0A00EE68C1 /* ATEProjectListViewController.swift in Sources */,
-				469375711D94797E00EE68C1 /* ATEAccount.swift in Sources */,
 				4693756E1D94796300EE68C1 /* ATELoginViewController.swift in Sources */,
 				4693757C1D947D5600EE68C1 /* ATELoginProvider.swift in Sources */,
 				469375771D947A2800EE68C1 /* ATEProjectDetailViewController.swift in Sources */,
+				469E1D6A1D9C40D900FE5987 /* Model.xcdatamodeld in Sources */,
 				469375791D947A4000EE68C1 /* ATEIssueDetailViewController.swift in Sources */,
 				4693753E1D94785A00EE68C1 /* AppDelegate.swift in Sources */,
 				4605B9471D99947200F7B6B8 /* ATESignUpViewController.swift in Sources */,
+				469E1D6E1D9C45B600FE5987 /* CoreDataModelManager.swift in Sources */,
+				469E1D701D9C5AC000FE5987 /* AccountStorage.swift in Sources */,
+				469E1D631D9C3E5C00FE5987 /* Account.swift in Sources */,
+				469E1D671D9C401500FE5987 /* AccountCoreData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +658,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		469E1D681D9C40D900FE5987 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				469E1D691D9C40D900FE5987 /* Model.xcdatamodel */,
+			);
+			currentVersion = 469E1D691D9C40D900FE5987 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 469375321D94785A00EE68C1 /* Project object */;
 }

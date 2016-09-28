@@ -13,7 +13,7 @@ class ATELoginViewController: UIViewController {
     @IBOutlet weak var usernameTextField : UITextField!
     @IBOutlet weak var passwordTextField : UITextField!
     
-    var account : ATEAccount?
+    var account : Account?
     
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -52,7 +52,7 @@ class ATELoginViewController: UIViewController {
     }
     
     // MARK: Presenter ()
-    private func checkAccountBeforeNavigate (account : ATEAccount, callback : (Bool) -> ()) {
+    private func checkAccountBeforeNavigate (account : Account, callback : (Bool) -> ()) {
         // TODO: At today we don't check that the data introduce by the user is
         // ok. At future, system will call to project list at this point, if service
         // returns a 403, then the account will be invalid.

@@ -22,11 +22,11 @@ class ATELoginProvider: NSObject {
     func login(
         withUsername username : String,
         andToken token : String,
-        onSuccess success : (_ user : ATEAccount) -> (),
+        onSuccess success : (_ user : Account) -> (),
         onError error : (_ error : ATELoginErrorType) -> ()) {
         
         // TODO: Implementar login
-        success(ATEAccount())
+        success(Account())
     }
     
 }
