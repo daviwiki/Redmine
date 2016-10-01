@@ -1,0 +1,30 @@
+/* 
+  Localizations.strings
+  Redmine
+
+  Created by David Martinez on 1/10/16.
+  Copyright © 2016 Atenea. All rights reserved.
+*/
+
+/*
+ INITIALIZE
+ */
+"account_window_title" = "Create Account";
+"account_name_placeholder" = "Account name";
+"account_host_placeholder" = "Account host";
+"account_token_placeholder" = "Account token";
+"account_singup_button_name" = "Create";
+
+/*
+ ERRORS
+ */
+"error_name_empty" = "Account name couldn't be emtpy";
+"error_host_empty" = "Account host couldn't be empty";
+"error_host_not_valid" = "Account host isn't a valid url";
+"error_token_emtpy" = "Account token couldn't be empty";
+
+/*
+ OTHER
+ */
+"alert_title" = "Advice";
+"alert_ok_action" = "Accept";

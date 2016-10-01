@@ -31,6 +31,7 @@ class AccountCoreData: NSObject, AccountStorage {
         account, account to be saved
     */
     func saveAccount (account : Account) {
+        // TODO: Fix save coredata
         let entity = NSEntityDescription.insertNewObject(
             forEntityName: "Account",
             into: moc) as! AccountMO
@@ -76,6 +77,11 @@ class AccountCoreData: NSObject, AccountStorage {
     func removeAccount (account : Account) {
         guard let accountMO = getAccountMO(forName: account.name) else { return }
         moc.delete(accountMO)
+        do {
+            try moc.save()
+        } catch {
+            print("[AccountCoreData] Account item couldn't be deleted")
+        }
     }
     
     // MARK: Internal
