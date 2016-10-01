@@ -22,7 +22,7 @@ class CoreDataModelManager : NSObject {
     private var managedObjectContext : NSManagedObjectContext!
     
     private let MODEL_NAME = "Model"
-    private let MODEL_EXTENSION_NAME = "xcdatamodeld"
+    private let MODEL_EXTENSION_NAME = "momd"
     
     private override init () {
         super.init()
@@ -31,7 +31,7 @@ class CoreDataModelManager : NSObject {
     
     // MARK: Services
     static func getInstance () -> CoreDataModelManager {
-        return CoreDataModelManager.getInstance()
+        return CoreDataModelManager.instance
     }
     
     func getManagedObjectContext() -> NSManagedObjectContext {
