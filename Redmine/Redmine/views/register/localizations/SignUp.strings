@@ -22,9 +22,10 @@
 "error_host_empty" = "Account host couldn't be empty";
 "error_host_not_valid" = "Account host isn't a valid url";
 "error_token_emtpy" = "Account token couldn't be empty";
+"error_account_exists" = "Account already exists";
 
 /*
  OTHER
  */
 "alert_title" = "Advice";
-"alert_ok_action" = "Accept";
+"alert_ok_action" = "Ok";

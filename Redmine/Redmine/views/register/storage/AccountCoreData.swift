@@ -26,12 +26,20 @@ class AccountCoreData: NSObject, AccountStorage {
     var moc : NSManagedObjectContext!
     
     /**
+     Set the NSManagedObjectContext object neccessary to manage
+     all coredata operations that involves accounts
+    */
+    init (managedObjectContext moc : NSManagedObjectContext) {
+        super.init()
+        self.moc = moc
+    }
+    
+    /**
      Save the account given by parameters into persistent location
      - Parameters:
         account, account to be saved
     */
     func saveAccount (account : Account) {
-        // TODO: Fix save coredata
         let entity = NSEntityDescription.insertNewObject(
             forEntityName: "Account",
             into: moc) as! AccountMO

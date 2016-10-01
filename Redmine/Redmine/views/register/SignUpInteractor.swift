@@ -37,7 +37,8 @@ class SignUpInteractor: NSObject, SignUpInteractorInterface {
         super.init()
         
         // TODO: Solve this injection
-        accountStorage = AccountCoreData()
+        accountStorage = CoreDataModelManager.getInstance().getAccountStorageManager()
+        
     }
     
     // MARK: SignUpInteractorInterface
@@ -62,6 +63,12 @@ class SignUpInteractor: NSObject, SignUpInteractorInterface {
         
         if (token == nil || token!.isEmpty) {
             let message = self.getLocalizable(fromId: "error_token_emtpy")!
+            callback(false, message)
+            return
+        }
+        
+        if (accountExists(name: name!, host: host!, token: token!)) {
+            let message = self.getLocalizable(fromId: "error_account_exists")!
             callback(false, message)
             return
         }

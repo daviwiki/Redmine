@@ -39,8 +39,8 @@ class CoreDataModelManager : NSObject {
     }
     
     func getAccountStorageManager () -> AccountStorage {
-        let manager = AccountCoreData()
-        manager.moc = getManagedObjectContext()
+        let moc = getManagedObjectContext()
+        let manager = AccountCoreData(managedObjectContext: moc)
         return manager
     }
     
