@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol SignUpInteractorInterface : NSObjectProtocol {
+protocol SignUpCreateAccountInterface : NSObjectProtocol {
     
     /**
      Try to store the account for the information given.

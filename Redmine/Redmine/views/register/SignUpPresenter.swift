@@ -10,16 +10,9 @@ import UIKit
 
 class SignUpPresenter: NSObject, SignUpPresenterInterface {
     
-    var interactor : SignUpInteractorInterface!
-    var router : SignUpRouterInterface!
     let localizableFileName = "SignUp"
     
     // MARK: Services
-    required init(interactor: SignUpInteractorInterface, router: SignUpRouterInterface) {
-        self.interactor = interactor
-        self.router = router
-    }
-    
     func configureViewForPresentation(view : SignUpLayoutInterface) {
         var message : String!
         
@@ -41,6 +34,9 @@ class SignUpPresenter: NSObject, SignUpPresenterInterface {
     
     func onCreateAccount(view : SignUpLayoutInterface, name: String?, host: String?, token: String?) {
         
+        let interactor = SignUpFactory.getSignUpCreateAccount()
+        let router = SignUpFactory.getSignUpRouter()
+        
         interactor.createAccount(
             name: name, host: host, token: token,
             callback: { (isValid : Bool, message : String?) in
@@ -51,7 +47,6 @@ class SignUpPresenter: NSObject, SignUpPresenterInterface {
                 }
             }
         )
-        
     }
     
     // MARK: Private

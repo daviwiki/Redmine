@@ -11,11 +11,11 @@ import UIKit
 class SignUpFactory: NSObject {
 
     static func getSignUpPresenter () -> SignUpPresenterInterface {
-        return SignUpPresenter(interactor: getSignUpInteractor(), router: getSignUpRouter())
+        return SignUpPresenter()
     }
     
-    static func getSignUpInteractor () -> SignUpInteractorInterface {
-        return SignUpInteractor()
+    static func getSignUpCreateAccount () -> SignUpCreateAccountInterface {
+        return SignUpCreateAccount()
     }
     
     static func getSignUpRouter () -> SignUpRouterInterface {

@@ -13,5 +13,4 @@ protocol SignUpPresenterInterface : class {
     func configureViewForPresentation (view : SignUpLayoutInterface)
     func onCreateAccount (view : SignUpLayoutInterface, name : String?, host : String?, token : String?)
     
-    init(interactor : SignUpInteractorInterface, router : SignUpRouterInterface)
 }

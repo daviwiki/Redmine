@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpInteractor: NSObject, SignUpInteractorInterface {
+class SignUpCreateAccount: NSObject, SignUpCreateAccountInterface {
 
     let localizableFileName = "SignUp"
     var accountStorage : AccountStorageInterface?
@@ -16,10 +16,7 @@ class SignUpInteractor: NSObject, SignUpInteractorInterface {
     // MARK: Lifecycle
     override init() {
         super.init()
-        
-        // TODO: Solve this injection
-        accountStorage = CoreDataModelManager.getInstance().getAccountStorageManager()
-        
+        accountStorage = SignUpFactory.getSignUpAccountStorage()
     }
     
     // MARK: SignUpInteractorInterface
