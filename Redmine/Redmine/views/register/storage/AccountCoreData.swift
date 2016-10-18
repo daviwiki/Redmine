@@ -21,7 +21,7 @@ extension AccountMO {
     
 }
 
-class AccountCoreData: NSObject, AccountStorage {
+class AccountCoreData: NSObject, AccountStorageInterface {
 
     var moc : NSManagedObjectContext!
     

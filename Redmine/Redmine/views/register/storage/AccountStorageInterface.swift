@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol AccountStorage {
+protocol AccountStorageInterface {
     
     func getAccounts () -> [Account]
     func saveAccount (account : Account)

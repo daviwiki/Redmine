@@ -82,11 +82,7 @@ class SignUpViewController: UIViewController, SignUpLayoutInterface {
     
     // MARK: Solve injetions
     private func injections () {
-        // TODO: Think about how to solve injections - factory patterns?
-        
-        let interactor = SignUpInteractor()
-        let router = SignUpRouter()
-        presenter = SignUpPresenter(interactor: interactor, router: router)
+        presenter = SignUpFactory.getSignUpPresenter()
     }
     
     // MARK: Internal

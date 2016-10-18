@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4605B9471D99947200F7B6B8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605B9461D99947200F7B6B8 /* SignUpViewController.swift */; };
 		4605B94B1D99A03000F7B6B8 /* pallette.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4605B94A1D99A03000F7B6B8 /* pallette.plist */; };
+		461955A51DB69195007A790A /* SignUpPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461955A41DB69195007A790A /* SignUpPresenterInterface.swift */; };
+		461955A71DB691D4007A790A /* SignUpInteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461955A61DB691D4007A790A /* SignUpInteractorInterface.swift */; };
+		461955A91DB6921C007A790A /* SignUpFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461955A81DB6921C007A790A /* SignUpFactory.swift */; };
 		4693753E1D94785A00EE68C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693753D1D94785A00EE68C1 /* AppDelegate.swift */; };
 		469375431D94785A00EE68C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469375411D94785A00EE68C1 /* Main.storyboard */; };
 		469375451D94785A00EE68C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469375441D94785A00EE68C1 /* Assets.xcassets */; };
@@ -29,7 +32,7 @@
 		46BAFB091DA01B3900A39ECD /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BAFB081DA01B3900A39ECD /* SignUpInteractor.swift */; };
 		46BAFB0C1DA01C4C00A39ECD /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BAFB0B1DA01C4C00A39ECD /* SignUpRouter.swift */; };
 		46BAFB121DA023DD00A39ECD /* SignUp.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46BAFB111DA023DD00A39ECD /* SignUp.strings */; };
-		46BAFB141DA0244900A39ECD /* AccountStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BAFB131DA0244900A39ECD /* AccountStorage.swift */; };
+		46BAFB141DA0244900A39ECD /* AccountStorageInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BAFB131DA0244900A39ECD /* AccountStorageInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,9 @@
 /* Begin PBXFileReference section */
 		4605B9461D99947200F7B6B8 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4605B94A1D99A03000F7B6B8 /* pallette.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pallette.plist; sourceTree = "<group>"; };
+		461955A41DB69195007A790A /* SignUpPresenterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPresenterInterface.swift; sourceTree = "<group>"; };
+		461955A61DB691D4007A790A /* SignUpInteractorInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpInteractorInterface.swift; sourceTree = "<group>"; };
+		461955A81DB6921C007A790A /* SignUpFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpFactory.swift; sourceTree = "<group>"; };
 		4693753A1D94785A00EE68C1 /* Redmine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Redmine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4693753D1D94785A00EE68C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		469375421D94785A00EE68C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,7 +84,7 @@
 		46BAFB081DA01B3900A39ECD /* SignUpInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
 		46BAFB0B1DA01C4C00A39ECD /* SignUpRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
 		46BAFB111DA023DD00A39ECD /* SignUp.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = SignUp.strings; sourceTree = "<group>"; };
-		46BAFB131DA0244900A39ECD /* AccountStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountStorage.swift; sourceTree = "<group>"; };
+		46BAFB131DA0244900A39ECD /* AccountStorageInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountStorageInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,9 +120,12 @@
 				469E1D651D9C3FE800FE5987 /* storage */,
 				46BAFB041DA01A2500A39ECD /* SignUpLayoutInterface.swift */,
 				4605B9461D99947200F7B6B8 /* SignUpViewController.swift */,
+				461955A41DB69195007A790A /* SignUpPresenterInterface.swift */,
 				46BAFB061DA01B2F00A39ECD /* SignUpPresenter.swift */,
+				461955A61DB691D4007A790A /* SignUpInteractorInterface.swift */,
 				46BAFB081DA01B3900A39ECD /* SignUpInteractor.swift */,
 				46BAFB0B1DA01C4C00A39ECD /* SignUpRouter.swift */,
+				461955A81DB6921C007A790A /* SignUpFactory.swift */,
 			);
 			name = signup;
 			path = register;
@@ -256,7 +265,7 @@
 		469E1D651D9C3FE800FE5987 /* storage */ = {
 			isa = PBXGroup;
 			children = (
-				46BAFB131DA0244900A39ECD /* AccountStorage.swift */,
+				46BAFB131DA0244900A39ECD /* AccountStorageInterface.swift */,
 				469E1D661D9C401500FE5987 /* AccountCoreData.swift */,
 			);
 			path = storage;
@@ -407,12 +416,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				469375751D947A0A00EE68C1 /* ATEProjectListViewController.swift in Sources */,
-				46BAFB141DA0244900A39ECD /* AccountStorage.swift in Sources */,
+				461955A91DB6921C007A790A /* SignUpFactory.swift in Sources */,
+				461955A51DB69195007A790A /* SignUpPresenterInterface.swift in Sources */,
+				46BAFB141DA0244900A39ECD /* AccountStorageInterface.swift in Sources */,
 				4693756E1D94796300EE68C1 /* ATELoginViewController.swift in Sources */,
 				4693757C1D947D5600EE68C1 /* ATELoginProvider.swift in Sources */,
 				469375771D947A2800EE68C1 /* ATEProjectDetailViewController.swift in Sources */,
 				46BAFB0C1DA01C4C00A39ECD /* SignUpRouter.swift in Sources */,
 				469E1D6A1D9C40D900FE5987 /* Model.xcdatamodeld in Sources */,
+				461955A71DB691D4007A790A /* SignUpInteractorInterface.swift in Sources */,
 				46BAFB091DA01B3900A39ECD /* SignUpInteractor.swift in Sources */,
 				469375791D947A4000EE68C1 /* ATEIssueDetailViewController.swift in Sources */,
 				4693753E1D94785A00EE68C1 /* AppDelegate.swift in Sources */,
@@ -572,7 +584,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Redmine/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = es.atenea.redmine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -585,7 +597,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Redmine/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = es.atenea.redmine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
