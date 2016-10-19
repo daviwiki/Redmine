@@ -14,20 +14,27 @@
 		461955A91DB6921C007A790A /* SignUpFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461955A81DB6921C007A790A /* SignUpFactory.swift */; };
 		461955B41DB6964A007A790A /* AccountCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461955B21DB6964A007A790A /* AccountCoreData.swift */; };
 		461955B51DB6964A007A790A /* AccountStorageInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461955B31DB6964A007A790A /* AccountStorageInterface.swift */; };
+		461955B71DB69948007A790A /* LoginLayoutInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461955B61DB69948007A790A /* LoginLayoutInterface.swift */; };
+		461955B91DB69A52007A790A /* LoginPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461955B81DB69A52007A790A /* LoginPresenterInterface.swift */; };
+		461955BB1DB69B30007A790A /* LoginRouterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461955BA1DB69B30007A790A /* LoginRouterInterface.swift */; };
+		461955BD1DB69BB1007A790A /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461955BC1DB69BB1007A790A /* LoginFactory.swift */; };
+		462095F11DB7D556001AFB96 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462095F01DB7D556001AFB96 /* LoginRouter.swift */; };
+		462095F31DB7D5FF001AFB96 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462095F21DB7D5FF001AFB96 /* LoginPresenter.swift */; };
+		462095F51DB7D6C7001AFB96 /* LoginCheckInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462095F41DB7D6C7001AFB96 /* LoginCheckInteractor.swift */; };
 		4693753E1D94785A00EE68C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693753D1D94785A00EE68C1 /* AppDelegate.swift */; };
 		469375431D94785A00EE68C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469375411D94785A00EE68C1 /* Main.storyboard */; };
 		469375451D94785A00EE68C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469375441D94785A00EE68C1 /* Assets.xcassets */; };
 		469375481D94785A00EE68C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469375461D94785A00EE68C1 /* LaunchScreen.storyboard */; };
 		469375531D94785A00EE68C1 /* RedmineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375521D94785A00EE68C1 /* RedmineTests.swift */; };
 		4693755E1D94785A00EE68C1 /* RedmineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693755D1D94785A00EE68C1 /* RedmineUITests.swift */; };
-		4693756E1D94796300EE68C1 /* ATELoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693756D1D94796300EE68C1 /* ATELoginViewController.swift */; };
+		4693756E1D94796300EE68C1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693756D1D94796300EE68C1 /* LoginViewController.swift */; };
 		469375751D947A0A00EE68C1 /* ATEProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375741D947A0A00EE68C1 /* ATEProjectListViewController.swift */; };
 		469375771D947A2800EE68C1 /* ATEProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375761D947A2800EE68C1 /* ATEProjectDetailViewController.swift */; };
 		469375791D947A4000EE68C1 /* ATEIssueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375781D947A4000EE68C1 /* ATEIssueDetailViewController.swift */; };
-		4693757C1D947D5600EE68C1 /* ATELoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693757B1D947D5600EE68C1 /* ATELoginProvider.swift */; };
 		469E1D631D9C3E5C00FE5987 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E1D621D9C3E5C00FE5987 /* Account.swift */; };
 		469E1D6A1D9C40D900FE5987 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 469E1D681D9C40D900FE5987 /* Model.xcdatamodeld */; };
 		469E1D6E1D9C45B600FE5987 /* CoreDataModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E1D6D1D9C45B600FE5987 /* CoreDataModelManager.swift */; };
+		46AB0E541DB7AB660019E5F1 /* LoginCheckInteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB0E531DB7AB660019E5F1 /* LoginCheckInteractorInterface.swift */; };
 		46BAFB051DA01A2500A39ECD /* SignUpLayoutInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BAFB041DA01A2500A39ECD /* SignUpLayoutInterface.swift */; };
 		46BAFB071DA01B2F00A39ECD /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BAFB061DA01B2F00A39ECD /* SignUpPresenter.swift */; };
 		46BAFB091DA01B3900A39ECD /* SignUpCreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BAFB081DA01B3900A39ECD /* SignUpCreateAccount.swift */; };
@@ -60,6 +67,13 @@
 		461955A81DB6921C007A790A /* SignUpFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpFactory.swift; sourceTree = "<group>"; };
 		461955B21DB6964A007A790A /* AccountCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCoreData.swift; sourceTree = "<group>"; };
 		461955B31DB6964A007A790A /* AccountStorageInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountStorageInterface.swift; sourceTree = "<group>"; };
+		461955B61DB69948007A790A /* LoginLayoutInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginLayoutInterface.swift; sourceTree = "<group>"; };
+		461955B81DB69A52007A790A /* LoginPresenterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenterInterface.swift; sourceTree = "<group>"; };
+		461955BA1DB69B30007A790A /* LoginRouterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouterInterface.swift; sourceTree = "<group>"; };
+		461955BC1DB69BB1007A790A /* LoginFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
+		462095F01DB7D556001AFB96 /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		462095F21DB7D5FF001AFB96 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		462095F41DB7D6C7001AFB96 /* LoginCheckInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCheckInteractor.swift; sourceTree = "<group>"; };
 		4693753A1D94785A00EE68C1 /* Redmine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Redmine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4693753D1D94785A00EE68C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		469375421D94785A00EE68C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,14 +86,14 @@
 		469375591D94785A00EE68C1 /* RedmineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedmineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4693755D1D94785A00EE68C1 /* RedmineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedmineUITests.swift; sourceTree = "<group>"; };
 		4693755F1D94785A00EE68C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4693756D1D94796300EE68C1 /* ATELoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATELoginViewController.swift; sourceTree = "<group>"; };
+		4693756D1D94796300EE68C1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		469375741D947A0A00EE68C1 /* ATEProjectListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATEProjectListViewController.swift; sourceTree = "<group>"; };
 		469375761D947A2800EE68C1 /* ATEProjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATEProjectDetailViewController.swift; sourceTree = "<group>"; };
 		469375781D947A4000EE68C1 /* ATEIssueDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATEIssueDetailViewController.swift; sourceTree = "<group>"; };
-		4693757B1D947D5600EE68C1 /* ATELoginProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATELoginProvider.swift; sourceTree = "<group>"; };
 		469E1D621D9C3E5C00FE5987 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		469E1D691D9C40D900FE5987 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		469E1D6D1D9C45B600FE5987 /* CoreDataModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataModelManager.swift; sourceTree = "<group>"; };
+		46AB0E531DB7AB660019E5F1 /* LoginCheckInteractorInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCheckInteractorInterface.swift; sourceTree = "<group>"; };
 		46BAFB041DA01A2500A39ECD /* SignUpLayoutInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpLayoutInterface.swift; sourceTree = "<group>"; };
 		46BAFB061DA01B2F00A39ECD /* SignUpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		46BAFB081DA01B3900A39ECD /* SignUpCreateAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpCreateAccount.swift; sourceTree = "<group>"; };
@@ -231,8 +245,15 @@
 		4693756C1D94791D00EE68C1 /* login */ = {
 			isa = PBXGroup;
 			children = (
-				4693757A1D947D3500EE68C1 /* provider */,
-				4693756D1D94796300EE68C1 /* ATELoginViewController.swift */,
+				46AB0E571DB7AC150019E5F1 /* routers */,
+				46AB0E561DB7AC0B0019E5F1 /* interactors */,
+				46AB0E551DB7AC020019E5F1 /* presenters */,
+				4693756D1D94796300EE68C1 /* LoginViewController.swift */,
+				461955B61DB69948007A790A /* LoginLayoutInterface.swift */,
+				461955B81DB69A52007A790A /* LoginPresenterInterface.swift */,
+				461955BA1DB69B30007A790A /* LoginRouterInterface.swift */,
+				46AB0E531DB7AB660019E5F1 /* LoginCheckInteractorInterface.swift */,
+				461955BC1DB69BB1007A790A /* LoginFactory.swift */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -254,14 +275,6 @@
 			path = issue;
 			sourceTree = "<group>";
 		};
-		4693757A1D947D3500EE68C1 /* provider */ = {
-			isa = PBXGroup;
-			children = (
-				4693757B1D947D5600EE68C1 /* ATELoginProvider.swift */,
-			);
-			path = provider;
-			sourceTree = "<group>";
-		};
 		469E1D611D9C3E3A00FE5987 /* api */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +290,30 @@
 				469E1D681D9C40D900FE5987 /* Model.xcdatamodeld */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		46AB0E551DB7AC020019E5F1 /* presenters */ = {
+			isa = PBXGroup;
+			children = (
+				462095F21DB7D5FF001AFB96 /* LoginPresenter.swift */,
+			);
+			path = presenters;
+			sourceTree = "<group>";
+		};
+		46AB0E561DB7AC0B0019E5F1 /* interactors */ = {
+			isa = PBXGroup;
+			children = (
+				462095F41DB7D6C7001AFB96 /* LoginCheckInteractor.swift */,
+			);
+			path = interactors;
+			sourceTree = "<group>";
+		};
+		46AB0E571DB7AC150019E5F1 /* routers */ = {
+			isa = PBXGroup;
+			children = (
+				462095F01DB7D556001AFB96 /* LoginRouter.swift */,
+			);
+			path = routers;
 			sourceTree = "<group>";
 		};
 		46BAFB101DA023DD00A39ECD /* localizations */ = {
@@ -425,10 +462,12 @@
 			files = (
 				469375751D947A0A00EE68C1 /* ATEProjectListViewController.swift in Sources */,
 				461955A91DB6921C007A790A /* SignUpFactory.swift in Sources */,
+				461955B91DB69A52007A790A /* LoginPresenterInterface.swift in Sources */,
+				462095F11DB7D556001AFB96 /* LoginRouter.swift in Sources */,
 				461955A51DB69195007A790A /* SignUpPresenterInterface.swift in Sources */,
 				461955B41DB6964A007A790A /* AccountCoreData.swift in Sources */,
-				4693756E1D94796300EE68C1 /* ATELoginViewController.swift in Sources */,
-				4693757C1D947D5600EE68C1 /* ATELoginProvider.swift in Sources */,
+				4693756E1D94796300EE68C1 /* LoginViewController.swift in Sources */,
+				462095F31DB7D5FF001AFB96 /* LoginPresenter.swift in Sources */,
 				469375771D947A2800EE68C1 /* ATEProjectDetailViewController.swift in Sources */,
 				46BAFB0C1DA01C4C00A39ECD /* SignUpRouter.swift in Sources */,
 				469E1D6A1D9C40D900FE5987 /* Model.xcdatamodeld in Sources */,
@@ -436,12 +475,17 @@
 				46BAFB091DA01B3900A39ECD /* SignUpCreateAccount.swift in Sources */,
 				469375791D947A4000EE68C1 /* ATEIssueDetailViewController.swift in Sources */,
 				461955B51DB6964A007A790A /* AccountStorageInterface.swift in Sources */,
+				461955B71DB69948007A790A /* LoginLayoutInterface.swift in Sources */,
 				4693753E1D94785A00EE68C1 /* AppDelegate.swift in Sources */,
+				461955BD1DB69BB1007A790A /* LoginFactory.swift in Sources */,
+				461955BB1DB69B30007A790A /* LoginRouterInterface.swift in Sources */,
 				4605B9471D99947200F7B6B8 /* SignUpViewController.swift in Sources */,
 				469E1D6E1D9C45B600FE5987 /* CoreDataModelManager.swift in Sources */,
 				46BAFB071DA01B2F00A39ECD /* SignUpPresenter.swift in Sources */,
+				462095F51DB7D6C7001AFB96 /* LoginCheckInteractor.swift in Sources */,
 				469E1D631D9C3E5C00FE5987 /* Account.swift in Sources */,
 				46BAFB051DA01A2500A39ECD /* SignUpLayoutInterface.swift in Sources */,
+				46AB0E541DB7AB660019E5F1 /* LoginCheckInteractorInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
