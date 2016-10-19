@@ -11,6 +11,7 @@ import UIKit
 protocol LoginPresenterInterface {
     
     func configureViewForPresentation (view : LoginLayoutInterface)
+    func onViewAppear (view : LoginLayoutInterface)
     func onLogin (account : Account)
     func onCreateAccount ()
     

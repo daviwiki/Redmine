@@ -20,7 +20,7 @@ class LoginViewController: UIViewController, LoginLayoutInterface {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        factory = LoginFactory()
+        factory = LoginFactory.getInstance()
         factory.setOriginController(controller: self)
         
         presenter = factory.getPresenter()
@@ -29,6 +29,7 @@ class LoginViewController: UIViewController, LoginLayoutInterface {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        presenter.onViewAppear(view: self)
     }
     
     override func didReceiveMemoryWarning() {

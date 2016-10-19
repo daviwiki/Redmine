@@ -12,9 +12,20 @@ class LoginPresenter: NSObject, LoginPresenterInterface {
 
     private var router : LoginRouterInterface?
     private var getLoginInteractor : LoginCheckInteractorInterface!
+    private var readAccountsInteractor : LoginReadAccountsInterface!
     
     func configureViewForPresentation(view: LoginLayoutInterface) {
-        // TODO:
+        // TODO: Localization and start
+    }
+    
+    func onViewAppear(view: LoginLayoutInterface) {
+        readAccountsInteractor.readAccounts { (accounts : [Account]) in
+            if (accounts.count == 0) {
+                view.showNoAccount()
+            } else {
+                view.showAccount(account: accounts.first!)
+            }
+        }
     }
     
     func onLogin(account: Account) {
@@ -25,7 +36,9 @@ class LoginPresenter: NSObject, LoginPresenterInterface {
         router?.navigateToSignUp()
     }
     
-    init(factory : LoginFactory) {
+    override init() {
+        
+        let factory = LoginFactory.getInstance()
         do {
             router = try factory.getRouter()
         } catch {
@@ -33,6 +46,7 @@ class LoginPresenter: NSObject, LoginPresenterInterface {
         }
         
         getLoginInteractor = factory.getCheckSyncInteractor()
+        readAccountsInteractor = factory.getReadAccountInteractor()
     }
     
 }

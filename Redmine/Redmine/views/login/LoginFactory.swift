@@ -14,10 +14,14 @@ class LoginFactory: NSObject {
         case NoController
     }
     
+    private static let instance = LoginFactory()
     private weak var originController : UIViewController?
     
-    override init() {
-        super.init()
+    /**
+     Singletion
+    */
+    static func getInstance () -> LoginFactory {
+        return instance
     }
     
     /**
@@ -31,7 +35,7 @@ class LoginFactory: NSObject {
     }
     
     func getPresenter () -> LoginPresenterInterface {
-        return LoginPresenter(factory: self)
+        return LoginPresenter()
     }
     
     /**
@@ -49,4 +53,15 @@ class LoginFactory: NSObject {
         return LoginCheckInteractor()
     }
     
+    func getReadAccountInteractor () -> LoginReadAccountsInterface {
+        return LoginReadAccounts()
+    }
+    
+    func getLoginAccountStorage () -> AccountStorageInterface {
+        return CoreDataModelManager.getInstance().getAccountStorageManager()
+    }
+    
+    private override init() {
+        super.init()
+    }
 }
