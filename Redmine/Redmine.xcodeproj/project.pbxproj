@@ -9,8 +9,12 @@
 /* Begin PBXBuildFile section */
 		4605B9471D99947200F7B6B8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605B9461D99947200F7B6B8 /* SignUpViewController.swift */; };
 		4605B94B1D99A03000F7B6B8 /* pallette.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4605B94A1D99A03000F7B6B8 /* pallette.plist */; };
-		461955A51DB69195007A790A /* SignUpPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461955A41DB69195007A790A /* SignUpPresenterInterface.swift */; };
-		461955A71DB691D4007A790A /* SignUpCreateAccountInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461955A61DB691D4007A790A /* SignUpCreateAccountInterface.swift */; };
+		46183D4D1DB9410D00D121A0 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46183D4B1DB9410D00D121A0 /* SignUpPresenter.swift */; };
+		46183D4E1DB9410D00D121A0 /* SignUpPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46183D4C1DB9410D00D121A0 /* SignUpPresenterInterface.swift */; };
+		46183D511DB9411900D121A0 /* SignUpCreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46183D4F1DB9411900D121A0 /* SignUpCreateAccount.swift */; };
+		46183D521DB9411900D121A0 /* SignUpCreateAccountInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46183D501DB9411900D121A0 /* SignUpCreateAccountInterface.swift */; };
+		46183D541DB9412300D121A0 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46183D531DB9412300D121A0 /* SignUpRouter.swift */; };
+		46183D561DB9414900D121A0 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46183D551DB9414900D121A0 /* Account.swift */; };
 		461955A91DB6921C007A790A /* SignUpFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461955A81DB6921C007A790A /* SignUpFactory.swift */; };
 		461955B41DB6964A007A790A /* AccountCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461955B21DB6964A007A790A /* AccountCoreData.swift */; };
 		461955B51DB6964A007A790A /* AccountStorageInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461955B31DB6964A007A790A /* AccountStorageInterface.swift */; };
@@ -34,13 +38,9 @@
 		469375751D947A0A00EE68C1 /* ATEProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375741D947A0A00EE68C1 /* ATEProjectListViewController.swift */; };
 		469375771D947A2800EE68C1 /* ATEProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375761D947A2800EE68C1 /* ATEProjectDetailViewController.swift */; };
 		469375791D947A4000EE68C1 /* ATEIssueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375781D947A4000EE68C1 /* ATEIssueDetailViewController.swift */; };
-		469E1D631D9C3E5C00FE5987 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E1D621D9C3E5C00FE5987 /* Account.swift */; };
 		469E1D6A1D9C40D900FE5987 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 469E1D681D9C40D900FE5987 /* Model.xcdatamodeld */; };
 		469E1D6E1D9C45B600FE5987 /* CoreDataModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E1D6D1D9C45B600FE5987 /* CoreDataModelManager.swift */; };
 		46BAFB051DA01A2500A39ECD /* SignUpLayoutInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BAFB041DA01A2500A39ECD /* SignUpLayoutInterface.swift */; };
-		46BAFB071DA01B2F00A39ECD /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BAFB061DA01B2F00A39ECD /* SignUpPresenter.swift */; };
-		46BAFB091DA01B3900A39ECD /* SignUpCreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BAFB081DA01B3900A39ECD /* SignUpCreateAccount.swift */; };
-		46BAFB0C1DA01C4C00A39ECD /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BAFB0B1DA01C4C00A39ECD /* SignUpRouter.swift */; };
 		46BAFB121DA023DD00A39ECD /* SignUp.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46BAFB111DA023DD00A39ECD /* SignUp.strings */; };
 /* End PBXBuildFile section */
 
@@ -64,8 +64,12 @@
 /* Begin PBXFileReference section */
 		4605B9461D99947200F7B6B8 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4605B94A1D99A03000F7B6B8 /* pallette.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pallette.plist; sourceTree = "<group>"; };
-		461955A41DB69195007A790A /* SignUpPresenterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPresenterInterface.swift; sourceTree = "<group>"; };
-		461955A61DB691D4007A790A /* SignUpCreateAccountInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpCreateAccountInterface.swift; sourceTree = "<group>"; };
+		46183D4B1DB9410D00D121A0 /* SignUpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		46183D4C1DB9410D00D121A0 /* SignUpPresenterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPresenterInterface.swift; sourceTree = "<group>"; };
+		46183D4F1DB9411900D121A0 /* SignUpCreateAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpCreateAccount.swift; sourceTree = "<group>"; };
+		46183D501DB9411900D121A0 /* SignUpCreateAccountInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpCreateAccountInterface.swift; sourceTree = "<group>"; };
+		46183D531DB9412300D121A0 /* SignUpRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
+		46183D551DB9414900D121A0 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		461955A81DB6921C007A790A /* SignUpFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpFactory.swift; sourceTree = "<group>"; };
 		461955B21DB6964A007A790A /* AccountCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCoreData.swift; sourceTree = "<group>"; };
 		461955B31DB6964A007A790A /* AccountStorageInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountStorageInterface.swift; sourceTree = "<group>"; };
@@ -95,13 +99,9 @@
 		469375741D947A0A00EE68C1 /* ATEProjectListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATEProjectListViewController.swift; sourceTree = "<group>"; };
 		469375761D947A2800EE68C1 /* ATEProjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATEProjectDetailViewController.swift; sourceTree = "<group>"; };
 		469375781D947A4000EE68C1 /* ATEIssueDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATEIssueDetailViewController.swift; sourceTree = "<group>"; };
-		469E1D621D9C3E5C00FE5987 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		469E1D691D9C40D900FE5987 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		469E1D6D1D9C45B600FE5987 /* CoreDataModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataModelManager.swift; sourceTree = "<group>"; };
 		46BAFB041DA01A2500A39ECD /* SignUpLayoutInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpLayoutInterface.swift; sourceTree = "<group>"; };
-		46BAFB061DA01B2F00A39ECD /* SignUpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
-		46BAFB081DA01B3900A39ECD /* SignUpCreateAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpCreateAccount.swift; sourceTree = "<group>"; };
-		46BAFB0B1DA01C4C00A39ECD /* SignUpRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
 		46BAFB111DA023DD00A39ECD /* SignUp.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = SignUp.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,15 +133,12 @@
 		4605B9451D99944800F7B6B8 /* signup */ = {
 			isa = PBXGroup;
 			children = (
-				469E1D611D9C3E3A00FE5987 /* api */,
+				46183D4A1DB940AB00D121A0 /* routers */,
+				46183D481DB9407F00D121A0 /* interactors */,
+				46183D491DB9408600D121A0 /* presenters */,
 				46BAFB101DA023DD00A39ECD /* localizations */,
 				46BAFB041DA01A2500A39ECD /* SignUpLayoutInterface.swift */,
 				4605B9461D99947200F7B6B8 /* SignUpViewController.swift */,
-				461955A41DB69195007A790A /* SignUpPresenterInterface.swift */,
-				46BAFB061DA01B2F00A39ECD /* SignUpPresenter.swift */,
-				461955A61DB691D4007A790A /* SignUpCreateAccountInterface.swift */,
-				46BAFB081DA01B3900A39ECD /* SignUpCreateAccount.swift */,
-				46BAFB0B1DA01C4C00A39ECD /* SignUpRouter.swift */,
 				461955A81DB6921C007A790A /* SignUpFactory.swift */,
 			);
 			name = signup;
@@ -164,9 +161,59 @@
 			path = files;
 			sourceTree = "<group>";
 		};
+		46183D451DB93FF700D121A0 /* support */ = {
+			isa = PBXGroup;
+			children = (
+				46183D471DB9403A00D121A0 /* localization */,
+				46183D461DB9402C00D121A0 /* views */,
+			);
+			path = support;
+			sourceTree = "<group>";
+		};
+		46183D461DB9402C00D121A0 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		46183D471DB9403A00D121A0 /* localization */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = localization;
+			sourceTree = "<group>";
+		};
+		46183D481DB9407F00D121A0 /* interactors */ = {
+			isa = PBXGroup;
+			children = (
+				46183D4F1DB9411900D121A0 /* SignUpCreateAccount.swift */,
+				46183D501DB9411900D121A0 /* SignUpCreateAccountInterface.swift */,
+			);
+			path = interactors;
+			sourceTree = "<group>";
+		};
+		46183D491DB9408600D121A0 /* presenters */ = {
+			isa = PBXGroup;
+			children = (
+				46183D4B1DB9410D00D121A0 /* SignUpPresenter.swift */,
+				46183D4C1DB9410D00D121A0 /* SignUpPresenterInterface.swift */,
+			);
+			path = presenters;
+			sourceTree = "<group>";
+		};
+		46183D4A1DB940AB00D121A0 /* routers */ = {
+			isa = PBXGroup;
+			children = (
+				46183D531DB9412300D121A0 /* SignUpRouter.swift */,
+			);
+			path = routers;
+			sourceTree = "<group>";
+		};
 		461955B01DB69635007A790A /* account */ = {
 			isa = PBXGroup;
 			children = (
+				46183D551DB9414900D121A0 /* Account.swift */,
 				461955B11DB6964A007A790A /* storage */,
 			);
 			path = account;
@@ -204,6 +251,7 @@
 		4693753C1D94785A00EE68C1 /* Redmine */ = {
 			isa = PBXGroup;
 			children = (
+				46183D451DB93FF700D121A0 /* support */,
 				4605B9481D999FF700F7B6B8 /* resources */,
 				4693756B1D94791200EE68C1 /* views */,
 				469E1D641D9C3F8900FE5987 /* model */,
@@ -274,14 +322,6 @@
 				469375781D947A4000EE68C1 /* ATEIssueDetailViewController.swift */,
 			);
 			path = issue;
-			sourceTree = "<group>";
-		};
-		469E1D611D9C3E3A00FE5987 /* api */ = {
-			isa = PBXGroup;
-			children = (
-				469E1D621D9C3E5C00FE5987 /* Account.swift */,
-			);
-			path = api;
 			sourceTree = "<group>";
 		};
 		469E1D641D9C3F8900FE5987 /* model */ = {
@@ -469,30 +509,30 @@
 				469375751D947A0A00EE68C1 /* ATEProjectListViewController.swift in Sources */,
 				461955A91DB6921C007A790A /* SignUpFactory.swift in Sources */,
 				462095F11DB7D556001AFB96 /* LoginRouter.swift in Sources */,
-				461955A51DB69195007A790A /* SignUpPresenterInterface.swift in Sources */,
 				461955B41DB6964A007A790A /* AccountCoreData.swift in Sources */,
 				4693756E1D94796300EE68C1 /* LoginViewController.swift in Sources */,
 				462095F31DB7D5FF001AFB96 /* LoginPresenter.swift in Sources */,
 				469375771D947A2800EE68C1 /* ATEProjectDetailViewController.swift in Sources */,
-				46BAFB0C1DA01C4C00A39ECD /* SignUpRouter.swift in Sources */,
 				469E1D6A1D9C40D900FE5987 /* Model.xcdatamodeld in Sources */,
-				461955A71DB691D4007A790A /* SignUpCreateAccountInterface.swift in Sources */,
-				46BAFB091DA01B3900A39ECD /* SignUpCreateAccount.swift in Sources */,
 				469375791D947A4000EE68C1 /* ATEIssueDetailViewController.swift in Sources */,
+				46183D561DB9414900D121A0 /* Account.swift in Sources */,
 				461955B51DB6964A007A790A /* AccountStorageInterface.swift in Sources */,
 				461955B71DB69948007A790A /* LoginLayoutInterface.swift in Sources */,
 				4693753E1D94785A00EE68C1 /* AppDelegate.swift in Sources */,
 				461955BD1DB69BB1007A790A /* LoginFactory.swift in Sources */,
 				462095FF1DB7E77C001AFB96 /* LoginRouterInterface.swift in Sources */,
 				462095F91DB7E56E001AFB96 /* LoginReadAccountsInterface.swift in Sources */,
+				46183D511DB9411900D121A0 /* SignUpCreateAccount.swift in Sources */,
 				462095F71DB7E303001AFB96 /* LoginReadAccounts.swift in Sources */,
+				46183D4E1DB9410D00D121A0 /* SignUpPresenterInterface.swift in Sources */,
 				4605B9471D99947200F7B6B8 /* SignUpViewController.swift in Sources */,
 				462095FB1DB7E58A001AFB96 /* LoginCheckInteractorInterface.swift in Sources */,
 				469E1D6E1D9C45B600FE5987 /* CoreDataModelManager.swift in Sources */,
-				46BAFB071DA01B2F00A39ECD /* SignUpPresenter.swift in Sources */,
+				46183D521DB9411900D121A0 /* SignUpCreateAccountInterface.swift in Sources */,
+				46183D541DB9412300D121A0 /* SignUpRouter.swift in Sources */,
 				462095F51DB7D6C7001AFB96 /* LoginCheckInteractor.swift in Sources */,
-				469E1D631D9C3E5C00FE5987 /* Account.swift in Sources */,
 				462095FD1DB7E770001AFB96 /* LoginPresenterInterface.swift in Sources */,
+				46183D4D1DB9410D00D121A0 /* SignUpPresenter.swift in Sources */,
 				46BAFB051DA01A2500A39ECD /* SignUpLayoutInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
