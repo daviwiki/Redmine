@@ -8,7 +8,8 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController, SignUpLayoutInterface {
+class SignUpViewController: UIViewController, SignUpLayoutInterface,
+SignUpAnimatedTextViewDelegate {
 
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var formStackView : UIStackView!
@@ -95,7 +96,22 @@ class SignUpViewController: UIViewController, SignUpLayoutInterface {
         scrollView.contentInset = contentInset
     }
     
-    // MARK: Solve injetions
+    // MARK: Delegates (SignUpAnimatedTextView)
+    func next(view: SignUpAnimatedTextView) {
+        if (view == nameAnimatedTextView) {
+            hostAnimatedTextView.focus()
+        } else if (view == hostAnimatedTextView) {
+            tokenAnimatedTextView.focus()
+        } else {
+            presenter.onCreateAccount (
+                view: self,
+                name: nameAnimatedTextView.getTextField().text,
+                host: hostAnimatedTextView.getTextField().text,
+                token: tokenAnimatedTextView.getTextField().text)
+        }
+    }
+    
+    // MARK: Internal (Solve injetions)
     private func injections () {
         presenter = SignUpFactory.getSignUpPresenter()
     }
@@ -114,16 +130,22 @@ class SignUpViewController: UIViewController, SignUpLayoutInterface {
         accountNameView!.heightAnchor.constraint(equalToConstant: 60).isActive = true
         accountNameView!.widthAnchor.constraint(equalToConstant: formStackView.frame.width).isActive = true
         nameAnimatedTextView = accountNameView
+        nameAnimatedTextView.getTextField().returnKeyType = UIReturnKeyType.next
+        nameAnimatedTextView.setDelegate(delegate: self)
         
         let accountHostView = nib.instantiate(withOwner: nil, options: nil).first as? SignUpAnimatedTextView
         accountHostView!.heightAnchor.constraint(equalToConstant: 60).isActive = true
         accountHostView!.widthAnchor.constraint(equalToConstant: formStackView.frame.width).isActive = true
         hostAnimatedTextView = accountHostView
+        hostAnimatedTextView.getTextField().returnKeyType = UIReturnKeyType.next
+        hostAnimatedTextView.setDelegate(delegate: self)
         
         let accountTokenView = nib.instantiate(withOwner: nil, options: nil).first as? SignUpAnimatedTextView
         accountTokenView!.heightAnchor.constraint(equalToConstant: 60).isActive = true
         accountTokenView!.widthAnchor.constraint(equalToConstant: formStackView.frame.width).isActive = true
         tokenAnimatedTextView = accountTokenView
+        tokenAnimatedTextView.getTextField().returnKeyType = UIReturnKeyType.go
+        tokenAnimatedTextView.setDelegate(delegate: self)
         
         formStackView.addArrangedSubview(accountNameView!)
         formStackView.addArrangedSubview(accountHostView!)

@@ -8,12 +8,21 @@
 
 import UIKit
 
-class SignUpAnimatedTextView : UIView {
+protocol SignUpAnimatedTextViewDelegate : NSObjectProtocol {
+    
+    func next (view : SignUpAnimatedTextView)
+    
+}
+
+class SignUpAnimatedTextView : UIView, UITextFieldDelegate {
     
     @IBOutlet weak var titleLabel : UILabel!
     @IBOutlet weak var textField : UITextField!
     
     private weak var viewTapGesture : UITapGestureRecognizer?
+    private weak var viewDelegate : SignUpAnimatedTextViewDelegate?
+    
+    private var isAnimationExecuted = false
     
     // MARK: Lifecicle
     override init(frame: CGRect) {
@@ -42,8 +51,23 @@ class SignUpAnimatedTextView : UIView {
         return titleLabel
     }
     
+    func setDelegate (delegate : SignUpAnimatedTextViewDelegate?) {
+        viewDelegate = delegate
+    }
+    
+    func focus () {
+        if (isAnimationExecuted) {
+            textField.becomeFirstResponder()
+        } else {
+            animateLabelTransition()
+        }
+    }
+    
     // MARK: Animations
     private func animateLabelTransition () {
+        guard !isAnimationExecuted else { return }
+        isAnimationExecuted = true
+        
         let duration = 0.2
         let timing = UICubicTimingParameters(animationCurve: .easeInOut)
         let animator = UIViewPropertyAnimator(duration: duration, timingParameters: timing)
@@ -75,6 +99,12 @@ class SignUpAnimatedTextView : UIView {
     // MARK: Actions
     @objc private func actionOnViewClick (_ sender : AnyObject?) {
         animateLabelTransition()
+    }
+    
+    // MARK: Delegate (UITextFieldDelegate)
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        viewDelegate?.next(view: self)
+        return true
     }
     
     // MARK: Internal (Configure View)
