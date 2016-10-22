@@ -163,13 +163,22 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7hE-1V-f9k" userLabel="View - data box">
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="daG-Vd-tZA">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="daG-Vd-tZA" customClass="SignUpAnimatedTextView" customModule="Redmine" customModuleProvider="target">
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Account Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QsO-HU-Fgf" userLabel="TextField - Account Name">
+                                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QsO-HU-Fgf" userLabel="TextField - Account Name">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="sf2-1s-ubd"/>
+                                                </constraints>
                                                 <color key="textColor" white="1" alpha="0.87" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qm3-ey-89J" userLabel="Label - Account PlaceHolder">
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="0.87" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wrc-G7-YIY" userLabel="separator">
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.12" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -179,22 +188,36 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="QsO-HU-Fgf" firstAttribute="centerY" secondItem="daG-Vd-tZA" secondAttribute="centerY" id="Bq5-wJ-T6Q"/>
                                             <constraint firstItem="QsO-HU-Fgf" firstAttribute="leading" secondItem="daG-Vd-tZA" secondAttribute="leading" constant="8" id="KNn-cb-Pfx"/>
+                                            <constraint firstItem="Qm3-ey-89J" firstAttribute="centerY" secondItem="daG-Vd-tZA" secondAttribute="centerY" id="LBA-Bd-LvW"/>
                                             <constraint firstItem="wrc-G7-YIY" firstAttribute="leading" secondItem="daG-Vd-tZA" secondAttribute="leading" id="Nlx-dV-Erq"/>
-                                            <constraint firstAttribute="height" constant="50" id="O8c-9P-O8k"/>
+                                            <constraint firstAttribute="height" constant="60" id="O8c-9P-O8k"/>
                                             <constraint firstAttribute="trailing" secondItem="wrc-G7-YIY" secondAttribute="trailing" id="PP3-eX-OUr"/>
                                             <constraint firstAttribute="trailing" secondItem="QsO-HU-Fgf" secondAttribute="trailing" constant="8" id="SMH-7R-PGU"/>
                                             <constraint firstAttribute="bottom" secondItem="wrc-G7-YIY" secondAttribute="bottom" id="SgA-bI-Lxe"/>
+                                            <constraint firstItem="Qm3-ey-89J" firstAttribute="leading" secondItem="daG-Vd-tZA" secondAttribute="leading" constant="8" id="qw7-PC-5uj"/>
+                                            <constraint firstItem="wrc-G7-YIY" firstAttribute="top" secondItem="QsO-HU-Fgf" secondAttribute="bottom" id="tMP-Zq-aFp"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="textField" destination="QsO-HU-Fgf" id="kaF-Te-PcJ"/>
+                                            <outlet property="titleLabel" destination="Qm3-ey-89J" id="y9j-8B-yDC"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v9o-NZ-MEs">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v9o-NZ-MEs" customClass="SignUpAnimatedTextView" customModule="Redmine" customModuleProvider="target">
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Account url" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mdh-ug-1up" userLabel="TextField - Account url">
+                                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mdh-ug-1up" userLabel="TextField - Account url">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="z0s-TZ-7Ha"/>
+                                                </constraints>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.87" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account url" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEk-4r-JAe" userLabel="Label - url PlaceHolder">
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="0.87" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xh2-ib-UlQ" userLabel="separator">
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.12" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -205,21 +228,38 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="xh2-ib-UlQ" secondAttribute="bottom" id="4KT-z1-gOG"/>
-                                            <constraint firstAttribute="height" constant="50" id="DMF-V7-gfO"/>
+                                            <constraint firstAttribute="height" constant="60" id="DMF-V7-gfO"/>
+                                            <constraint firstItem="iEk-4r-JAe" firstAttribute="leading" secondItem="v9o-NZ-MEs" secondAttribute="leading" constant="8" id="Yux-e4-Ffd"/>
                                             <constraint firstAttribute="trailing" secondItem="mdh-ug-1up" secondAttribute="trailing" constant="8" id="bJ5-5a-URB"/>
-                                            <constraint firstItem="mdh-ug-1up" firstAttribute="centerY" secondItem="v9o-NZ-MEs" secondAttribute="centerY" id="eO1-01-8sg"/>
+                                            <constraint firstItem="xh2-ib-UlQ" firstAttribute="top" secondItem="mdh-ug-1up" secondAttribute="bottom" id="d36-mK-fyq"/>
                                             <constraint firstItem="mdh-ug-1up" firstAttribute="leading" secondItem="v9o-NZ-MEs" secondAttribute="leading" constant="8" id="et0-bn-3Ja"/>
+                                            <constraint firstItem="iEk-4r-JAe" firstAttribute="centerY" secondItem="v9o-NZ-MEs" secondAttribute="centerY" id="gca-ej-lit"/>
                                             <constraint firstAttribute="trailing" secondItem="xh2-ib-UlQ" secondAttribute="trailing" id="nI5-M3-fEj"/>
                                             <constraint firstItem="xh2-ib-UlQ" firstAttribute="leading" secondItem="v9o-NZ-MEs" secondAttribute="leading" id="s49-Sk-Pfd"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="textField" destination="mdh-ug-1up" id="xJ6-QM-OGP"/>
+                                            <outlet property="titleLabel" destination="iEk-4r-JAe" id="ljs-8P-aQ8"/>
+                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7U-vh-ZcZ">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7U-vh-ZcZ" customClass="SignUpAnimatedTextView" customModule="Redmine" customModuleProvider="target">
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Account Api Key" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="svx-Gf-YCx" userLabel="TextField - Account api key">
+                                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="svx-Gf-YCx" userLabel="TextField - Account api key">
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="gCI-Tb-KlT"/>
+                                                </constraints>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.87" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account api key" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ISV-WD-2t3" userLabel="Label - api key PlaceHolder">
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="0.87" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bn7-JV-Q19" userLabel="separator">
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.12" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -229,14 +269,20 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="svx-Gf-YCx" firstAttribute="centerY" secondItem="h7U-vh-ZcZ" secondAttribute="centerY" id="2mi-vF-qBg"/>
+                                            <constraint firstItem="ISV-WD-2t3" firstAttribute="centerY" secondItem="h7U-vh-ZcZ" secondAttribute="centerY" id="ACE-HM-iTa"/>
                                             <constraint firstAttribute="trailing" secondItem="bn7-JV-Q19" secondAttribute="trailing" id="K9W-tA-LWd"/>
+                                            <constraint firstItem="ISV-WD-2t3" firstAttribute="leading" secondItem="h7U-vh-ZcZ" secondAttribute="leading" constant="8" id="RPs-wc-Nn4"/>
                                             <constraint firstItem="bn7-JV-Q19" firstAttribute="leading" secondItem="h7U-vh-ZcZ" secondAttribute="leading" id="SyK-O9-lOB"/>
+                                            <constraint firstItem="bn7-JV-Q19" firstAttribute="top" secondItem="svx-Gf-YCx" secondAttribute="bottom" id="TZa-Nf-NTM"/>
                                             <constraint firstAttribute="bottom" secondItem="bn7-JV-Q19" secondAttribute="bottom" id="XZy-DP-nX2"/>
-                                            <constraint firstAttribute="height" constant="50" id="Zlj-uX-B97"/>
+                                            <constraint firstAttribute="height" constant="60" id="Zlj-uX-B97"/>
                                             <constraint firstItem="svx-Gf-YCx" firstAttribute="leading" secondItem="h7U-vh-ZcZ" secondAttribute="leading" constant="8" id="qCI-j2-5po"/>
                                             <constraint firstAttribute="trailing" secondItem="svx-Gf-YCx" secondAttribute="trailing" constant="8" id="uGU-T2-egv"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="textField" destination="svx-Gf-YCx" id="3Jj-5n-8uj"/>
+                                            <outlet property="titleLabel" destination="ISV-WD-2t3" id="OZ1-BA-8aa"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -279,9 +325,7 @@
                     </view>
                     <connections>
                         <outlet property="hostTextField" destination="mdh-ug-1up" id="EqJ-Rn-AUQ"/>
-                        <outlet property="nameTextField" destination="QsO-HU-Fgf" id="2dI-hH-0zC"/>
                         <outlet property="signUpButton" destination="YQP-yt-1CX" id="dWn-KD-ksR"/>
-                        <outlet property="tokenTextField" destination="svx-Gf-YCx" id="JuS-nf-shF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbY-ah-hp5" userLabel="First Responder" sceneMemberID="firstResponder"/>

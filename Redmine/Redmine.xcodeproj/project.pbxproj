@@ -15,6 +15,7 @@
 		46183D521DB9411900D121A0 /* SignUpCreateAccountInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46183D501DB9411900D121A0 /* SignUpCreateAccountInterface.swift */; };
 		46183D541DB9412300D121A0 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46183D531DB9412300D121A0 /* SignUpRouter.swift */; };
 		46183D561DB9414900D121A0 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46183D551DB9414900D121A0 /* Account.swift */; };
+		46183D591DB94B9D00D121A0 /* SignUpAnimatedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46183D581DB94B9D00D121A0 /* SignUpAnimatedTextView.swift */; };
 		461955A91DB6921C007A790A /* SignUpFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461955A81DB6921C007A790A /* SignUpFactory.swift */; };
 		461955B41DB6964A007A790A /* AccountCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461955B21DB6964A007A790A /* AccountCoreData.swift */; };
 		461955B51DB6964A007A790A /* AccountStorageInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461955B31DB6964A007A790A /* AccountStorageInterface.swift */; };
@@ -70,6 +71,7 @@
 		46183D501DB9411900D121A0 /* SignUpCreateAccountInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpCreateAccountInterface.swift; sourceTree = "<group>"; };
 		46183D531DB9412300D121A0 /* SignUpRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
 		46183D551DB9414900D121A0 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		46183D581DB94B9D00D121A0 /* SignUpAnimatedTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpAnimatedTextView.swift; sourceTree = "<group>"; };
 		461955A81DB6921C007A790A /* SignUpFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpFactory.swift; sourceTree = "<group>"; };
 		461955B21DB6964A007A790A /* AccountCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCoreData.swift; sourceTree = "<group>"; };
 		461955B31DB6964A007A790A /* AccountStorageInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountStorageInterface.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				46183D481DB9407F00D121A0 /* interactors */,
 				46183D491DB9408600D121A0 /* presenters */,
 				46BAFB101DA023DD00A39ECD /* localizations */,
+				46183D571DB94B4300D121A0 /* support */,
 				46BAFB041DA01A2500A39ECD /* SignUpLayoutInterface.swift */,
 				4605B9461D99947200F7B6B8 /* SignUpViewController.swift */,
 				461955A81DB6921C007A790A /* SignUpFactory.swift */,
@@ -208,6 +211,14 @@
 				46183D531DB9412300D121A0 /* SignUpRouter.swift */,
 			);
 			path = routers;
+			sourceTree = "<group>";
+		};
+		46183D571DB94B4300D121A0 /* support */ = {
+			isa = PBXGroup;
+			children = (
+				46183D581DB94B9D00D121A0 /* SignUpAnimatedTextView.swift */,
+			);
+			path = support;
 			sourceTree = "<group>";
 		};
 		461955B01DB69635007A790A /* account */ = {
@@ -511,6 +522,7 @@
 				462095F11DB7D556001AFB96 /* LoginRouter.swift in Sources */,
 				461955B41DB6964A007A790A /* AccountCoreData.swift in Sources */,
 				4693756E1D94796300EE68C1 /* LoginViewController.swift in Sources */,
+				46183D591DB94B9D00D121A0 /* SignUpAnimatedTextView.swift in Sources */,
 				462095F31DB7D5FF001AFB96 /* LoginPresenter.swift in Sources */,
 				469375771D947A2800EE68C1 /* ATEProjectDetailViewController.swift in Sources */,
 				469E1D6A1D9C40D900FE5987 /* Model.xcdatamodeld in Sources */,
