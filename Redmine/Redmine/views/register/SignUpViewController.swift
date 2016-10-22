@@ -12,6 +12,7 @@ class SignUpViewController: UIViewController, SignUpLayoutInterface {
 
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var formStackView : UIStackView!
+    @IBOutlet weak var scrollView : UIScrollView!
 
     weak var nameAnimatedTextView : SignUpAnimatedTextView!
     weak var hostAnimatedTextView : SignUpAnimatedTextView!
@@ -40,6 +41,16 @@ class SignUpViewController: UIViewController, SignUpLayoutInterface {
         addHideKeyboardGesture()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        addKeyboardEventsListeners()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        removeKeyboardNotifications()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -67,6 +78,21 @@ class SignUpViewController: UIViewController, SignUpLayoutInterface {
     
     @objc private func actionHideKeyboard (sender : AnyObject?) {
         view.endEditing(true)
+    }
+    
+    @objc private func onKeyboardWillShow (notification : NSNotification) {
+        var userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = view.convert(keyboardFrame, from: nil)
+        
+        var contentInset:UIEdgeInsets = scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height + signUpButton.frame.height
+        scrollView.contentInset = contentInset
+    }
+    
+    @objc private func onKeyboardWillHide (notification : NSNotification){
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInset
     }
     
     // MARK: Solve injetions
@@ -134,4 +160,13 @@ class SignUpViewController: UIViewController, SignUpLayoutInterface {
         view.addGestureRecognizer(gesture)
     }
     
+    private func addKeyboardEventsListeners () {
+        let center = NotificationCenter.default
+        center.addObserver(self, selector: #selector(onKeyboardWillShow(notification:)), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
+        center.addObserver(self, selector: #selector(onKeyboardWillHide(notification:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    private func removeKeyboardNotifications () {
+        NotificationCenter.default.removeObserver(self)
+    }
 }
