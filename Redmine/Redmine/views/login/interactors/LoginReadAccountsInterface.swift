@@ -10,6 +10,6 @@ import UIKit
 
 protocol LoginReadAccountsInterface {
     
-    func readAccounts (callback : ([Account]) -> ())
+    func readAccounts (callback : @escaping ([Account]) -> ())
     
 }

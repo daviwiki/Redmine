@@ -29,7 +29,11 @@ class LoginViewController: UIViewController, LoginLayoutInterface {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        presenter.onViewAppear(view: self)
+ 
+        self.presenter.onViewAppear(view: self)
+//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.init(uptimeNanoseconds: 5*NSEC_PER_SEC)) {
+//            
+//        }
     }
     
     override func didReceiveMemoryWarning() {

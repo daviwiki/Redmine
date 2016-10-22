@@ -22,7 +22,7 @@ class SignUpFactory: NSObject {
         return SignUpRouter()
     }
     
-    static func getSignUpAccountStorage () -> AccountStorageInterface {
-        return CoreDataModelManager.getInstance().getAccountStorageManager()
+    static func getSignUpAccountStorage (_ callback : @escaping (AccountStorageInterface) -> Void) {
+        CoreDataModelManager.getInstance().getAccountStorageManager(callback)
     }
 }

@@ -19,14 +19,13 @@ import UIKit
 class CoreDataModelManager : NSObject {
 
     private static let instance = CoreDataModelManager()
-    private var managedObjectContext : NSManagedObjectContext!
+    private var managedObjectContext : NSManagedObjectContext?
     
     private let MODEL_NAME = "Model"
     private let MODEL_EXTENSION_NAME = "momd"
     
     private override init () {
         super.init()
-        initializeCoreData()
     }
     
     // MARK: Services
@@ -34,18 +33,23 @@ class CoreDataModelManager : NSObject {
         return CoreDataModelManager.instance
     }
     
-    func getManagedObjectContext() -> NSManagedObjectContext {
-        return managedObjectContext
+    func getManagedObjectContext(_ callback : @escaping (NSManagedObjectContext) -> Void) {
+        if (managedObjectContext == nil) {
+            initializeCoreData(callback)
+        } else {
+            callback(managedObjectContext!)
+        }
     }
     
-    func getAccountStorageManager () -> AccountStorageInterface {
-        let moc = getManagedObjectContext()
-        let manager = AccountCoreData(managedObjectContext: moc)
-        return manager
+    func getAccountStorageManager (_ callback : @escaping (AccountStorageInterface) -> Void) {
+        getManagedObjectContext { (moc : NSManagedObjectContext) in
+            let manager = AccountCoreData(managedObjectContext: moc)
+            callback(manager)
+        }
     }
     
     // MARK: Internal
-    func initializeCoreData()  {
+    func initializeCoreData(_ callback : @escaping (NSManagedObjectContext) -> Void)  {
         
         guard let modelUrl = Bundle.main.url(forResource: MODEL_NAME, withExtension: MODEL_EXTENSION_NAME) else {
             fatalError("Core Data couldn't be initialized")
@@ -58,8 +62,9 @@ class CoreDataModelManager : NSObject {
         }
         
         let psc = NSPersistentStoreCoordinator(managedObjectModel: mom)
-        managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-        managedObjectContext.persistentStoreCoordinator = psc
+        let moc = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        moc.persistentStoreCoordinator = psc
+        managedObjectContext = moc
         
         DispatchQueue.global().async {
             let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -73,6 +78,10 @@ class CoreDataModelManager : NSObject {
                 try psc.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: docURL, options: nil)
             } catch {
                 fatalError("Error migrating store: \(error)")
+            }
+            
+            DispatchQueue.main.sync {
+                callback(moc)
             }
         }
 

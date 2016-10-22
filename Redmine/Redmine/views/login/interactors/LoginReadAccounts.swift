@@ -10,10 +10,12 @@ import UIKit
 
 class LoginReadAccounts: NSObject, LoginReadAccountsInterface {
     
-    func readAccounts (callback : ([Account]) -> ()) {
-        let storage = LoginFactory.getInstance().getLoginAccountStorage()
-        let accounts = storage.getAccounts()
-        callback(accounts)
+    func readAccounts (callback : @escaping ([Account]) -> ()) {
+        
+        LoginFactory.getInstance().getLoginAccountStorage { (storage : AccountStorageInterface) in
+            let accounts = storage.getAccounts()
+            callback(accounts)
+        }
+        
     }
-    
 }
