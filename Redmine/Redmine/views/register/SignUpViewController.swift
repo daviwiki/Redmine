@@ -10,10 +10,12 @@ import UIKit
 
 class SignUpViewController: UIViewController, SignUpLayoutInterface {
 
-    @IBOutlet weak var nameTextField : UITextField!
-    @IBOutlet weak var hostTextField : UITextField!
-    @IBOutlet weak var tokenTextField : UITextField!
     @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var formStackView : UIStackView!
+
+    weak var nameAnimatedTextView : SignUpAnimatedTextView!
+    weak var hostAnimatedTextView : SignUpAnimatedTextView!
+    weak var tokenAnimatedTextView : SignUpAnimatedTextView!
     
     var presenter : SignUpPresenterInterface!
     let localizableFileName = "SignUp"
@@ -33,33 +35,16 @@ class SignUpViewController: UIViewController, SignUpLayoutInterface {
         super.viewDidLoad()
         presenter.configureViewForPresentation(view: self)
         roundCorner(view: signUpButton, radius: 6.0)
+        mountSignUpBoxes()
+        internacionalize()
+        addHideKeyboardGesture()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    // MARK: SignUpLayoutInterface
-    func showWindowTitle(title: String?) {
-        self.title = title
-    }
-    
-    func showNamePlaceholder(name: String) {
-        nameTextField.placeholder = name
-    }
-    
-    func showHostPlaceholder(name: String) {
-        hostTextField.placeholder = name
-    }
-    
-    func showTokenPlaceholder(name: String) {
-        tokenTextField.placeholder = name
-    }
-    
-    func showSignUpButtonName(name: String) {
-        signUpButton?.setTitle(name, for: UIControlState.normal)
-    }
-    
+    // MARK: SignUpLayoutInterface    
     func showError(message: String) {
         let alertTitle = getLocalizable(fromId: "alert_title")
         let alert = UIAlertController(title: alertTitle, message: message, preferredStyle: UIAlertControllerStyle.alert)
@@ -73,11 +58,15 @@ class SignUpViewController: UIViewController, SignUpLayoutInterface {
     
     // MARK: Actions
     @IBAction func onClickSignUp (withSender sender : UIButton) {
-        presenter.onCreateAccount(
+        presenter.onCreateAccount (
             view: self,
-            name: nameTextField.text,
-            host: hostTextField.text,
-            token: tokenTextField.text)
+            name: nameAnimatedTextView.getTextField().text,
+            host: hostAnimatedTextView.getTextField().text,
+            token: tokenAnimatedTextView.getTextField().text)
+    }
+    
+    @objc private func actionHideKeyboard (sender : AnyObject?) {
+        view.endEditing(true)
     }
     
     // MARK: Solve injetions
@@ -86,12 +75,63 @@ class SignUpViewController: UIViewController, SignUpLayoutInterface {
     }
     
     // MARK: Internal
-    private func getLocalizable (fromId id : String) -> String? {
-        return NSLocalizedString(id, tableName: localizableFileName, bundle: Bundle.main, value: "", comment: "")
-    }
-    
     private func roundCorner (view : UIView, radius : CGFloat) {
         view.clipsToBounds = true
         view.layer.cornerRadius = radius
     }
+    
+    private func mountSignUpBoxes () {
+        self.view.layoutIfNeeded()
+        
+        let nib = UINib(nibName: "SignUpAnimatedTextView", bundle: nil)
+        let accountNameView = nib.instantiate(withOwner: nil, options: nil).first as? SignUpAnimatedTextView
+        accountNameView!.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        accountNameView!.widthAnchor.constraint(equalToConstant: formStackView.frame.width).isActive = true
+        nameAnimatedTextView = accountNameView
+        
+        let accountHostView = nib.instantiate(withOwner: nil, options: nil).first as? SignUpAnimatedTextView
+        accountHostView!.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        accountHostView!.widthAnchor.constraint(equalToConstant: formStackView.frame.width).isActive = true
+        hostAnimatedTextView = accountHostView
+        
+        let accountTokenView = nib.instantiate(withOwner: nil, options: nil).first as? SignUpAnimatedTextView
+        accountTokenView!.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        accountTokenView!.widthAnchor.constraint(equalToConstant: formStackView.frame.width).isActive = true
+        tokenAnimatedTextView = accountTokenView
+        
+        formStackView.addArrangedSubview(accountNameView!)
+        formStackView.addArrangedSubview(accountHostView!)
+        formStackView.addArrangedSubview(accountTokenView!)
+        formStackView.translatesAutoresizingMaskIntoConstraints = false;
+        formStackView.layoutIfNeeded()
+    }
+    
+    private func internacionalize () {
+        var message : String?
+        
+        message = getLocalizable(fromId: "account_window_title")
+        self.title = message
+        
+        message = getLocalizable(fromId: "account_name_placeholder")
+        nameAnimatedTextView.getTitleLabel().text = message
+        
+        message = getLocalizable(fromId: "account_host_placeholder")
+        hostAnimatedTextView.getTitleLabel().text = message
+        
+        message = getLocalizable(fromId: "account_token_placeholder")
+        tokenAnimatedTextView.getTitleLabel().text = message
+        
+        message = getLocalizable(fromId: "account_singup_button_name")
+        signUpButton?.setTitle(message, for: UIControlState.normal)
+    }
+    
+    private func getLocalizable (fromId id : String) -> String? {
+        return NSLocalizedString(id, tableName: localizableFileName, bundle: Bundle.main, value: "", comment: "")
+    }
+    
+    private func addHideKeyboardGesture () {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(actionHideKeyboard(sender:)))
+        view.addGestureRecognizer(gesture)
+    }
+    
 }

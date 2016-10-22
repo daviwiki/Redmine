@@ -29,6 +29,7 @@
 		462095FB1DB7E58A001AFB96 /* LoginCheckInteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462095FA1DB7E58A001AFB96 /* LoginCheckInteractorInterface.swift */; };
 		462095FD1DB7E770001AFB96 /* LoginPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462095FC1DB7E770001AFB96 /* LoginPresenterInterface.swift */; };
 		462095FF1DB7E77C001AFB96 /* LoginRouterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462095FE1DB7E77C001AFB96 /* LoginRouterInterface.swift */; };
+		462A13251DBB72EF0036A371 /* SignUpAnimatedTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 462A13241DBB72EF0036A371 /* SignUpAnimatedTextView.xib */; };
 		4693753E1D94785A00EE68C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693753D1D94785A00EE68C1 /* AppDelegate.swift */; };
 		469375431D94785A00EE68C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469375411D94785A00EE68C1 /* Main.storyboard */; };
 		469375451D94785A00EE68C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469375441D94785A00EE68C1 /* Assets.xcassets */; };
@@ -85,6 +86,7 @@
 		462095FA1DB7E58A001AFB96 /* LoginCheckInteractorInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCheckInteractorInterface.swift; sourceTree = "<group>"; };
 		462095FC1DB7E770001AFB96 /* LoginPresenterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenterInterface.swift; sourceTree = "<group>"; };
 		462095FE1DB7E77C001AFB96 /* LoginRouterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouterInterface.swift; sourceTree = "<group>"; };
+		462A13241DBB72EF0036A371 /* SignUpAnimatedTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpAnimatedTextView.xib; sourceTree = "<group>"; };
 		4693753A1D94785A00EE68C1 /* Redmine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Redmine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4693753D1D94785A00EE68C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		469375421D94785A00EE68C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				46183D581DB94B9D00D121A0 /* SignUpAnimatedTextView.swift */,
+				462A13241DBB72EF0036A371 /* SignUpAnimatedTextView.xib */,
 			);
 			path = support;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				462A13251DBB72EF0036A371 /* SignUpAnimatedTextView.xib in Resources */,
 				469375481D94785A00EE68C1 /* LaunchScreen.storyboard in Resources */,
 				469375451D94785A00EE68C1 /* Assets.xcassets in Resources */,
 				469375431D94785A00EE68C1 /* Main.storyboard in Resources */,

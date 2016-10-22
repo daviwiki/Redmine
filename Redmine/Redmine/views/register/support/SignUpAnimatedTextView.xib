@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xsd-rg-7uL" customClass="SignUpAnimatedTextView" customModule="Redmine" customModuleProvider="target">
+            <subviews>
+                <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ul4-rv-J4U" userLabel="TextField - Account Name">
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="0.87" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="pfV-3T-Wd2"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="0.87" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JtK-cT-3YG" userLabel="Label - Account PlaceHolder">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="0.87" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wQX-BT-dmO" userLabel="separator">
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.12" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Qz3-MS-cIM"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="JtK-cT-3YG" firstAttribute="leading" secondItem="Xsd-rg-7uL" secondAttribute="leading" constant="8" id="0gu-wA-hI4"/>
+                <constraint firstAttribute="trailing" secondItem="wQX-BT-dmO" secondAttribute="trailing" id="0sV-gU-bvx"/>
+                <constraint firstItem="wQX-BT-dmO" firstAttribute="leading" secondItem="Xsd-rg-7uL" secondAttribute="leading" id="69A-4v-7GK"/>
+                <constraint firstItem="wQX-BT-dmO" firstAttribute="top" secondItem="Ul4-rv-J4U" secondAttribute="bottom" id="PvC-LD-ruo"/>
+                <constraint firstAttribute="bottom" secondItem="wQX-BT-dmO" secondAttribute="bottom" id="V8R-hV-Oj6"/>
+                <constraint firstItem="JtK-cT-3YG" firstAttribute="centerY" secondItem="Xsd-rg-7uL" secondAttribute="centerY" id="aKw-Od-pht"/>
+                <constraint firstItem="Ul4-rv-J4U" firstAttribute="leading" secondItem="Xsd-rg-7uL" secondAttribute="leading" constant="8" id="qxt-9z-wpw"/>
+                <constraint firstAttribute="trailing" secondItem="Ul4-rv-J4U" secondAttribute="trailing" constant="8" id="tqA-4K-vOU"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="textField" destination="Ul4-rv-J4U" id="N4a-CT-fz4"/>
+                <outlet property="titleLabel" destination="JtK-cT-3YG" id="jgI-KO-6OP"/>
+            </connections>
+            <point key="canvasLocation" x="-116" y="53"/>
+        </view>
+    </objects>
+</document>
