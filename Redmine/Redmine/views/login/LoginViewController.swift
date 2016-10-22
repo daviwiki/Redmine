@@ -11,6 +11,8 @@ import UIKit
 class LoginViewController: UIViewController, LoginLayoutInterface {
 
     @IBOutlet weak var accountTitleLabel : UILabel!
+    @IBOutlet weak var loginButton : UIButton!
+    @IBOutlet weak var accountsContainer : UIView!
     
     private var factory : LoginFactory!
     private var presenter : LoginPresenterInterface!
@@ -25,15 +27,20 @@ class LoginViewController: UIViewController, LoginLayoutInterface {
         
         presenter = factory.getPresenter()
         presenter.configureViewForPresentation(view: self)
+        
+        // Next call is neccessary before calculate roundCorner method
+        // or before call any function that needs to ask subviews size
+        // cause system is generating 1000x1000 view size at this point
+        // instead of real sizes
+        view.layoutIfNeeded()
+        
+        roundCorner(view: loginButton, radius: 6.0)
+        accountsContainer.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
- 
         self.presenter.onViewAppear(view: self)
-//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.init(uptimeNanoseconds: 5*NSEC_PER_SEC)) {
-//            
-//        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -55,10 +62,11 @@ class LoginViewController: UIViewController, LoginLayoutInterface {
     }
     
     func showNoAccount() {
-        // TODO: Show no account display
+        accountsContainer.isHidden = true
     }
     
     func showAccount(account: Account) {
+        accountsContainer.isHidden = false
         selectedAccount = account
         accountTitleLabel.text = selectedAccount?.name
     }
@@ -72,4 +80,11 @@ class LoginViewController: UIViewController, LoginLayoutInterface {
         guard selectedAccount != nil else { return }
         presenter.onLogin(account: selectedAccount!)
     }
+    
+    // MARK: Internal
+    private func roundCorner (view : UIView, radius : CGFloat) {
+        view.clipsToBounds = true
+        view.layer.cornerRadius = radius
+    }
+    
 }

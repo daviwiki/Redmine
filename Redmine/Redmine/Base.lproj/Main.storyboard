@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -44,9 +45,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l0n-Zo-Anq" userLabel="View - Select account container">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFX-nA-CIg" userLabel="View - Account selector container">
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hx2-Wd-nF1" userLabel="View - Current Account Box">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hx2-Wd-nF1" userLabel="View - Account selecte box">
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjN-3f-K3p">
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -82,39 +83,31 @@
                                             <constraint firstItem="JjN-3f-K3p" firstAttribute="leading" secondItem="hx2-Wd-nF1" secondAttribute="leading" constant="16" id="ii0-o2-fvF"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rOb-se-t7b">
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6E-ee-mmP" userLabel="Button - Login">
+                                        <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" id="fQu-Kb-ePF"/>
+                                            <constraint firstAttribute="height" constant="44" id="LfB-Up-X0n"/>
+                                            <constraint firstAttribute="width" constant="120" id="iAu-TI-D2t"/>
                                         </constraints>
-                                    </tableView>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="SignIn">
+                                            <color key="titleColor" red="0.1137254902" green="0.91372549020000005" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionOnLogin:" destination="g5P-en-wgo" eventType="touchUpInside" id="bql-C7-Gzx"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="rOb-se-t7b" secondAttribute="trailing" id="Bc2-zH-ugm"/>
-                                    <constraint firstItem="rOb-se-t7b" firstAttribute="leading" secondItem="l0n-Zo-Anq" secondAttribute="leading" id="Ptg-6i-KJ7"/>
-                                    <constraint firstItem="hx2-Wd-nF1" firstAttribute="leading" secondItem="l0n-Zo-Anq" secondAttribute="leading" id="YMe-le-P27"/>
-                                    <constraint firstItem="rOb-se-t7b" firstAttribute="top" secondItem="hx2-Wd-nF1" secondAttribute="bottom" id="arL-e3-DEY"/>
-                                    <constraint firstAttribute="width" constant="256" id="gvw-i9-PX7"/>
-                                    <constraint firstAttribute="trailing" secondItem="hx2-Wd-nF1" secondAttribute="trailing" id="jMh-tS-CB4"/>
-                                    <constraint firstItem="hx2-Wd-nF1" firstAttribute="top" secondItem="l0n-Zo-Anq" secondAttribute="top" id="kuH-NY-Mro"/>
-                                    <constraint firstAttribute="bottom" secondItem="rOb-se-t7b" secondAttribute="bottom" id="m7D-zX-Irq"/>
+                                    <constraint firstAttribute="bottom" secondItem="F6E-ee-mmP" secondAttribute="bottom" id="FV1-cT-i1M"/>
+                                    <constraint firstItem="F6E-ee-mmP" firstAttribute="centerX" secondItem="pFX-nA-CIg" secondAttribute="centerX" id="aB2-S2-ZZ7"/>
+                                    <constraint firstItem="F6E-ee-mmP" firstAttribute="top" secondItem="hx2-Wd-nF1" secondAttribute="bottom" constant="16" id="mcS-aF-kyO"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="hx2-Wd-nF1" secondAttribute="trailing" id="nMr-4V-tfX"/>
+                                    <constraint firstItem="hx2-Wd-nF1" firstAttribute="leading" secondItem="pFX-nA-CIg" secondAttribute="leadingMargin" id="s8L-wk-Lca"/>
+                                    <constraint firstItem="hx2-Wd-nF1" firstAttribute="top" secondItem="pFX-nA-CIg" secondAttribute="top" id="t0o-Mb-952"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6E-ee-mmP" userLabel="Button - Login">
-                                <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="LfB-Up-X0n"/>
-                                    <constraint firstAttribute="width" constant="120" id="iAu-TI-D2t"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="SignIn">
-                                    <color key="titleColor" red="0.1137254902" green="0.91372549020000005" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="actionOnLogin:" destination="g5P-en-wgo" eventType="touchUpInside" id="bql-C7-Gzx"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQg-Bc-K6z" userLabel="Button - Add new Account">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Add new account">
@@ -127,19 +120,18 @@
                         </subviews>
                         <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="l0n-Zo-Anq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pxY-ZL-KV1" secondAttribute="leading" constant="32" id="2I3-jy-NCA"/>
-                            <constraint firstItem="F6E-ee-mmP" firstAttribute="centerX" secondItem="pxY-ZL-KV1" secondAttribute="centerX" id="7vC-VF-Xnv"/>
-                            <constraint firstItem="l0n-Zo-Anq" firstAttribute="centerY" secondItem="pxY-ZL-KV1" secondAttribute="centerY" constant="-32" id="Mt8-hu-ali"/>
+                            <constraint firstAttribute="trailing" secondItem="pFX-nA-CIg" secondAttribute="trailing" constant="32" id="2JG-fh-9vc"/>
                             <constraint firstItem="ozv-YU-Ubp" firstAttribute="top" secondItem="eQg-Bc-K6z" secondAttribute="bottom" constant="16" id="NRK-VA-wiF"/>
-                            <constraint firstItem="F6E-ee-mmP" firstAttribute="top" secondItem="l0n-Zo-Anq" secondAttribute="bottom" constant="32" id="PKi-iY-3CV"/>
+                            <constraint firstItem="pFX-nA-CIg" firstAttribute="centerY" secondItem="pxY-ZL-KV1" secondAttribute="centerY" id="SWT-7F-CHq"/>
                             <constraint firstItem="eQg-Bc-K6z" firstAttribute="centerX" secondItem="pxY-ZL-KV1" secondAttribute="centerX" id="VkZ-jA-co2"/>
-                            <constraint firstItem="l0n-Zo-Anq" firstAttribute="centerX" secondItem="pxY-ZL-KV1" secondAttribute="centerX" id="e7a-qz-nQ2"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="l0n-Zo-Anq" secondAttribute="trailing" constant="32" id="qkz-dK-8q4"/>
+                            <constraint firstItem="pFX-nA-CIg" firstAttribute="leading" secondItem="pxY-ZL-KV1" secondAttribute="leading" constant="32" id="iGb-TM-vdZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="H1O-eS-SdJ"/>
                     <connections>
                         <outlet property="accountTitleLabel" destination="JjN-3f-K3p" id="pg8-Q4-Lvr"/>
+                        <outlet property="accountsContainer" destination="pFX-nA-CIg" id="5PJ-4S-0sv"/>
+                        <outlet property="loginButton" destination="F6E-ee-mmP" id="fUy-Ws-kKS"/>
                         <segue destination="8Ma-MU-5yi" kind="show" identifier="login_to_projectlist" id="9zv-Zz-o1d"/>
                         <segue destination="lNd-ec-ffr" kind="show" identifier="login_to_signup" id="jIX-Bx-bhj"/>
                     </connections>
