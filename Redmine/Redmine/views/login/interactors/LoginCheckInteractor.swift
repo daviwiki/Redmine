@@ -10,8 +10,18 @@ import UIKit
 
 class LoginCheckInteractor: NSObject, LoginCheckInteractorInterface {
     
-    func loginCheck(account: Account, callback: (Bool) -> ()) {
-        // TODO:
+    func loginCheck(_ account: Account, _ completion: @escaping (Bool) -> ()) throws {
+        
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        guard let session = appDelegate?.defaultSession else { throw LoginCheckError.noUrlSessionDefined }
+        
+        let restUser = ApiRestUser(session, account)
+        let options : ApiRestUser.AdditionalOptions? = nil
+        restUser.getMe(options, { (responseUrl : URL?, response : URLResponse?, error : ApiRestUser.ApiRestUserError?) in
+            DispatchQueue.main.sync {
+                completion (error == nil)
+            }
+        })
     }
     
 }

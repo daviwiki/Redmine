@@ -30,6 +30,8 @@
 		462095FD1DB7E770001AFB96 /* LoginPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462095FC1DB7E770001AFB96 /* LoginPresenterInterface.swift */; };
 		462095FF1DB7E77C001AFB96 /* LoginRouterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462095FE1DB7E77C001AFB96 /* LoginRouterInterface.swift */; };
 		462A13251DBB72EF0036A371 /* SignUpAnimatedTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 462A13241DBB72EF0036A371 /* SignUpAnimatedTextView.xib */; };
+		462A13291DBBEE890036A371 /* ApiRestUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462A13281DBBEE890036A371 /* ApiRestUser.swift */; };
+		462A132D1DBBF25D0036A371 /* ApiRestAccountInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462A132C1DBBF25D0036A371 /* ApiRestAccountInterface.swift */; };
 		4693753E1D94785A00EE68C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693753D1D94785A00EE68C1 /* AppDelegate.swift */; };
 		469375431D94785A00EE68C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469375411D94785A00EE68C1 /* Main.storyboard */; };
 		469375451D94785A00EE68C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469375441D94785A00EE68C1 /* Assets.xcassets */; };
@@ -87,6 +89,8 @@
 		462095FC1DB7E770001AFB96 /* LoginPresenterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenterInterface.swift; sourceTree = "<group>"; };
 		462095FE1DB7E77C001AFB96 /* LoginRouterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouterInterface.swift; sourceTree = "<group>"; };
 		462A13241DBB72EF0036A371 /* SignUpAnimatedTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpAnimatedTextView.xib; sourceTree = "<group>"; };
+		462A13281DBBEE890036A371 /* ApiRestUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRestUser.swift; sourceTree = "<group>"; };
+		462A132C1DBBF25D0036A371 /* ApiRestAccountInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRestAccountInterface.swift; sourceTree = "<group>"; };
 		4693753A1D94785A00EE68C1 /* Redmine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Redmine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4693753D1D94785A00EE68C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		469375421D94785A00EE68C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -227,8 +231,8 @@
 		461955B01DB69635007A790A /* account */ = {
 			isa = PBXGroup;
 			children = (
-				46183D551DB9414900D121A0 /* Account.swift */,
 				461955B11DB6964A007A790A /* storage */,
+				46183D551DB9414900D121A0 /* Account.swift */,
 			);
 			path = account;
 			sourceTree = "<group>";
@@ -240,6 +244,31 @@
 				461955B21DB6964A007A790A /* AccountCoreData.swift */,
 			);
 			path = storage;
+			sourceTree = "<group>";
+		};
+		462A13261DBBEE380036A371 /* apirest */ = {
+			isa = PBXGroup;
+			children = (
+				462A132B1DBBF22E0036A371 /* account */,
+				462A13271DBBEE570036A371 /* users */,
+			);
+			path = apirest;
+			sourceTree = "<group>";
+		};
+		462A13271DBBEE570036A371 /* users */ = {
+			isa = PBXGroup;
+			children = (
+				462A13281DBBEE890036A371 /* ApiRestUser.swift */,
+			);
+			path = users;
+			sourceTree = "<group>";
+		};
+		462A132B1DBBF22E0036A371 /* account */ = {
+			isa = PBXGroup;
+			children = (
+				462A132C1DBBF25D0036A371 /* ApiRestAccountInterface.swift */,
+			);
+			path = account;
 			sourceTree = "<group>";
 		};
 		469375311D94785A00EE68C1 = {
@@ -265,6 +294,7 @@
 		4693753C1D94785A00EE68C1 /* Redmine */ = {
 			isa = PBXGroup;
 			children = (
+				462A13261DBBEE380036A371 /* apirest */,
 				46183D451DB93FF700D121A0 /* support */,
 				4605B9481D999FF700F7B6B8 /* resources */,
 				4693756B1D94791200EE68C1 /* views */,
@@ -529,6 +559,7 @@
 				46183D591DB94B9D00D121A0 /* SignUpAnimatedTextView.swift in Sources */,
 				462095F31DB7D5FF001AFB96 /* LoginPresenter.swift in Sources */,
 				469375771D947A2800EE68C1 /* ATEProjectDetailViewController.swift in Sources */,
+				462A132D1DBBF25D0036A371 /* ApiRestAccountInterface.swift in Sources */,
 				469E1D6A1D9C40D900FE5987 /* Model.xcdatamodeld in Sources */,
 				469375791D947A4000EE68C1 /* ATEIssueDetailViewController.swift in Sources */,
 				46183D561DB9414900D121A0 /* Account.swift in Sources */,
@@ -540,6 +571,7 @@
 				462095F91DB7E56E001AFB96 /* LoginReadAccountsInterface.swift in Sources */,
 				46183D511DB9411900D121A0 /* SignUpCreateAccount.swift in Sources */,
 				462095F71DB7E303001AFB96 /* LoginReadAccounts.swift in Sources */,
+				462A13291DBBEE890036A371 /* ApiRestUser.swift in Sources */,
 				46183D4E1DB9410D00D121A0 /* SignUpPresenterInterface.swift in Sources */,
 				4605B9471D99947200F7B6B8 /* SignUpViewController.swift in Sources */,
 				462095FB1DB7E58A001AFB96 /* LoginCheckInteractorInterface.swift in Sources */,
@@ -699,6 +731,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Redmine/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -712,6 +745,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Redmine/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

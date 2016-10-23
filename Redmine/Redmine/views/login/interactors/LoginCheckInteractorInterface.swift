@@ -8,8 +8,12 @@
 
 import UIKit
 
+enum LoginCheckError : Error {
+    case noUrlSessionDefined
+}
+
 protocol LoginCheckInteractorInterface {
     
-    func loginCheck(account : Account, callback : (_ success : Bool) -> ())
+    func loginCheck(_ account: Account, _ completion: @escaping (Bool) -> ()) throws
     
 }

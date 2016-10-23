@@ -78,7 +78,7 @@ class LoginViewController: UIViewController, LoginLayoutInterface {
     
     @IBAction func actionOnLogin (_ sender : UIButton) {
         guard selectedAccount != nil else { return }
-        presenter.onLogin(account: selectedAccount!)
+        presenter.onLogin(account: selectedAccount!, view : self)
     }
     
     // MARK: Internal

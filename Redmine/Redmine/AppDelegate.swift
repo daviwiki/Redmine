@@ -44,3 +44,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+// MARK: NSURLSession
+private var appDelegateSessionKey : UInt8 = 0
+
+extension AppDelegate : URLSessionTaskDelegate {
+    
+    private var session : URLSession? {
+        get {
+            return objc_getAssociatedObject(self, &appDelegateSessionKey) as? URLSession
+        }
+        set (newValue) {
+            objc_setAssociatedObject(self, &appDelegateSessionKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+        }
+    }
+    
+    
+    
+    var defaultConfiguration : URLSessionConfiguration {
+        get {
+            return URLSessionConfiguration.default
+        }
+    }
+    
+    var defaultSession : URLSession {
+        get {
+            if session != nil {
+                return session!
+            }
+            
+            session = URLSession(configuration:defaultConfiguration, delegate: self, delegateQueue: nil)
+            return session!
+        }
+    }
+    
+    func urlSession(_ session: URLSession, task: URLSessionTask, didFinishCollecting metrics: URLSessionTaskMetrics) {
+        print("\(metrics)")
+    }
+}

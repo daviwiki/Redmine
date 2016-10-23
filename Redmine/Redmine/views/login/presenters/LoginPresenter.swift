@@ -15,7 +15,7 @@ class LoginPresenter: NSObject, LoginPresenterInterface {
     private var readAccountsInteractor : LoginReadAccountsInterface!
     
     func configureViewForPresentation(view: LoginLayoutInterface) {
-        // TODO: Localization and start
+        // do nothing
     }
     
     func onViewAppear(view: LoginLayoutInterface) {
@@ -28,8 +28,23 @@ class LoginPresenter: NSObject, LoginPresenterInterface {
         }
     }
     
-    func onLogin(account: Account) {
-        router?.navigateToProjects()
+    func onLogin(account: Account, view: LoginLayoutInterface) {
+        // TODO: Localize string
+        // TODO: Improve error message for each error type
+        let localizedError = "Couldn't connect with your user"
+        do {
+            try getLoginInteractor.loginCheck(account) { [weak self] (ok : Bool) in
+                if (ok) {
+                    self?.router?.navigateToProjects()
+                } else {
+                    
+                    view.showError(message: localizedError)
+                }
+            }
+        } catch {
+            print (error)
+            view.showError(message: localizedError)
+        }
     }
     
     func onCreateAccount() {
