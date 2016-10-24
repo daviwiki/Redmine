@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ATEProjectDetailViewController: UIViewController {
+class ProjectDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
