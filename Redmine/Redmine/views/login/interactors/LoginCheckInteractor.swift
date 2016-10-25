@@ -15,7 +15,12 @@ class LoginCheckInteractor: NSObject, LoginCheckInteractorInterface {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         guard let session = appDelegate?.defaultSession else { throw LoginCheckError.noUrlSessionDefined }
         
-        let restUser = ApiRestUser(session, account)
+        let accountEntity = ApiRestAccountEntity()
+        accountEntity.host = account.host
+        accountEntity.name = account.name
+        accountEntity.token = account.token
+        
+        let restUser = ApiRestUser(session, accountEntity)
         let options : ApiRestUser.AdditionalOptions? = nil
         restUser.getMe(options, { (responseUrl : URL?, response : URLResponse?, error : ApiRestUser.ApiRestUserError?) in
             DispatchQueue.main.sync {

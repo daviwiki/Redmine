@@ -8,10 +8,10 @@
 
 import UIKit
 
-protocol ApiRestAccountInterface {
+class ApiRestAccountEntity : NSObject {
     
-    var name : String { get }
-    var host : String { get }
-    var token : String { get }
+    var name : String = ""
+    var host : String = ""
+    var token : String = ""
     
 }

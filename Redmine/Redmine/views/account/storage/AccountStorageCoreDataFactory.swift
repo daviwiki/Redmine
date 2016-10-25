@@ -16,9 +16,9 @@ import UIKit
  
  - Seealso: For more information: https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreData/InitializingtheCoreDataStack.html#//apple_ref/doc/uid/TP40001075-CH4-SW1
  */
-class CoreDataModelManager : NSObject {
+class AccountStorageCoreDataFactory : NSObject {
 
-    private static let instance = CoreDataModelManager()
+    private static let instance = AccountStorageCoreDataFactory()
     private var managedObjectContext : NSManagedObjectContext?
     
     private let MODEL_NAME = "Model"
@@ -29,8 +29,8 @@ class CoreDataModelManager : NSObject {
     }
     
     // MARK: Services
-    static func getInstance () -> CoreDataModelManager {
-        return CoreDataModelManager.instance
+    static func getInstance () -> AccountStorageCoreDataFactory {
+        return AccountStorageCoreDataFactory.instance
     }
     
     func getManagedObjectContext(_ callback : @escaping (NSManagedObjectContext) -> Void) {
@@ -43,7 +43,7 @@ class CoreDataModelManager : NSObject {
     
     func getAccountStorageManager (_ callback : @escaping (AccountStorageInterface) -> Void) {
         getManagedObjectContext { (moc : NSManagedObjectContext) in
-            let manager = AccountCoreData(managedObjectContext: moc)
+            let manager = AccountStorageCoreData(managedObjectContext: moc)
             callback(manager)
         }
     }

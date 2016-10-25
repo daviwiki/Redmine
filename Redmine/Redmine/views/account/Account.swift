@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Account: NSObject, NSCoding, ApiRestAccountInterface {
+class Account: NSObject, NSCoding {
 
     var name : String = ""
     var host : String = ""

@@ -11,7 +11,7 @@ import UIKit
 class ApiRestUser: NSObject {
 
     private var session : URLSession!
-    private var account : ApiRestAccountInterface!
+    private var account : ApiRestAccountEntity!
     
     private let urlMe = "/users/current.json"
     
@@ -29,7 +29,7 @@ class ApiRestUser: NSObject {
     }
     
     // MARK : Lifecycle
-    init(_ session : URLSession, _ account : ApiRestAccountInterface) {
+    init(_ session : URLSession, _ account : ApiRestAccountEntity) {
         self.session = session
         self.account = account
     }

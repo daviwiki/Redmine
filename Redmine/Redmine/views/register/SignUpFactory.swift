@@ -23,6 +23,6 @@ class SignUpFactory: NSObject {
     }
     
     static func getSignUpAccountStorage (_ callback : @escaping (AccountStorageInterface) -> Void) {
-        CoreDataModelManager.getInstance().getAccountStorageManager(callback)
+        AccountStorageCoreDataFactory.getInstance().getAccountStorageManager(callback)
     }
 }

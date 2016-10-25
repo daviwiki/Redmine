@@ -58,7 +58,7 @@ class LoginFactory: NSObject {
     }
     
     func getLoginAccountStorage (_ callback : @escaping (AccountStorageInterface) -> Void) {
-        CoreDataModelManager.getInstance().getAccountStorageManager(callback)
+        AccountStorageCoreDataFactory.getInstance().getAccountStorageManager(callback)
     }
     
     private override init() {

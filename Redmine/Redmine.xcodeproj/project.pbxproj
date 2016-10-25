@@ -17,7 +17,7 @@
 		46183D561DB9414900D121A0 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46183D551DB9414900D121A0 /* Account.swift */; };
 		46183D591DB94B9D00D121A0 /* SignUpAnimatedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46183D581DB94B9D00D121A0 /* SignUpAnimatedTextView.swift */; };
 		461955A91DB6921C007A790A /* SignUpFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461955A81DB6921C007A790A /* SignUpFactory.swift */; };
-		461955B41DB6964A007A790A /* AccountCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461955B21DB6964A007A790A /* AccountCoreData.swift */; };
+		461955B41DB6964A007A790A /* AccountStorageCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461955B21DB6964A007A790A /* AccountStorageCoreData.swift */; };
 		461955B51DB6964A007A790A /* AccountStorageInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461955B31DB6964A007A790A /* AccountStorageInterface.swift */; };
 		461955B71DB69948007A790A /* LoginLayoutInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461955B61DB69948007A790A /* LoginLayoutInterface.swift */; };
 		461955BD1DB69BB1007A790A /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461955BC1DB69BB1007A790A /* LoginFactory.swift */; };
@@ -31,7 +31,8 @@
 		462095FF1DB7E77C001AFB96 /* LoginRouterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462095FE1DB7E77C001AFB96 /* LoginRouterInterface.swift */; };
 		462A13251DBB72EF0036A371 /* SignUpAnimatedTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 462A13241DBB72EF0036A371 /* SignUpAnimatedTextView.xib */; };
 		462A13291DBBEE890036A371 /* ApiRestUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462A13281DBBEE890036A371 /* ApiRestUser.swift */; };
-		462A132D1DBBF25D0036A371 /* ApiRestAccountInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462A132C1DBBF25D0036A371 /* ApiRestAccountInterface.swift */; };
+		462A132D1DBBF25D0036A371 /* ApiRestAccountEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462A132C1DBBF25D0036A371 /* ApiRestAccountEntity.swift */; };
+		464D81AB1DBFD5D30097AC6D /* AccountStorageCoreDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464D81AA1DBFD5D30097AC6D /* AccountStorageCoreDataFactory.swift */; };
 		4693753E1D94785A00EE68C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693753D1D94785A00EE68C1 /* AppDelegate.swift */; };
 		469375431D94785A00EE68C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469375411D94785A00EE68C1 /* Main.storyboard */; };
 		469375451D94785A00EE68C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469375441D94785A00EE68C1 /* Assets.xcassets */; };
@@ -43,7 +44,6 @@
 		469375771D947A2800EE68C1 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375761D947A2800EE68C1 /* ProjectDetailViewController.swift */; };
 		469375791D947A4000EE68C1 /* ATEIssueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375781D947A4000EE68C1 /* ATEIssueDetailViewController.swift */; };
 		469E1D6A1D9C40D900FE5987 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 469E1D681D9C40D900FE5987 /* Model.xcdatamodeld */; };
-		469E1D6E1D9C45B600FE5987 /* CoreDataModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E1D6D1D9C45B600FE5987 /* CoreDataModelManager.swift */; };
 		46BAFB051DA01A2500A39ECD /* SignUpLayoutInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BAFB041DA01A2500A39ECD /* SignUpLayoutInterface.swift */; };
 		46BAFB121DA023DD00A39ECD /* SignUp.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46BAFB111DA023DD00A39ECD /* SignUp.strings */; };
 		46EC23CF1DBE80FD00F6C96C /* ProjectListLayoutInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EC23CE1DBE80FD00F6C96C /* ProjectListLayoutInterface.swift */; };
@@ -87,7 +87,7 @@
 		46183D551DB9414900D121A0 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		46183D581DB94B9D00D121A0 /* SignUpAnimatedTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpAnimatedTextView.swift; sourceTree = "<group>"; };
 		461955A81DB6921C007A790A /* SignUpFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpFactory.swift; sourceTree = "<group>"; };
-		461955B21DB6964A007A790A /* AccountCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCoreData.swift; sourceTree = "<group>"; };
+		461955B21DB6964A007A790A /* AccountStorageCoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountStorageCoreData.swift; sourceTree = "<group>"; };
 		461955B31DB6964A007A790A /* AccountStorageInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountStorageInterface.swift; sourceTree = "<group>"; };
 		461955B61DB69948007A790A /* LoginLayoutInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginLayoutInterface.swift; sourceTree = "<group>"; };
 		461955BC1DB69BB1007A790A /* LoginFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
@@ -101,7 +101,8 @@
 		462095FE1DB7E77C001AFB96 /* LoginRouterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouterInterface.swift; sourceTree = "<group>"; };
 		462A13241DBB72EF0036A371 /* SignUpAnimatedTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpAnimatedTextView.xib; sourceTree = "<group>"; };
 		462A13281DBBEE890036A371 /* ApiRestUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRestUser.swift; sourceTree = "<group>"; };
-		462A132C1DBBF25D0036A371 /* ApiRestAccountInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRestAccountInterface.swift; sourceTree = "<group>"; };
+		462A132C1DBBF25D0036A371 /* ApiRestAccountEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRestAccountEntity.swift; sourceTree = "<group>"; };
+		464D81AA1DBFD5D30097AC6D /* AccountStorageCoreDataFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountStorageCoreDataFactory.swift; sourceTree = "<group>"; };
 		4693753A1D94785A00EE68C1 /* Redmine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Redmine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4693753D1D94785A00EE68C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		469375421D94785A00EE68C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -119,7 +120,6 @@
 		469375761D947A2800EE68C1 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
 		469375781D947A4000EE68C1 /* ATEIssueDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATEIssueDetailViewController.swift; sourceTree = "<group>"; };
 		469E1D691D9C40D900FE5987 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		469E1D6D1D9C45B600FE5987 /* CoreDataModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataModelManager.swift; sourceTree = "<group>"; };
 		46BAFB041DA01A2500A39ECD /* SignUpLayoutInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpLayoutInterface.swift; sourceTree = "<group>"; };
 		46BAFB111DA023DD00A39ECD /* SignUp.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = SignUp.strings; sourceTree = "<group>"; };
 		46EC23CE1DBE80FD00F6C96C /* ProjectListLayoutInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectListLayoutInterface.swift; sourceTree = "<group>"; };
@@ -263,7 +263,8 @@
 			isa = PBXGroup;
 			children = (
 				461955B31DB6964A007A790A /* AccountStorageInterface.swift */,
-				461955B21DB6964A007A790A /* AccountCoreData.swift */,
+				461955B21DB6964A007A790A /* AccountStorageCoreData.swift */,
+				464D81AA1DBFD5D30097AC6D /* AccountStorageCoreDataFactory.swift */,
 			);
 			path = storage;
 			sourceTree = "<group>";
@@ -288,7 +289,7 @@
 		462A132B1DBBF22E0036A371 /* account */ = {
 			isa = PBXGroup;
 			children = (
-				462A132C1DBBF25D0036A371 /* ApiRestAccountInterface.swift */,
+				462A132C1DBBF25D0036A371 /* ApiRestAccountEntity.swift */,
 			);
 			path = account;
 			sourceTree = "<group>";
@@ -399,7 +400,6 @@
 		469E1D641D9C3F8900FE5987 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				469E1D6D1D9C45B600FE5987 /* CoreDataModelManager.swift */,
 				469E1D681D9C40D900FE5987 /* Model.xcdatamodeld */,
 			);
 			path = model;
@@ -609,11 +609,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				46EC23E11DBE838B00F6C96C /* GetLatestsProjectsInteractor.swift in Sources */,
+				464D81AB1DBFD5D30097AC6D /* AccountStorageCoreDataFactory.swift in Sources */,
 				469375751D947A0A00EE68C1 /* ProjectListViewController.swift in Sources */,
 				461955A91DB6921C007A790A /* SignUpFactory.swift in Sources */,
 				46EC23D71DBE823500F6C96C /* ProjectListFactory.swift in Sources */,
 				462095F11DB7D556001AFB96 /* LoginRouter.swift in Sources */,
-				461955B41DB6964A007A790A /* AccountCoreData.swift in Sources */,
+				461955B41DB6964A007A790A /* AccountStorageCoreData.swift in Sources */,
 				4693756E1D94796300EE68C1 /* LoginViewController.swift in Sources */,
 				46EC23DB1DBE82F500F6C96C /* GetAllProjectsInterface.swift in Sources */,
 				46EC23E31DBE844A00F6C96C /* ProjectListRouter.swift in Sources */,
@@ -622,7 +623,7 @@
 				46EC23D31DBE821900F6C96C /* ProjectListPresenterInterface.swift in Sources */,
 				462095F31DB7D5FF001AFB96 /* LoginPresenter.swift in Sources */,
 				469375771D947A2800EE68C1 /* ProjectDetailViewController.swift in Sources */,
-				462A132D1DBBF25D0036A371 /* ApiRestAccountInterface.swift in Sources */,
+				462A132D1DBBF25D0036A371 /* ApiRestAccountEntity.swift in Sources */,
 				469E1D6A1D9C40D900FE5987 /* Model.xcdatamodeld in Sources */,
 				469375791D947A4000EE68C1 /* ATEIssueDetailViewController.swift in Sources */,
 				46183D561DB9414900D121A0 /* Account.swift in Sources */,
@@ -642,7 +643,6 @@
 				4605B9471D99947200F7B6B8 /* SignUpViewController.swift in Sources */,
 				462095FB1DB7E58A001AFB96 /* LoginCheckInteractorInterface.swift in Sources */,
 				46EC23D11DBE81B800F6C96C /* ProjectListInterface.swift in Sources */,
-				469E1D6E1D9C45B600FE5987 /* CoreDataModelManager.swift in Sources */,
 				46183D521DB9411900D121A0 /* SignUpCreateAccountInterface.swift in Sources */,
 				46183D541DB9412300D121A0 /* SignUpRouter.swift in Sources */,
 				462095F51DB7D6C7001AFB96 /* LoginCheckInteractor.swift in Sources */,
