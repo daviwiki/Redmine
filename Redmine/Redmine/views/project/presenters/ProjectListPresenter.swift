@@ -10,7 +10,7 @@ import UIKit
 
 class ProjectListPresenter: NSObject, ProjectListPresenterInterface {
 
-    func navigateProject(_ project: ProjectInterface) {
+    func navigateProject(_ project: Project) {
         // TODO:
     }
     

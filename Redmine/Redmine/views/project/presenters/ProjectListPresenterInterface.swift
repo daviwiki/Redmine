@@ -11,6 +11,6 @@ import UIKit
 protocol ProjectListPresenterInterface {
     
     func onViewAppear (_ view : ProjectListLayoutInterface)
-    func navigateProject (_ project : ProjectInterface)
+    func navigateProject (_ project : Project)
     
 }

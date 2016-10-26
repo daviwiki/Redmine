@@ -10,6 +10,6 @@ import UIKit
 
 protocol GetLatestsProjectsInterface {
     
-    func getLatestProjects (_ completion : @escaping ([ProjectInterface]) -> Void)
+    func getLatestProjects (_ completion : @escaping ([Project]) -> Void)
     
 }

@@ -11,7 +11,7 @@ import UIKit
 protocol LoginRouterInterface {
     
     func navigateToSignUp ()
-    func navigateToProjects ()
+    func navigateToProjects (account: Account)
     
     init (controller : UIViewController)
 }

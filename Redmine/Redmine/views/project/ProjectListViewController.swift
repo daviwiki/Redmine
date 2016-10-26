@@ -10,6 +10,8 @@ import UIKit
 
 class ProjectListViewController: UIViewController, ProjectListLayoutInterface {
 
+    private var account : Account!
+    
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,15 +22,19 @@ class ProjectListViewController: UIViewController, ProjectListLayoutInterface {
     }
     
     // MARK: ProjectListInterface
+    func setAccount(account: Account) {
+        self.account = account
+    }
+    
     func showNoProjects() {
         
     }
     
-    func showLatestProjects(_ projects: [ProjectInterface]) {
+    func showLatestProjects(_ projects: [Project]) {
         
     }
     
-    func showAllProjects(_ projects: [ProjectInterface]) {
+    func showAllProjects(_ projects: [Project]) {
         
     }
 }

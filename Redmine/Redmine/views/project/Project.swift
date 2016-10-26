@@ -8,9 +8,9 @@
 
 import UIKit
 
-protocol ProjectInterface {
+class Project : NSObject {
     
-    var projectId : String { get set }
-    var projectName : String { get set }
+    var projectId : String = ""
+    var projectName : String = ""
     
 }

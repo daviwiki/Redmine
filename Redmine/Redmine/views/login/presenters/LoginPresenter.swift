@@ -35,7 +35,7 @@ class LoginPresenter: NSObject, LoginPresenterInterface {
         do {
             try getLoginInteractor.loginCheck(account) { [weak self] (ok : Bool) in
                 if (ok) {
-                    self?.router?.navigateToProjects()
+                    self?.router?.navigateToProjects(account: account)
                 } else {
                     
                     view.showError(message: localizedError)

@@ -36,12 +36,17 @@ SignUpAnimatedTextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.configureViewForPresentation(view: self)
-        roundCorner(view: signUpButton, radius: 6.0)
-        mountSignUpBoxes()
-        internacionalize()
         addHideKeyboardGesture()
     }
 
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        roundCorner(view: signUpButton, radius: 6.0)
+        mountSignUpBoxes()
+        internacionalize()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         addKeyboardEventsListeners()
@@ -122,9 +127,7 @@ SignUpAnimatedTextViewDelegate {
         view.layer.cornerRadius = radius
     }
     
-    private func mountSignUpBoxes () {
-        self.view.layoutIfNeeded()
-        
+    private func mountSignUpBoxes () {        
         let nib = UINib(nibName: "SignUpAnimatedTextView", bundle: nil)
         let accountNameView = nib.instantiate(withOwner: nil, options: nil).first as? SignUpAnimatedTextView
         accountNameView!.heightAnchor.constraint(equalToConstant: 60).isActive = true

@@ -10,8 +10,9 @@ import UIKit
 
 protocol ProjectListLayoutInterface {
     
+    func setAccount (account : Account)
     func showNoProjects()
-    func showLatestProjects(_ projects : [ProjectInterface])
-    func showAllProjects(_ projects : [ProjectInterface])
+    func showLatestProjects(_ projects : [Project])
+    func showAllProjects(_ projects : [Project])
     
 }

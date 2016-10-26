@@ -18,7 +18,7 @@ class LoginRouter: NSObject, LoginRouterInterface {
         originController.performSegue(withIdentifier: segueSignUp, sender: nil)
     }
     
-    func navigateToProjects() {
+    func navigateToProjects(account: Account) {
         originController.performSegue(withIdentifier: segueProjects, sender: nil)
     }
     

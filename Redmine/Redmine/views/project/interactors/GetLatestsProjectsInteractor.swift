@@ -10,7 +10,7 @@ import UIKit
 
 class GetLatestsProjectsInteractor: NSObject, GetLatestsProjectsInterface {
 
-    func getLatestProjects(_ completion: @escaping ([ProjectInterface]) -> Void) {
+    func getLatestProjects(_ completion: @escaping ([Project]) -> Void) {
         
     }
     

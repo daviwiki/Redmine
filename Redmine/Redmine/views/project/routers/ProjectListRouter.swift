@@ -12,7 +12,7 @@ class ProjectListRouter: NSObject, ProjectListRouterInterface {
 
     private weak var originController : UIViewController?
     
-    func navigateToProject(_ project: ProjectInterface) {
+    func navigateToProject(_ project: Project) {
         // TODO: 
     }
     

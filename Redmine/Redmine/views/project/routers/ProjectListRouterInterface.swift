@@ -10,7 +10,7 @@ import UIKit
 
 protocol ProjectListRouterInterface: NSObjectProtocol {
 
-    func navigateToProject (_ project : ProjectInterface)
+    func navigateToProject (_ project : Project)
     
     init(controller: UIViewController)
     

@@ -10,7 +10,7 @@ import UIKit
 
 class GetAllProjectsInteractor: NSObject, GetAllProjectsInterface {
     
-    internal func getAllProjects(_ completion: @escaping ([ProjectInterface]) -> Void) {
+    internal func getAllProjects(_ completion: @escaping ([Project]) -> Void) {
         
     }
     

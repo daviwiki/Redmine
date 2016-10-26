@@ -27,15 +27,13 @@ class LoginViewController: UIViewController, LoginLayoutInterface {
         
         presenter = factory.getPresenter()
         presenter.configureViewForPresentation(view: self)
-        
-        // Next call is neccessary before calculate roundCorner method
-        // or before call any function that needs to ask subviews size
-        // cause system is generating 1000x1000 view size at this point
-        // instead of real sizes
-        view.layoutIfNeeded()
-        
-        roundCorner(view: loginButton, radius: 6.0)
+                
         accountsContainer.isHidden = true
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        roundCorner(view: loginButton, radius: 6.0)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -45,6 +43,12 @@ class LoginViewController: UIViewController, LoginLayoutInterface {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let layout = segue.destination as? ProjectListLayoutInterface {
+            layout.setAccount(account: selectedAccount!)
+        }
     }
     
     // MARK: Services
