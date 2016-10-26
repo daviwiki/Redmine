@@ -11,7 +11,8 @@ import UIKit
 class GetLatestsProjectsInteractor: NSObject, GetLatestsProjectsInterface {
 
     func getLatestProjects(_ completion: @escaping ([Project]) -> Void) {
-        
+        // TODO: 
+        completion([])
     }
     
 }

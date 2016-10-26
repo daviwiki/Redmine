@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4605B9471D99947200F7B6B8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605B9461D99947200F7B6B8 /* SignUpViewController.swift */; };
 		4605B94B1D99A03000F7B6B8 /* pallette.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4605B94A1D99A03000F7B6B8 /* pallette.plist */; };
+		46143D7B1DC135B900455533 /* ApiRestProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46143D7A1DC135B900455533 /* ApiRestProject.swift */; };
+		46143D7D1DC13CC600455533 /* GetAllProjectsBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46143D7C1DC13CC600455533 /* GetAllProjectsBuilderTest.swift */; };
 		46183D4D1DB9410D00D121A0 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46183D4B1DB9410D00D121A0 /* SignUpPresenter.swift */; };
 		46183D4E1DB9410D00D121A0 /* SignUpPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46183D4C1DB9410D00D121A0 /* SignUpPresenterInterface.swift */; };
 		46183D511DB9411900D121A0 /* SignUpCreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46183D4F1DB9411900D121A0 /* SignUpCreateAccount.swift */; };
@@ -79,6 +81,8 @@
 /* Begin PBXFileReference section */
 		4605B9461D99947200F7B6B8 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4605B94A1D99A03000F7B6B8 /* pallette.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pallette.plist; sourceTree = "<group>"; };
+		46143D7A1DC135B900455533 /* ApiRestProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRestProject.swift; sourceTree = "<group>"; };
+		46143D7C1DC13CC600455533 /* GetAllProjectsBuilderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAllProjectsBuilderTest.swift; sourceTree = "<group>"; };
 		46183D4B1DB9410D00D121A0 /* SignUpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		46183D4C1DB9410D00D121A0 /* SignUpPresenterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPresenterInterface.swift; sourceTree = "<group>"; };
 		46183D4F1DB9411900D121A0 /* SignUpCreateAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpCreateAccount.swift; sourceTree = "<group>"; };
@@ -192,6 +196,15 @@
 			path = files;
 			sourceTree = "<group>";
 		};
+		46143D791DC1354F00455533 /* project */ = {
+			isa = PBXGroup;
+			children = (
+				46143D7A1DC135B900455533 /* ApiRestProject.swift */,
+			);
+			name = project;
+			path = projects;
+			sourceTree = "<group>";
+		};
 		46183D451DB93FF700D121A0 /* support */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				462A132B1DBBF22E0036A371 /* account */,
+				46143D791DC1354F00455533 /* project */,
 				462A13271DBBEE570036A371 /* users */,
 			);
 			path = apirest;
@@ -449,6 +463,7 @@
 				46EC23DE1DBE832400F6C96C /* GetAllProjectsInteractor.swift */,
 				46EC23DC1DBE830400F6C96C /* GetLatestsProjectsInterface.swift */,
 				46EC23E01DBE838B00F6C96C /* GetLatestsProjectsInteractor.swift */,
+				46143D7C1DC13CC600455533 /* GetAllProjectsBuilderTest.swift */,
 			);
 			path = interactors;
 			sourceTree = "<group>";
@@ -631,6 +646,7 @@
 				461955B71DB69948007A790A /* LoginLayoutInterface.swift in Sources */,
 				4693753E1D94785A00EE68C1 /* AppDelegate.swift in Sources */,
 				461955BD1DB69BB1007A790A /* LoginFactory.swift in Sources */,
+				46143D7B1DC135B900455533 /* ApiRestProject.swift in Sources */,
 				46EC23DD1DBE830400F6C96C /* GetLatestsProjectsInterface.swift in Sources */,
 				462095FF1DB7E77C001AFB96 /* LoginRouterInterface.swift in Sources */,
 				462095F91DB7E56E001AFB96 /* LoginReadAccountsInterface.swift in Sources */,
@@ -657,6 +673,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46143D7D1DC13CC600455533 /* GetAllProjectsBuilderTest.swift in Sources */,
 				469375531D94785A00EE68C1 /* RedmineTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

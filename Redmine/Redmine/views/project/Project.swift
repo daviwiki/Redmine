@@ -10,7 +10,7 @@ import UIKit
 
 class Project : NSObject {
     
-    var projectId : String = ""
-    var projectName : String = ""
+    var id : String = ""
+    var name : String = ""
     
 }
