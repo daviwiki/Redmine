@@ -35,7 +35,7 @@ SignUpAnimatedTextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.configureViewForPresentation(view: self)
+        presenter.bind(view: self)
         addHideKeyboardGesture()
     }
 
@@ -75,11 +75,7 @@ SignUpAnimatedTextViewDelegate {
     
     // MARK: Actions
     @IBAction func onClickSignUp (withSender sender : UIButton) {
-        presenter.onCreateAccount (
-            view: self,
-            name: nameAnimatedTextView.getTextField().text,
-            host: hostAnimatedTextView.getTextField().text,
-            token: tokenAnimatedTextView.getTextField().text)
+        createAccount()
     }
     
     @objc private func actionHideKeyboard (sender : AnyObject?) {
@@ -108,11 +104,7 @@ SignUpAnimatedTextViewDelegate {
         } else if (view == hostAnimatedTextView) {
             tokenAnimatedTextView.focus()
         } else {
-            presenter.onCreateAccount (
-                view: self,
-                name: nameAnimatedTextView.getTextField().text,
-                host: hostAnimatedTextView.getTextField().text,
-                token: tokenAnimatedTextView.getTextField().text)
+            createAccount()
         }
     }
     
@@ -121,7 +113,15 @@ SignUpAnimatedTextViewDelegate {
         presenter = SignUpFactory.getSignUpPresenter()
     }
     
-    // MARK: Internal
+    // MARK: Interal (orders)
+    private func createAccount () {
+        presenter.createAccount (
+            name: nameAnimatedTextView.getTextField().text,
+            host: hostAnimatedTextView.getTextField().text,
+            token: tokenAnimatedTextView.getTextField().text)
+    }
+    
+    // MARK: Internal (View)
     private func roundCorner (view : UIView, radius : CGFloat) {
         view.clipsToBounds = true
         view.layer.cornerRadius = radius

@@ -10,7 +10,7 @@ import UIKit
 
 protocol SignUpPresenterInterface : class {
     
-    func configureViewForPresentation (view : SignUpLayoutInterface)
-    func onCreateAccount (view : SignUpLayoutInterface, name : String?, host : String?, token : String?)
+    func bind (view : SignUpLayoutInterface)
+    func createAccount (name : String?, host : String?, token : String?)
     
 }

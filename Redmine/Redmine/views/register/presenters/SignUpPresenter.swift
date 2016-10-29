@@ -10,23 +10,25 @@ import UIKit
 
 class SignUpPresenter: NSObject, SignUpPresenterInterface {
     
+    private weak var view : SignUpLayoutInterface?
+    
     // MARK: Services
-    func configureViewForPresentation(view : SignUpLayoutInterface) {
-        
+    func bind(view: SignUpLayoutInterface) {
+        self.view = view
     }
     
-    func onCreateAccount(view : SignUpLayoutInterface, name: String?, host: String?, token: String?) {
+    func createAccount (name: String?, host: String?, token: String?) {
         
         let interactor = SignUpFactory.getSignUpCreateAccount()
         let router = SignUpFactory.getSignUpRouter()
         
         interactor.createAccount(
             name: name, host: host, token: token,
-            callback: { (isValid : Bool, message : String?) in
+            callback: { [weak self] (isValid : Bool, message : String?) in
                 if (isValid) {
                     router.navigateBack()
                 } else {
-                    view.showError(message: message!)
+                    self?.view?.showError(message: message!)
                 }
             }
         )

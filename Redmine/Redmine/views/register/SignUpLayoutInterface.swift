@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol SignUpLayoutInterface {
+protocol SignUpLayoutInterface : NSObjectProtocol {
         
     /**
      If a error ocurrs, a alert view must be shown with the message
