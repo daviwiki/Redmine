@@ -14,6 +14,9 @@ class Account: NSObject, NSCoding {
     var host : String = ""
     var token : String = ""
     
+    var isSelected : Bool = false
+    var order : Int = 0
+    
     // MARK: Lifecycle
     override init() {
         super.init()
@@ -23,12 +26,16 @@ class Account: NSObject, NSCoding {
         aCoder.encode(name, forKey: "name")
         aCoder.encode(host, forKey: "host")
         aCoder.encode(token, forKey: "token")
+        aCoder.encode(isSelected, forKey: "isSelected")
+        aCoder.encode(order, forKey: "order")
     }
     
     required init?(coder aDecoder: NSCoder) {
         name = aDecoder.decodeObject(forKey: "name") as! String
         host = aDecoder.decodeObject(forKey: "host") as! String
         token = aDecoder.decodeObject(forKey: "token") as! String
+        isSelected = aDecoder.decodeObject(forKey: "isSelected") as! Bool
+        order = aDecoder.decodeObject(forKey: "order") as! Int
     }
     
     override func isEqual(_ object: Any?) -> Bool {

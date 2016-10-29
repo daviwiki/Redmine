@@ -13,9 +13,11 @@ extension AccountMO {
     
     func buildAccountFrom() -> Account {
         let account = Account()
-        account.name = self.name!
-        account.host = self.host!
-        account.token = self.token!
+        account.name = name!
+        account.host = host!
+        account.token = token!
+        account.isSelected = selected
+        account.order = Int(order)
         return account
     }
     
@@ -34,11 +36,6 @@ class AccountStorageCoreData : NSObject, AccountStorageInterface {
         self.moc = moc
     }
     
-    /**
-     Save the account given by parameters into persistent location
-     - Parameters:
-        account, account to be saved
-    */
     func saveAccount (account : Account) {
         let entity = NSEntityDescription.insertNewObject(
             forEntityName: "Account",
@@ -47,6 +44,8 @@ class AccountStorageCoreData : NSObject, AccountStorageInterface {
         entity.name = account.name
         entity.host = account.host
         entity.token = account.token
+        entity.selected = account.isSelected
+        entity.order = Int32 (account.order)
         
         do {
             try moc.save()
@@ -55,11 +54,6 @@ class AccountStorageCoreData : NSObject, AccountStorageInterface {
         }
     }
     
-    /**
-     Return a list of all the accouts item storage at persisten location
-     - Returns:
-        Account list storage or nil if any account is storage
-    */
     func getAccounts () -> [Account] {
         let accountFetch : NSFetchRequest<AccountMO> = AccountMO.fetchRequest()
         
@@ -78,10 +72,10 @@ class AccountStorageCoreData : NSObject, AccountStorageInterface {
         return []
     }
     
-    /**
-     Remove the account defined by parameter. If this account not exists, this
-     method do nothing
-     */
+    func updateAccount(account: Account) {
+        saveAccount(account: account)
+    }
+    
     func removeAccount (account : Account) {
         guard let accountMO = getAccountMO(forName: account.name) else { return }
         moc.delete(accountMO)

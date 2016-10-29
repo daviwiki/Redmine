@@ -104,7 +104,8 @@ class AccountViewCell : UITableViewCell {
     @IBOutlet weak var tokenLabel : UILabel!
     
     func showAccount (_ account : Account) {
-        nameLabel.text = account.name
+        let titleSuffix = account.isSelected ? "(Active)" : ""
+        nameLabel.text = "\(account.name) \(titleSuffix)"
         hostLabel.text = "host : \(account.host)"
         
         let token = account.token

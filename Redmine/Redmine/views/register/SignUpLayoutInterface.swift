@@ -9,13 +9,8 @@
 import UIKit
 
 protocol SignUpLayoutInterface : NSObjectProtocol {
-        
-    /**
-     If a error ocurrs, a alert view must be shown with the message
-     given.
-     - Parameters:
-        message, the message to display inside the alert
-    */
+
     func showError (message : String)
+    func showAccountCreated (account : Account)
     
 }

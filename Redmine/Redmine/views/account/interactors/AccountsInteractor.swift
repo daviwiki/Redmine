@@ -24,4 +24,20 @@ class AccountsInteractor: NSObject, AccountsInteractorInterface {
         })
     }
     
+    func getSelectedAccount(_ callback: @escaping (Account?) -> Void) {
+        // TODO: Por eficencia, generar una query que solo busque la cuenta
+        // seleccionada en base de datos en lugar de traer todos las cuentas
+        // y luego buscar
+        AccountFactory.getInstance().getAccountStorage({ (storage : AccountStorageInterface) in
+            let accounts = storage.getAccounts()
+            for account in accounts {
+                if (account.isSelected) {
+                    callback(account)
+                    return
+                }
+            }
+            
+            callback(nil)
+        })
+    }
 }

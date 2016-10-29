@@ -3,9 +3,11 @@
     <entity name="Account" representedClassName="AccountMO" syncable="YES" codeGenerationType="class">
         <attribute name="host" attributeType="String" minValueString="1" syncable="YES"/>
         <attribute name="name" attributeType="String" minValueString="1" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 32" minValueString="0" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="selected" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="token" attributeType="String" minValueString="1" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Account" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Account" positionX="-63" positionY="-18" width="128" height="118"/>
     </elements>
 </model>

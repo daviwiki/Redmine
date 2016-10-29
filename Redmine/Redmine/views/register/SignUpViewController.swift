@@ -72,6 +72,19 @@ SignUpAnimatedTextViewDelegate {
         present(alert, animated: true, completion: nil)
     }
     
+    func showAccountCreated (account: Account) {
+        let alertTitle = getLocalizable(fromId: "alert_title")
+        let messagePattern = getLocalizable(fromId: "ok_account_created")!
+        let message = String(format: messagePattern, account.name)
+        let alert = UIAlertController(title: alertTitle, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let alertActionTitle = getLocalizable(fromId: "alert_ok_action")
+        let action = UIAlertAction(title: alertActionTitle, style: UIAlertActionStyle.default, handler: nil)
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
     // MARK: Actions
     @IBAction func onClickSignUp (withSender sender : UIButton) {
         createAccount()

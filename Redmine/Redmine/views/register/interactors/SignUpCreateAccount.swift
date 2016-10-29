@@ -53,10 +53,15 @@ class SignUpCreateAccount: NSObject, SignUpCreateAccountInterface {
             return
         }
         
+        let storedAccounts = accountStorage?.getAccounts()
+        let isSelected = storedAccounts!.count == 0
+        
         let account = Account()
         account.name = name!
         account.host = host!
         account.token = token!
+        account.isSelected = isSelected
+        account.order = 0
         
         persistAccount(account: account)
         print("[SignUpViewController] - Account saves successfully \(name)")
