@@ -51,6 +51,10 @@ class LoginPresenter: NSObject, LoginPresenterInterface {
         router?.navigateToSignUp()
     }
     
+    func onManageAccounts() {
+        router?.navigateToManageAccounts()
+    }
+    
     override init() {
         
         let factory = LoginFactory.getInstance()

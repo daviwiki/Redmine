@@ -12,6 +12,7 @@ protocol LoginRouterInterface {
     
     func navigateToSignUp ()
     func navigateToProjects (account: Account)
+    func navigateToManageAccounts ()
     
     init (controller : UIViewController)
 }

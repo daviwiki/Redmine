@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        customizeNavigationBars()
+        customizeBarButtonItems()
+        
         return true
     }
 
@@ -58,8 +62,6 @@ extension AppDelegate : URLSessionTaskDelegate {
         }
     }
     
-    
-    
     var defaultConfiguration : URLSessionConfiguration {
         get {
             return URLSessionConfiguration.default
@@ -80,4 +82,28 @@ extension AppDelegate : URLSessionTaskDelegate {
     func urlSession(_ session: URLSession, task: URLSessionTask, didFinishCollecting metrics: URLSessionTaskMetrics) {
         print("\(metrics)")
     }
+}
+
+extension AppDelegate {
+    
+    func customizeNavigationBars() {
+        let appearance = UINavigationBar.appearance()
+        let font = UIFont(name: "SFUIText-Regular", size: 18)!
+        appearance.titleTextAttributes = [
+            NSForegroundColorAttributeName : #colorLiteral(red: 0, green: 0.9182831645, blue: 0.7645309567, alpha: 1),
+            NSFontAttributeName : font
+        ]
+    }
+    
+    func customizeBarButtonItems() {
+        let appearance = UIBarButtonItem.appearance()
+        let font = UIFont(name: "SFUIText-Regular", size: 16)!
+        appearance.setTitleTextAttributes(
+            [
+                NSForegroundColorAttributeName : #colorLiteral(red: 0, green: 0.9182831645, blue: 0.7645309567, alpha: 1),
+                NSFontAttributeName : font
+            ],
+            for: UIControlState.normal)
+    }
+    
 }

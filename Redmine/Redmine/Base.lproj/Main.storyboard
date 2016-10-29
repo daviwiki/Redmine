@@ -6,12 +6,20 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-UI-Text-Light.otf">
+            <string>SFUIText-Light</string>
+        </array>
+        <array key="SF-UI-Text-Regular.otf">
+            <string>SFUIText-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="ivy-9p-6Jf">
             <objects>
                 <navigationController id="JxK-Df-ogX" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="dFJ-9x-lIm">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="dFJ-9x-lIm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.1137254902" green="0.91372549020000005" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -109,12 +117,28 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQg-Bc-K6z" userLabel="Button - Add new Account">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="sFh-C2-gaX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Add new account">
                                     <color key="titleColor" red="0.1137254902" green="0.91372549020000005" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="actionOnSignUp:" destination="g5P-en-wgo" eventType="touchUpInside" id="iLR-in-zw9"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPW-4T-hru" userLabel="Button - Manage Accounts">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="exz-t0-zbH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Manage Accounts">
+                                    <color key="titleColor" red="0.1137254902" green="0.91372549020000005" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionOnManageAccounts:" destination="g5P-en-wgo" eventType="touchUpInside" id="yak-m9-BjQ"/>
+                                    <segue destination="GBx-fB-Qr1" kind="presentation" identifier="login_to_accounts" id="tEr-WB-9B9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -125,6 +149,8 @@
                             <constraint firstItem="pFX-nA-CIg" firstAttribute="centerY" secondItem="pxY-ZL-KV1" secondAttribute="centerY" id="SWT-7F-CHq"/>
                             <constraint firstItem="eQg-Bc-K6z" firstAttribute="centerX" secondItem="pxY-ZL-KV1" secondAttribute="centerX" id="VkZ-jA-co2"/>
                             <constraint firstItem="pFX-nA-CIg" firstAttribute="leading" secondItem="pxY-ZL-KV1" secondAttribute="leading" constant="32" id="iGb-TM-vdZ"/>
+                            <constraint firstItem="eQg-Bc-K6z" firstAttribute="top" secondItem="mPW-4T-hru" secondAttribute="bottom" constant="16" id="kvC-PB-q1Z"/>
+                            <constraint firstItem="mPW-4T-hru" firstAttribute="centerX" secondItem="pxY-ZL-KV1" secondAttribute="centerX" id="mGl-hF-oPT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="H1O-eS-SdJ"/>
@@ -132,6 +158,7 @@
                         <outlet property="accountTitleLabel" destination="JjN-3f-K3p" id="pg8-Q4-Lvr"/>
                         <outlet property="accountsContainer" destination="pFX-nA-CIg" id="5PJ-4S-0sv"/>
                         <outlet property="loginButton" destination="F6E-ee-mmP" id="fUy-Ws-kKS"/>
+                        <outlet property="manageAccountsButton" destination="mPW-4T-hru" id="9ZM-08-NU2"/>
                         <segue destination="8Ma-MU-5yi" kind="show" identifier="login_to_projectlist" id="9zv-Zz-o1d"/>
                         <segue destination="lNd-ec-ffr" kind="show" identifier="login_to_signup" id="jIX-Bx-bhj"/>
                     </connections>
@@ -201,7 +228,123 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbY-ah-hp5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="329" y="842"/>
+            <point key="canvasLocation" x="294" y="849"/>
+        </scene>
+        <!--Account View Controller-->
+        <scene sceneID="V77-76-oY0">
+            <objects>
+                <viewController id="GBx-fB-Qr1" customClass="AccountViewController" customModule="Redmine" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5SF-jM-5M9"/>
+                        <viewControllerLayoutGuide type="bottom" id="66M-mA-fSc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yAv-Nz-a1F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miM-ay-p0C">
+                                <color key="tintColor" red="0.1137254902" green="0.91372549020000005" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.1137254902" green="0.91372549020000005" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Accounts Manager" id="8TY-9y-IV0">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="Ob7-tQ-30V">
+                                            <connections>
+                                                <action selector="actionOnCancel:" destination="GBx-fB-Qr1" id="FbK-Z5-47y"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="bun-qS-e5Z">
+                                            <color key="tintColor" red="0.1137254902" green="0.91372549020000005" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="actionOnEdit:" destination="GBx-fB-Qr1" id="ykX-MT-4MY"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="94" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n0s-di-YEQ">
+                                <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="accountcell" id="BZn-7x-hM6" customClass="AccountViewCell" customModule="Redmine" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="94"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BZn-7x-hM6" id="lFq-Tt-vTq">
+                                            <frame key="frameInset" width="375" height="94"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9h-60-J03" userLabel="Label - Name">
+                                                    <fontDescription key="fontDescription" name="SFUIText-Light" family="SF UI Text" pointSize="22"/>
+                                                    <color key="textColor" red="0.1137254902" green="0.91372549020000005" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzq-Bl-jly" userLabel="Label - Host">
+                                                    <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="14"/>
+                                                    <color key="textColor" red="0.1137254902" green="0.91372549020000005" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDb-AL-kxc" userLabel="Label - Token">
+                                                    <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI Text" pointSize="14"/>
+                                                    <color key="textColor" red="0.1137254902" green="0.91372549020000005" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6SJ-Ia-ZgR">
+                                                    <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="FXd-aY-evk"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="UDb-AL-kxc" secondAttribute="bottom" constant="8" id="9Am-TV-ONn"/>
+                                                <constraint firstAttribute="trailing" secondItem="tzq-Bl-jly" secondAttribute="trailing" constant="16" id="Cme-B4-Kab"/>
+                                                <constraint firstAttribute="trailing" secondItem="W9h-60-J03" secondAttribute="trailing" constant="16" id="HFo-mf-wej"/>
+                                                <constraint firstAttribute="trailing" secondItem="UDb-AL-kxc" secondAttribute="trailing" constant="16" id="ItT-Rt-LPa"/>
+                                                <constraint firstItem="6SJ-Ia-ZgR" firstAttribute="leading" secondItem="lFq-Tt-vTq" secondAttribute="leading" constant="16" id="K0h-fx-2Cd"/>
+                                                <constraint firstItem="UDb-AL-kxc" firstAttribute="leading" secondItem="lFq-Tt-vTq" secondAttribute="leading" constant="16" id="KPC-Ed-nby"/>
+                                                <constraint firstAttribute="trailing" secondItem="6SJ-Ia-ZgR" secondAttribute="trailing" id="LUD-h3-gnO"/>
+                                                <constraint firstAttribute="bottom" secondItem="6SJ-Ia-ZgR" secondAttribute="bottom" id="Shf-uu-yAQ"/>
+                                                <constraint firstItem="tzq-Bl-jly" firstAttribute="top" secondItem="W9h-60-J03" secondAttribute="bottom" constant="8" id="VGM-GC-HkS"/>
+                                                <constraint firstItem="UDb-AL-kxc" firstAttribute="top" secondItem="tzq-Bl-jly" secondAttribute="bottom" id="Wqu-7l-dwE"/>
+                                                <constraint firstItem="W9h-60-J03" firstAttribute="leading" secondItem="lFq-Tt-vTq" secondAttribute="leading" constant="16" id="bHd-Ix-mSf"/>
+                                                <constraint firstItem="tzq-Bl-jly" firstAttribute="leading" secondItem="lFq-Tt-vTq" secondAttribute="leading" constant="16" id="i9P-2O-ZeM"/>
+                                                <constraint firstItem="W9h-60-J03" firstAttribute="top" secondItem="lFq-Tt-vTq" secondAttribute="top" constant="8" id="yB0-m7-6zc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="hostLabel" destination="tzq-Bl-jly" id="EZe-eQ-9M9"/>
+                                            <outlet property="nameLabel" destination="W9h-60-J03" id="8w6-n5-Gw0"/>
+                                            <outlet property="tokenLabel" destination="UDb-AL-kxc" id="Kw4-FR-WpC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="GBx-fB-Qr1" id="SBU-lL-l7b"/>
+                                    <outlet property="delegate" destination="GBx-fB-Qr1" id="air-Av-9GO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="n0s-di-YEQ" secondAttribute="trailing" id="9Rb-b8-Tg1"/>
+                            <constraint firstItem="66M-mA-fSc" firstAttribute="top" secondItem="n0s-di-YEQ" secondAttribute="bottom" id="CmQ-c4-31M"/>
+                            <constraint firstItem="n0s-di-YEQ" firstAttribute="top" secondItem="miM-ay-p0C" secondAttribute="bottom" id="DzC-h4-Obw"/>
+                            <constraint firstAttribute="trailing" secondItem="miM-ay-p0C" secondAttribute="trailing" id="GoJ-Rr-Vmc"/>
+                            <constraint firstItem="miM-ay-p0C" firstAttribute="top" secondItem="5SF-jM-5M9" secondAttribute="bottom" id="IKu-1a-wtX"/>
+                            <constraint firstItem="n0s-di-YEQ" firstAttribute="leading" secondItem="yAv-Nz-a1F" secondAttribute="leading" id="ZNV-Dh-O4S"/>
+                            <constraint firstItem="miM-ay-p0C" firstAttribute="leading" secondItem="yAv-Nz-a1F" secondAttribute="leading" id="hmm-hO-6nz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="n0s-di-YEQ" id="qcO-je-EjA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XGP-Fc-RK7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1412" y="848.72563718140941"/>
         </scene>
         <!--Proyectos-->
         <scene sceneID="juF-ZV-qv7">

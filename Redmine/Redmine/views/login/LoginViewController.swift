@@ -13,6 +13,7 @@ class LoginViewController: UIViewController, LoginLayoutInterface {
     @IBOutlet weak var accountTitleLabel : UILabel!
     @IBOutlet weak var loginButton : UIButton!
     @IBOutlet weak var accountsContainer : UIView!
+    @IBOutlet weak var manageAccountsButton: UIButton!
     
     private var factory : LoginFactory!
     private var presenter : LoginPresenterInterface!
@@ -67,10 +68,12 @@ class LoginViewController: UIViewController, LoginLayoutInterface {
     
     func showNoAccount() {
         accountsContainer.isHidden = true
+        manageAccountsButton.isHidden = true
     }
     
     func showAccount(account: Account) {
         accountsContainer.isHidden = false
+        manageAccountsButton.isHidden = false
         selectedAccount = account
         accountTitleLabel.text = selectedAccount?.name
     }
@@ -83,6 +86,10 @@ class LoginViewController: UIViewController, LoginLayoutInterface {
     @IBAction func actionOnLogin (_ sender : UIButton) {
         guard selectedAccount != nil else { return }
         presenter.onLogin(account: selectedAccount!, view : self)
+    }
+    
+    @IBAction func actionOnManageAccounts (_ sender : UIButton) {
+        presenter.onManageAccounts()
     }
     
     // MARK: Internal

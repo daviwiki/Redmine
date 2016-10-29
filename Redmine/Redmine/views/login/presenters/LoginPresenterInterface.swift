@@ -14,5 +14,6 @@ protocol LoginPresenterInterface {
     func onViewAppear (view : LoginLayoutInterface)
     func onLogin(account: Account, view: LoginLayoutInterface)
     func onCreateAccount ()
+    func onManageAccounts ()
     
 }
