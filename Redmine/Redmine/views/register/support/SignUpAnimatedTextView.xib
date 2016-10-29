@@ -51,10 +51,10 @@
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="textField" destination="Ul4-rv-J4U" id="N4a-CT-fz4"/>
-                <outlet property="titleLabel" destination="JtK-cT-3YG" id="jgI-KO-6OP"/>
+                <outlet property="textField" destination="Ul4-rv-J4U" id="wK0-41-AkQ"/>
+                <outlet property="titleLabel" destination="JtK-cT-3YG" id="ZBe-VA-4jm"/>
             </connections>
-            <point key="canvasLocation" x="-116" y="53"/>
+            <point key="canvasLocation" x="-544" y="247"/>
         </view>
     </objects>
 </document>
