@@ -41,7 +41,15 @@ UITableViewDataSource, UITableViewDelegate {
         self.accounts = accounts
         tableView.reloadData()
     }
+    
+    func refreshAccount(_ account: Account) {
+        guard let index = accounts?.index(of: account) else { return }
+        accounts![index] = account
         
+        let indexPath = IndexPath(row: index, section: 0)
+        tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+    }
+    
     func removeAccount(_ account: Account) {
         guard let index = accounts?.index(of: account) else { return }
         accounts?.remove(at: index)

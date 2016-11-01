@@ -35,6 +35,16 @@ class AccountPresenter: NSObject, AccountPresenterInterface {
     func removeAccount(_ account: Account) {
         interactor.removeAccount(account) { [weak self] (account: Account, removed: Bool) in
             self?.view?.removeAccount(account)
+            
+            if (account.isSelected) {
+                self?.interactor.getAccounts({ [weak self] (accounts : [Account]) in
+                    guard let ac = accounts.first else { return }
+                    ac.isSelected = true
+                    self?.interactor.selectAccount(ac, { (ac : Account) in
+                        self?.view?.refreshAccount(ac)
+                    })
+                })
+            }
         }
     }
     

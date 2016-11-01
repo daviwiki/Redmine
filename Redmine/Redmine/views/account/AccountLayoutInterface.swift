@@ -11,6 +11,7 @@ import UIKit
 protocol AccountLayoutInterface: NSObjectProtocol {
 
     func showAccounts (_ accounts : [Account])
+    func refreshAccount (_ account : Account)
     func removeAccount (_ account : Account)
     
 }
