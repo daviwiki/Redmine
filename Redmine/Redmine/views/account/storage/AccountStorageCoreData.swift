@@ -36,24 +36,6 @@ class AccountStorageCoreData : NSObject, AccountStorageInterface {
         self.moc = moc
     }
     
-    func saveAccount (account : Account) {
-        let entity = NSEntityDescription.insertNewObject(
-            forEntityName: "Account",
-            into: moc) as! AccountMO
-        
-        entity.name = account.name
-        entity.host = account.host
-        entity.token = account.token
-        entity.selected = account.isSelected
-        entity.order = Int32 (account.order)
-        
-        do {
-            try moc.save()
-        } catch {
-            print("[AccountCoreData] Account item couldn't be saved")
-        }
-    }
-    
     func getAccounts () -> [Account] {
         let accountFetch : NSFetchRequest<AccountMO> = AccountMO.fetchRequest()
         
@@ -72,8 +54,46 @@ class AccountStorageCoreData : NSObject, AccountStorageInterface {
         return []
     }
     
+    func getAccountForName (_ name : String) -> Account? {
+        guard let accountMO = getAccountMO(forName: name) else { return nil }
+        return accountMO.buildAccountFrom()
+    }
+    
+    func saveAccount (account : Account) {
+        let entity = NSEntityDescription.insertNewObject(
+            forEntityName: "Account",
+            into: moc) as! AccountMO
+        
+        entity.name = account.name
+        entity.host = account.host
+        entity.token = account.token
+        entity.selected = account.isSelected
+        entity.order = Int32 (account.order)
+        
+        do {
+            try moc.save()
+        } catch {
+            print("[AccountCoreData] Account item couldn't be saved")
+        }
+    }
+    
     func updateAccount(account: Account) {
-        saveAccount(account: account)
+        guard let accountMO = getAccountMO(forName: account.name) else {
+            print("[AccountCoreData] No item to be updated")
+            return
+        }
+        
+        accountMO.name = account.name
+        accountMO.host = account.host
+        accountMO.token = account.token
+        accountMO.order = Int32 (account.order)
+        accountMO.selected = account.isSelected
+        
+        do {
+            try moc.save()
+        } catch {
+            print("[AccountCoreData] Account item couldn't be updated")
+        }
     }
     
     func removeAccount (account : Account) {
@@ -86,8 +106,23 @@ class AccountStorageCoreData : NSObject, AccountStorageInterface {
         }
     }
     
+    func removeAll () {
+        let accountFetch : NSFetchRequest<AccountMO> = AccountMO.fetchRequest()
+        
+        do {
+            let fetchedAccounts = try moc.fetch(accountFetch)
+            for item in fetchedAccounts {
+                moc.delete(item)
+            }
+            try moc.save()
+            
+        } catch let error as NSError {
+            print ("[AccountCoreData] remove all items failed \(error)")
+        }
+    }
+    
     // MARK: Internal
-    func getAccountMO (forName name : String) -> AccountMO? {
+    private func getAccountMO (forName name : String) -> AccountMO? {
         let accountFetch : NSFetchRequest<AccountMO> = AccountMO.fetchRequest()
         accountFetch.predicate = NSPredicate(format: "name == %@", name)
         

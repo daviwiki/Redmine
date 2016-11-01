@@ -41,7 +41,7 @@ UITableViewDataSource, UITableViewDelegate {
         self.accounts = accounts
         tableView.reloadData()
     }
-    
+        
     func removeAccount(_ account: Account) {
         guard let index = accounts?.index(of: account) else { return }
         accounts?.remove(at: index)
@@ -88,6 +88,11 @@ UITableViewDataSource, UITableViewDelegate {
             let account = accounts![indexPath.row]
             presenter.removeAccount(account)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let account = accounts![indexPath.row]
+        presenter.selectAccount(account)
     }
     
     // MARK: Internal (inject)

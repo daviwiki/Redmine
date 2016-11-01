@@ -18,6 +18,11 @@ protocol AccountStorageInterface {
     func getAccounts () -> [Account]
     
     /**
+     Return the account for the name given
+    */
+    func getAccountForName (_ name : String) -> Account?
+    
+    /**
      Update account data
      - Parameters:
      account, account to be updated

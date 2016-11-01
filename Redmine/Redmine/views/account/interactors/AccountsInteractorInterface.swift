@@ -11,7 +11,9 @@ import UIKit
 protocol AccountsInteractorInterface : NSObjectProtocol {
 
     func getAccounts (_ callback: @escaping ([Account]) -> Void)
-    func removeAccount (_ account: Account, _ callback: @escaping (_ account: Account, _ removed: Bool) -> Void)
     func getSelectedAccount (_ callback : @escaping (Account?) -> Void)
     
+    func selectAccount(_ account: Account, _ callback: @escaping (Account) -> Void)
+    func updateAccount(_ account: Account, _ callback: @escaping (Account) -> Void)
+    func removeAccount (_ account: Account, _ callback: @escaping (_ account: Account, _ removed: Bool) -> Void)
 }

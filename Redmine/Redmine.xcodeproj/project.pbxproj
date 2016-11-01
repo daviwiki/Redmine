@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4605B9471D99947200F7B6B8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605B9461D99947200F7B6B8 /* SignUpViewController.swift */; };
 		4605B94B1D99A03000F7B6B8 /* pallette.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4605B94A1D99A03000F7B6B8 /* pallette.plist */; };
+		460E56F51DC920A900241762 /* AccountStorageCoreDataTestUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E56F41DC920A900241762 /* AccountStorageCoreDataTestUnit.swift */; };
 		46143D7B1DC135B900455533 /* ApiRestProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46143D7A1DC135B900455533 /* ApiRestProject.swift */; };
 		46143D7D1DC13CC600455533 /* GetAllProjectsBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46143D7C1DC13CC600455533 /* GetAllProjectsBuilderTest.swift */; };
 		46183D4D1DB9410D00D121A0 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46183D4B1DB9410D00D121A0 /* SignUpPresenter.swift */; };
@@ -63,7 +64,6 @@
 		469375451D94785A00EE68C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469375441D94785A00EE68C1 /* Assets.xcassets */; };
 		469375481D94785A00EE68C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469375461D94785A00EE68C1 /* LaunchScreen.storyboard */; };
 		469375531D94785A00EE68C1 /* RedmineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375521D94785A00EE68C1 /* RedmineTests.swift */; };
-		4693755E1D94785A00EE68C1 /* RedmineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693755D1D94785A00EE68C1 /* RedmineUITests.swift */; };
 		4693756E1D94796300EE68C1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693756D1D94796300EE68C1 /* LoginViewController.swift */; };
 		469375751D947A0A00EE68C1 /* ProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375741D947A0A00EE68C1 /* ProjectListViewController.swift */; };
 		469375771D947A2800EE68C1 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375761D947A2800EE68C1 /* ProjectDetailViewController.swift */; };
@@ -111,6 +111,7 @@
 /* Begin PBXFileReference section */
 		4605B9461D99947200F7B6B8 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4605B94A1D99A03000F7B6B8 /* pallette.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pallette.plist; sourceTree = "<group>"; };
+		460E56F41DC920A900241762 /* AccountStorageCoreDataTestUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountStorageCoreDataTestUnit.swift; sourceTree = "<group>"; };
 		46143D7A1DC135B900455533 /* ApiRestProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRestProject.swift; sourceTree = "<group>"; };
 		46143D7C1DC13CC600455533 /* GetAllProjectsBuilderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAllProjectsBuilderTest.swift; sourceTree = "<group>"; };
 		46183D4B1DB9410D00D121A0 /* SignUpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
@@ -343,6 +344,7 @@
 			children = (
 				461955B31DB6964A007A790A /* AccountStorageInterface.swift */,
 				461955B21DB6964A007A790A /* AccountStorageCoreData.swift */,
+				460E56F41DC920A900241762 /* AccountStorageCoreDataTestUnit.swift */,
 				464D81AA1DBFD5D30097AC6D /* AccountStorageCoreDataFactory.swift */,
 			);
 			path = storage;
@@ -835,6 +837,7 @@
 			files = (
 				46143D7D1DC13CC600455533 /* GetAllProjectsBuilderTest.swift in Sources */,
 				469375531D94785A00EE68C1 /* RedmineTests.swift in Sources */,
+				460E56F51DC920A900241762 /* AccountStorageCoreDataTestUnit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -842,7 +845,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4693755E1D94785A00EE68C1 /* RedmineUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

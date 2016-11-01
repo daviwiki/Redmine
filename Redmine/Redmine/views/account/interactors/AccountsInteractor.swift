@@ -17,13 +17,6 @@ class AccountsInteractor: NSObject, AccountsInteractorInterface {
         })
     }
     
-    func removeAccount(_ account: Account, _ callback: @escaping (Account, Bool) -> Void) {
-        AccountFactory.getInstance().getAccountStorage({ (storage : AccountStorageInterface) in
-            storage.removeAccount(account: account)
-            callback(account, true)
-        })
-    }
-    
     func getSelectedAccount(_ callback: @escaping (Account?) -> Void) {
         // TODO: Por eficencia, generar una query que solo busque la cuenta
         // seleccionada en base de datos en lugar de traer todos las cuentas
@@ -40,4 +33,43 @@ class AccountsInteractor: NSObject, AccountsInteractorInterface {
             callback(nil)
         })
     }
+    
+    func selectAccount(_ account: Account, _ callback: @escaping (Account) -> Void) {
+        AccountFactory.getInstance().getAccountStorage({ [weak self] (storage : AccountStorageInterface) in
+            let accounts = storage.getAccounts()
+            var accountsToBeUpdated : [Account] = []
+            
+            for item in accounts {
+                if (item.isSelected && item.name != account.name) {
+                    item.isSelected = false
+                    accountsToBeUpdated.append(item)
+                }
+            }
+            
+            accountsToBeUpdated.append(account)
+            
+            for item in accountsToBeUpdated {
+                self?.updateAccount(item, { (account : Account) in
+                    // do nothing
+                })
+            }
+            
+            callback(account)
+        })
+    }
+    
+    func updateAccount(_ account: Account, _ callback: @escaping (Account) -> Void) {
+        AccountFactory.getInstance().getAccountStorage { (storage : AccountStorageInterface) in
+            storage.updateAccount(account: account)
+            callback (account)
+        }
+    }
+    
+    func removeAccount(_ account: Account, _ callback: @escaping (Account, Bool) -> Void) {
+        AccountFactory.getInstance().getAccountStorage({ (storage : AccountStorageInterface) in
+            storage.removeAccount(account: account)
+            callback(account, true)
+        })
+    }
+    
 }

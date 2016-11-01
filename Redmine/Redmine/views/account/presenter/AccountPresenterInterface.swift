@@ -13,5 +13,6 @@ protocol AccountPresenterInterface : NSObjectProtocol {
     func bind (view : AccountLayoutInterface)
     func loadAccounts ()
     func removeAccount (_ account : Account)
+    func selectAccount (_ account : Account)
     
 }
