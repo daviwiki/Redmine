@@ -27,7 +27,7 @@ class LoginViewController: UIViewController, LoginLayoutInterface {
         factory.setOriginController(controller: self)
         
         presenter = factory.getPresenter()
-        presenter.configureViewForPresentation(view: self)
+        presenter.bind(view: self)
                 
         accountsContainer.isHidden = true
     }
@@ -39,7 +39,7 @@ class LoginViewController: UIViewController, LoginLayoutInterface {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.presenter.onViewAppear(view: self)
+        self.presenter.onViewAppear()
     }
     
     override func didReceiveMemoryWarning() {
@@ -85,7 +85,7 @@ class LoginViewController: UIViewController, LoginLayoutInterface {
     
     @IBAction func actionOnLogin (_ sender : UIButton) {
         guard selectedAccount != nil else { return }
-        presenter.onLogin(account: selectedAccount!, view : self)
+        presenter.onLogin(account: selectedAccount!)
     }
     
     @IBAction func actionOnManageAccounts (_ sender : UIButton) {

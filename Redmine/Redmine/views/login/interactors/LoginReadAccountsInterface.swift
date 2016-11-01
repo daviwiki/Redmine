@@ -11,5 +11,6 @@ import UIKit
 protocol LoginReadAccountsInterface {
     
     func readAccounts (callback : @escaping ([Account]) -> ())
+    func readSelectedAccount (callback : @escaping (Account?) -> ())
     
 }

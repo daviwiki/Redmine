@@ -10,9 +10,9 @@ import UIKit
 
 protocol LoginPresenterInterface {
     
-    func configureViewForPresentation (view : LoginLayoutInterface)
-    func onViewAppear (view : LoginLayoutInterface)
-    func onLogin(account: Account, view: LoginLayoutInterface)
+    func bind (view : LoginLayoutInterface)
+    func onViewAppear ()
+    func onLogin(account: Account)
     func onCreateAccount ()
     func onManageAccounts ()
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol LoginLayoutInterface {
+protocol LoginLayoutInterface : NSObjectProtocol {
     
     // TODO: Define methods for localization
     

@@ -10,25 +10,26 @@ import UIKit
 
 class LoginPresenter: NSObject, LoginPresenterInterface {
 
+    private weak var view : LoginLayoutInterface?
     private var router : LoginRouterInterface?
     private var getLoginInteractor : LoginCheckInteractorInterface!
     private var readAccountsInteractor : LoginReadAccountsInterface!
     
-    func configureViewForPresentation(view: LoginLayoutInterface) {
-        // do nothing
+    func bind(view: LoginLayoutInterface) {
+        self.view = view
     }
     
-    func onViewAppear(view: LoginLayoutInterface) {
-        readAccountsInteractor.readAccounts { (accounts : [Account]) in
-            if (accounts.count == 0) {
-                view.showNoAccount()
+    func onViewAppear() {
+        readAccountsInteractor.readSelectedAccount { [weak self] (account : Account?) in
+            if (account == nil) {
+                self?.view?.showNoAccount()
             } else {
-                view.showAccount(account: accounts.first!)
+                self?.view?.showAccount(account: account!)
             }
         }
     }
     
-    func onLogin(account: Account, view: LoginLayoutInterface) {
+    func onLogin(account: Account) {
         // TODO: Localize string
         // TODO: Improve error message for each error type
         let localizedError = "Couldn't connect with your user"
@@ -38,12 +39,12 @@ class LoginPresenter: NSObject, LoginPresenterInterface {
                     self?.router?.navigateToProjects(account: account)
                 } else {
                     
-                    view.showError(message: localizedError)
+                    self?.view?.showError(message: localizedError)
                 }
             }
         } catch {
             print (error)
-            view.showError(message: localizedError)
+            view?.showError(message: localizedError)
         }
     }
     
