@@ -19,8 +19,8 @@ class SignUpPresenter: NSObject, SignUpPresenterInterface {
     
     func createAccount (name: String?, host: String?, token: String?) {
         
-        let interactor = SignUpFactory.getSignUpCreateAccount()
-        let router = SignUpFactory.getSignUpRouter()
+        let interactor = SignUpFactory.getInstance().getSignUpCreateAccount()
+        let router = SignUpFactory.getInstance().getSignUpRouter()
         
         interactor.createAccount(
             name: name, host: host, token: token,

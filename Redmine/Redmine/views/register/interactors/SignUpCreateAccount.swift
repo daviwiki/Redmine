@@ -16,7 +16,7 @@ class SignUpCreateAccount: NSObject, SignUpCreateAccountInterface {
     // MARK: Lifecycle
     override init() {
         super.init()
-        SignUpFactory.getSignUpAccountStorage({ [weak self] (storage : AccountStorageInterface) in
+        SignUpFactory.getInstance().getSignUpAccountStorage({ [weak self] (storage : AccountStorageInterface) in
             self?.accountStorage = storage
         })
     }

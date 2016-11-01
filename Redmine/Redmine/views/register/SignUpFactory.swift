@@ -10,19 +10,25 @@ import UIKit
 
 class SignUpFactory: NSObject {
 
-    static func getSignUpPresenter () -> SignUpPresenterInterface {
+    private static let instance = SignUpFactory()
+    
+    static func getInstance() -> SignUpFactory {
+        return instance
+    }
+    
+    func getSignUpPresenter () -> SignUpPresenterInterface {
         return SignUpPresenter()
     }
     
-    static func getSignUpCreateAccount () -> SignUpCreateAccountInterface {
+    func getSignUpCreateAccount () -> SignUpCreateAccountInterface {
         return SignUpCreateAccount()
     }
     
-    static func getSignUpRouter () -> SignUpRouterInterface {
+    func getSignUpRouter () -> SignUpRouterInterface {
         return SignUpRouter()
     }
     
-    static func getSignUpAccountStorage (_ callback : @escaping (AccountStorageInterface) -> Void) {
+    func getSignUpAccountStorage (_ callback : @escaping (AccountStorageInterface) -> Void) {
         AccountStorageCoreDataFactory.getInstance().getAccountStorageManager(callback)
     }
 }

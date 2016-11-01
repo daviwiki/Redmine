@@ -122,7 +122,7 @@ SignUpAnimatedTextViewDelegate {
     
     // MARK: Internal (Solve injetions)
     private func injections () {
-        presenter = SignUpFactory.getSignUpPresenter()
+        presenter = SignUpFactory.getInstance().getSignUpPresenter()
     }
     
     // MARK: Interal (orders)
