@@ -14,6 +14,7 @@ class LoginViewController: UIViewController, LoginLayoutInterface {
     @IBOutlet weak var loginButton : UIButton!
     @IBOutlet weak var accountsContainer : UIView!
     @IBOutlet weak var manageAccountsButton: UIButton!
+    @IBOutlet weak var loadingView : UIActivityIndicatorView!
     
     private var factory : LoginFactory!
     private var presenter : LoginPresenterInterface!
@@ -57,7 +58,34 @@ class LoginViewController: UIViewController, LoginLayoutInterface {
         self.title = title
     }
     
+    func showLoading() {
+        let timing = UICubicTimingParameters(animationCurve: .easeInOut)
+        let animator = UIViewPropertyAnimator(duration: 0.25, timingParameters: timing)
+        
+        loadingView.isHidden = false
+        loadingView.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
+        
+        animator.addAnimations { [weak self] in
+            self?.loginButton.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        }
+        
+        animator.addAnimations({ [weak self] in
+            self?.loadingView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }, delayFactor: 0.15)
+        
+        animator.addCompletion { [weak self] (position : UIViewAnimatingPosition) in
+            self?.loginButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            self?.loginButton.isHidden = true
+            self?.loadingView.isHidden = true
+        }
+        
+        animator.startAnimation()
+    }
+    
     func showError(message: String) {
+        loadingView.isHidden = true
+        loginButton.isHidden = false
+        
         // TODO: Move to localized strings
         let title = "Advice"
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
@@ -67,11 +95,15 @@ class LoginViewController: UIViewController, LoginLayoutInterface {
     }
     
     func showNoAccount() {
+        loadingView.isHidden = true
+        loginButton.isHidden = false
         accountsContainer.isHidden = true
         manageAccountsButton.isHidden = true
     }
     
     func showAccount(account: Account) {
+        loadingView.isHidden = true
+        loginButton.isHidden = false
         accountsContainer.isHidden = false
         manageAccountsButton.isHidden = false
         selectedAccount = account

@@ -20,6 +20,11 @@ protocol LoginLayoutInterface : NSObjectProtocol {
     func showWindowTitle (title : String?)
     
     /**
+     Display a loading mark into window
+    */
+    func showLoading ()
+    
+    /**
      If a error ocurrs, a alert view must be shown with the message
      given.
      - Parameters:

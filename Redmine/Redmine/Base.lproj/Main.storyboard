@@ -57,7 +57,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFX-nA-CIg" userLabel="View - Account selector container">
-                                <rect key="frame" x="32" y="278.5" width="311" height="110"/>
+                                <rect key="frame" x="32" y="279" width="311" height="110"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hx2-Wd-nF1" userLabel="View - Account selecte box">
                                         <rect key="frame" x="8" y="0.0" width="295" height="50"/>
@@ -100,7 +100,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6E-ee-mmP" userLabel="Button - Login">
-                                        <rect key="frame" x="95.5" y="66" width="120" height="44"/>
+                                        <rect key="frame" x="96" y="66" width="120" height="44"/>
                                         <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="LfB-Up-X0n"/>
@@ -114,11 +114,16 @@
                                             <action selector="actionOnLogin:" destination="g5P-en-wgo" eventType="touchUpInside" id="bql-C7-Gzx"/>
                                         </connections>
                                     </button>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="lkX-Lg-c7l">
+                                        <rect key="frame" x="146" y="78" width="20" height="20"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="F6E-ee-mmP" secondAttribute="bottom" id="FV1-cT-i1M"/>
+                                    <constraint firstItem="lkX-Lg-c7l" firstAttribute="centerY" secondItem="F6E-ee-mmP" secondAttribute="centerY" id="FWf-zG-scA"/>
                                     <constraint firstItem="F6E-ee-mmP" firstAttribute="centerX" secondItem="pFX-nA-CIg" secondAttribute="centerX" id="aB2-S2-ZZ7"/>
+                                    <constraint firstItem="lkX-Lg-c7l" firstAttribute="centerX" secondItem="F6E-ee-mmP" secondAttribute="centerX" id="fMn-Ro-cyf"/>
                                     <constraint firstItem="F6E-ee-mmP" firstAttribute="top" secondItem="hx2-Wd-nF1" secondAttribute="bottom" constant="16" id="mcS-aF-kyO"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="hx2-Wd-nF1" secondAttribute="trailing" id="nMr-4V-tfX"/>
                                     <constraint firstItem="hx2-Wd-nF1" firstAttribute="leading" secondItem="pFX-nA-CIg" secondAttribute="leadingMargin" id="s8L-wk-Lca"/>
@@ -126,7 +131,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQg-Bc-K6z" userLabel="Button - Add new Account">
-                                <rect key="frame" x="131.5" y="613" width="112" height="38"/>
+                                <rect key="frame" x="132" y="613" width="112" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="sFh-C2-gaX"/>
                                 </constraints>
@@ -139,7 +144,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPW-4T-hru" userLabel="Button - Manage Accounts">
-                                <rect key="frame" x="129.5" y="559" width="116" height="38"/>
+                                <rect key="frame" x="130" y="559" width="116" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="exz-t0-zbH"/>
                                 </constraints>
@@ -168,6 +173,7 @@
                     <connections>
                         <outlet property="accountTitleLabel" destination="JjN-3f-K3p" id="pg8-Q4-Lvr"/>
                         <outlet property="accountsContainer" destination="pFX-nA-CIg" id="5PJ-4S-0sv"/>
+                        <outlet property="loadingView" destination="lkX-Lg-c7l" id="nRd-zy-UUy"/>
                         <outlet property="loginButton" destination="F6E-ee-mmP" id="fUy-Ws-kKS"/>
                         <outlet property="manageAccountsButton" destination="mPW-4T-hru" id="9ZM-08-NU2"/>
                         <segue destination="8Ma-MU-5yi" kind="show" identifier="login_to_projectlist" id="9zv-Zz-o1d"/>

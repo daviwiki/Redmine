@@ -30,6 +30,7 @@ class LoginPresenter: NSObject, LoginPresenterInterface {
     }
     
     func onLogin(account: Account) {
+        view?.showLoading()
         // TODO: Localize string
         // TODO: Improve error message for each error type
         let localizedError = "Couldn't connect with your user"
