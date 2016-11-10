@@ -27,9 +27,18 @@ class GetAllProjectsInteractor: NSObject, GetAllProjectsInterface {
         let options : ApiRestProject.AdditionalOptions? = nil
         restProject.getProjectList(options) { (responseUrl : URL?, response : URLResponse?, error : ApiRestProject.ApiRestProjectError?) in
             
-            DispatchQueue.main.sync {
-                // TODO: Send Data
+            var projects : [Project] = []
+            
+            defer {
+                DispatchQueue.main.sync {
+                    completion (projects)
+                }
             }
+            
+            guard responseUrl != nil else { return }
+            
+            let builder = GetAllProjectsBuilder()
+            projects = builder.buildFromUrl(responseUrl!)
         }
     }
     
@@ -58,12 +67,17 @@ class GetAllProjectsBuilder : NSObject {
         return projectList
     }
     
-    func buildData (_ data : Data?, _ completion : ([Project]) -> Void) {
+    func buildFromUrl (_ responseUrl : URL) -> [Project] {
+        var projects : [Project] = []
         
-    }
-    
-    func buildFromUrl (_ responseUrl : URL?, _ completion : ([Project]) -> Void) {
+        do {
+            let data = try Data(contentsOf: responseUrl)
+            projects = buildData(data)
+        } catch {
+            print(error)
+        }
         
+        return projects
     }
     
     private func toJson(data : Data) -> Any? {

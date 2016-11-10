@@ -8,9 +8,12 @@
 
 import UIKit
 
-protocol ProjectListPresenterInterface {
+protocol ProjectListPresenterInterface : NSObjectProtocol {
     
-    func onViewAppear (_ view : ProjectListLayoutInterface)
+    func bind (_ view: ProjectListLayoutInterface)
+    func unbind (_ view: ProjectListLayoutInterface)
+    
+    func loadProjects (_ account : Account)
     func navigateProject (_ project : Project)
     
 }

@@ -10,12 +10,30 @@ import UIKit
 
 class ProjectListPresenter: NSObject, ProjectListPresenterInterface {
 
-    func navigateProject(_ project: Project) {
-        // TODO:
+    private weak var view : ProjectListLayoutInterface?
+    
+    func bind(_ view: ProjectListLayoutInterface) {
+        self.view = view
     }
     
-    func onViewAppear(_ view: ProjectListLayoutInterface) {
-        // TODO: 
+    func unbind(_ view: ProjectListLayoutInterface) {
+        self.view = nil
+    }
+    
+    func loadProjects(_ account : Account) {
+        view?.showLoading()
+        let loadProjectsInteractor = GetAllProjectsInteractor()
+        loadProjectsInteractor.getAllProjects(account) { [weak self] (projects : [Project]) in
+            if (projects.count == 0) {
+                self?.view?.showNoProjects()
+            } else {
+                self?.view?.showAllProjects(projects)
+            }
+        }
+    }
+    
+    func navigateProject(_ project: Project) {
+        // TODO:
     }
     
 }
