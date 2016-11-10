@@ -8,28 +8,38 @@
 
 import UIKit
 
-class ProjectDetailViewController: UIViewController {
+class ProjectDetailViewController: UIViewController, ProjectDetailLayoutInterface {
     
+    private var account : Account!
+    private var project : Project!
+    
+    // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    // MARK: ProjectDetailLayoutInterface
+    func setAccount(account: Account) {
+        self.account = account
+    }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    func setProject(project: Project) {
+        self.project = project
+    }
     
+    func showLoading () {
+        
+    }
+    
+    func showIssuesInfo (_ issues : [Issue]) {
+        
+    }
+    
+    func showError (_ message : String) {
+        
+    }
 }

@@ -14,11 +14,14 @@ UITableViewDataSource, UITableViewDelegate {
     private var account : Account!
     private var projects : [Project] = []
     private var presenter : ProjectListPresenterInterface!
+    private var selectedProject : Project!
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var messageView: UIView!
     @IBOutlet weak var messageLabel: UILabel!
+    
+    private let segueProjectDetail = "projectlist_to_projectdetail"
     
     // MARK: Lifecycle
     required init?(coder aDecoder: NSCoder) {
@@ -103,13 +106,15 @@ UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let project = projects[indexPath.row]
-        presenter.navigateProject(project)
+        selectedProject = projects[indexPath.row]
+        performSegue(withIdentifier: segueProjectDetail, sender: nil)
     }
-}
-
-class ProjectListCell : UITableViewCell {
     
-    @IBOutlet weak var nameLabel : UILabel!
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let layout = segue.destination as? ProjectDetailLayoutInterface {
+            layout.setAccount(account: account)
+            layout.setProject(project: selectedProject)
+        }
+    }
     
 }

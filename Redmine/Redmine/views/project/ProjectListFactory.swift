@@ -15,28 +15,14 @@ class ProjectListFactory: NSObject {
     }
     
     private static let instance = ProjectListFactory()
-    private weak var originController : UIViewController?
     
-    /**
-     Singletion
-     */
+
     static func getInstance () -> ProjectListFactory {
         return instance
     }
     
-    func setOriginController(controller : UIViewController) {
-        originController = controller
-    }
-    
     func getPresenter () -> ProjectListPresenterInterface {
         return ProjectListPresenter()
-    }
-    
-    func getRouter () throws -> ProjectListRouterInterface {
-        if (originController == nil) {
-            throw ProjectListError.NoController
-        }
-        return ProjectListRouter(controller: originController!)
     }
     
     func getSearchLastProjectsInteractor () -> GetLatestsProjectsInterface {

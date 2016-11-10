@@ -32,8 +32,4 @@ class ProjectListPresenter: NSObject, ProjectListPresenterInterface {
         }
     }
     
-    func navigateProject(_ project: Project) {
-        // TODO:
-    }
-    
 }

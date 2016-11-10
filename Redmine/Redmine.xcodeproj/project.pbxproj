@@ -36,6 +36,10 @@
 		462A13291DBBEE890036A371 /* ApiRestUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462A13281DBBEE890036A371 /* ApiRestUser.swift */; };
 		462A132D1DBBF25D0036A371 /* ApiRestAccountEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462A132C1DBBF25D0036A371 /* ApiRestAccountEntity.swift */; };
 		464D81AB1DBFD5D30097AC6D /* AccountStorageCoreDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464D81AA1DBFD5D30097AC6D /* AccountStorageCoreDataFactory.swift */; };
+		4654B23A1DD510FB00AAFB31 /* ApiRestIssues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4654B2391DD510FB00AAFB31 /* ApiRestIssues.swift */; };
+		4654B23C1DD519CF00AAFB31 /* ProjectDetailLayoutInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4654B23B1DD519CF00AAFB31 /* ProjectDetailLayoutInterface.swift */; };
+		4654B23E1DD51BAF00AAFB31 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4654B23D1DD51BAF00AAFB31 /* Issue.swift */; };
+		4654B2411DD51C4E00AAFB31 /* ProjectListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4654B2401DD51C4E00AAFB31 /* ProjectListCell.swift */; };
 		4665655D1DC4A6AE00585D53 /* SF-UI-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 466565451DC4A6AE00585D53 /* SF-UI-Display-Black.otf */; };
 		4665655E1DC4A6AE00585D53 /* SF-UI-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 466565461DC4A6AE00585D53 /* SF-UI-Display-Bold.otf */; };
 		4665655F1DC4A6AE00585D53 /* SF-UI-Display-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 466565471DC4A6AE00585D53 /* SF-UI-Display-Heavy.otf */; };
@@ -67,21 +71,19 @@
 		4693756E1D94796300EE68C1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4693756D1D94796300EE68C1 /* LoginViewController.swift */; };
 		469375751D947A0A00EE68C1 /* ProjectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375741D947A0A00EE68C1 /* ProjectListViewController.swift */; };
 		469375771D947A2800EE68C1 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375761D947A2800EE68C1 /* ProjectDetailViewController.swift */; };
-		469375791D947A4000EE68C1 /* ATEIssueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375781D947A4000EE68C1 /* ATEIssueDetailViewController.swift */; };
+		469375791D947A4000EE68C1 /* IssueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469375781D947A4000EE68C1 /* IssueDetailViewController.swift */; };
 		469E1D6A1D9C40D900FE5987 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 469E1D681D9C40D900FE5987 /* Model.xcdatamodeld */; };
 		46BAFB051DA01A2500A39ECD /* SignUpLayoutInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BAFB041DA01A2500A39ECD /* SignUpLayoutInterface.swift */; };
 		46BAFB121DA023DD00A39ECD /* SignUp.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46BAFB111DA023DD00A39ECD /* SignUp.strings */; };
 		46EC23CF1DBE80FD00F6C96C /* ProjectListLayoutInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EC23CE1DBE80FD00F6C96C /* ProjectListLayoutInterface.swift */; };
 		46EC23D11DBE81B800F6C96C /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EC23D01DBE81B800F6C96C /* Project.swift */; };
 		46EC23D31DBE821900F6C96C /* ProjectListPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EC23D21DBE821900F6C96C /* ProjectListPresenterInterface.swift */; };
-		46EC23D51DBE822B00F6C96C /* ProjectListRouterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EC23D41DBE822B00F6C96C /* ProjectListRouterInterface.swift */; };
 		46EC23D71DBE823500F6C96C /* ProjectListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EC23D61DBE823500F6C96C /* ProjectListFactory.swift */; };
 		46EC23D91DBE82B800F6C96C /* ProjectListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EC23D81DBE82B800F6C96C /* ProjectListPresenter.swift */; };
 		46EC23DB1DBE82F500F6C96C /* GetAllProjectsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EC23DA1DBE82F500F6C96C /* GetAllProjectsInterface.swift */; };
 		46EC23DD1DBE830400F6C96C /* GetLatestsProjectsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EC23DC1DBE830400F6C96C /* GetLatestsProjectsInterface.swift */; };
 		46EC23DF1DBE832400F6C96C /* GetAllProjectsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EC23DE1DBE832400F6C96C /* GetAllProjectsInteractor.swift */; };
 		46EC23E11DBE838B00F6C96C /* GetLatestsProjectsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EC23E01DBE838B00F6C96C /* GetLatestsProjectsInteractor.swift */; };
-		46EC23E31DBE844A00F6C96C /* ProjectListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EC23E21DBE844A00F6C96C /* ProjectListRouter.swift */; };
 		46FF4CD61DC499DA0013433E /* AccountLayoutInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF4CD51DC499DA0013433E /* AccountLayoutInterface.swift */; };
 		46FF4CD81DC499F70013433E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF4CD71DC499F70013433E /* AccountViewController.swift */; };
 		46FF4CDC1DC49A390013433E /* AccountFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FF4CDB1DC49A390013433E /* AccountFactory.swift */; };
@@ -138,6 +140,10 @@
 		462A13281DBBEE890036A371 /* ApiRestUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRestUser.swift; sourceTree = "<group>"; };
 		462A132C1DBBF25D0036A371 /* ApiRestAccountEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRestAccountEntity.swift; sourceTree = "<group>"; };
 		464D81AA1DBFD5D30097AC6D /* AccountStorageCoreDataFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountStorageCoreDataFactory.swift; sourceTree = "<group>"; };
+		4654B2391DD510FB00AAFB31 /* ApiRestIssues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRestIssues.swift; sourceTree = "<group>"; };
+		4654B23B1DD519CF00AAFB31 /* ProjectDetailLayoutInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailLayoutInterface.swift; sourceTree = "<group>"; };
+		4654B23D1DD51BAF00AAFB31 /* Issue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		4654B2401DD51C4E00AAFB31 /* ProjectListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectListCell.swift; sourceTree = "<group>"; };
 		466565451DC4A6AE00585D53 /* SF-UI-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Black.otf"; sourceTree = "<group>"; };
 		466565461DC4A6AE00585D53 /* SF-UI-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Bold.otf"; sourceTree = "<group>"; };
 		466565471DC4A6AE00585D53 /* SF-UI-Display-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Heavy.otf"; sourceTree = "<group>"; };
@@ -176,21 +182,19 @@
 		4693756D1D94796300EE68C1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		469375741D947A0A00EE68C1 /* ProjectListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectListViewController.swift; sourceTree = "<group>"; };
 		469375761D947A2800EE68C1 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
-		469375781D947A4000EE68C1 /* ATEIssueDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATEIssueDetailViewController.swift; sourceTree = "<group>"; };
+		469375781D947A4000EE68C1 /* IssueDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueDetailViewController.swift; sourceTree = "<group>"; };
 		469E1D691D9C40D900FE5987 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		46BAFB041DA01A2500A39ECD /* SignUpLayoutInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpLayoutInterface.swift; sourceTree = "<group>"; };
 		46BAFB111DA023DD00A39ECD /* SignUp.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = SignUp.strings; sourceTree = "<group>"; };
 		46EC23CE1DBE80FD00F6C96C /* ProjectListLayoutInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectListLayoutInterface.swift; sourceTree = "<group>"; };
 		46EC23D01DBE81B800F6C96C /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		46EC23D21DBE821900F6C96C /* ProjectListPresenterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectListPresenterInterface.swift; sourceTree = "<group>"; };
-		46EC23D41DBE822B00F6C96C /* ProjectListRouterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectListRouterInterface.swift; sourceTree = "<group>"; };
 		46EC23D61DBE823500F6C96C /* ProjectListFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectListFactory.swift; sourceTree = "<group>"; };
 		46EC23D81DBE82B800F6C96C /* ProjectListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectListPresenter.swift; sourceTree = "<group>"; };
 		46EC23DA1DBE82F500F6C96C /* GetAllProjectsInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAllProjectsInterface.swift; sourceTree = "<group>"; };
 		46EC23DC1DBE830400F6C96C /* GetLatestsProjectsInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLatestsProjectsInterface.swift; sourceTree = "<group>"; };
 		46EC23DE1DBE832400F6C96C /* GetAllProjectsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAllProjectsInteractor.swift; sourceTree = "<group>"; };
 		46EC23E01DBE838B00F6C96C /* GetLatestsProjectsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLatestsProjectsInteractor.swift; sourceTree = "<group>"; };
-		46EC23E21DBE844A00F6C96C /* ProjectListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectListRouter.swift; sourceTree = "<group>"; };
 		46FF4CD51DC499DA0013433E /* AccountLayoutInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountLayoutInterface.swift; sourceTree = "<group>"; };
 		46FF4CD71DC499F70013433E /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		46FF4CDB1DC49A390013433E /* AccountFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountFactory.swift; sourceTree = "<group>"; };
@@ -353,6 +357,7 @@
 		462A13261DBBEE380036A371 /* apirest */ = {
 			isa = PBXGroup;
 			children = (
+				4654B2381DD510B000AAFB31 /* issues */,
 				462A132B1DBBF22E0036A371 /* account */,
 				46143D791DC1354F00455533 /* project */,
 				462A13271DBBEE570036A371 /* users */,
@@ -374,6 +379,22 @@
 				462A132C1DBBF25D0036A371 /* ApiRestAccountEntity.swift */,
 			);
 			path = account;
+			sourceTree = "<group>";
+		};
+		4654B2381DD510B000AAFB31 /* issues */ = {
+			isa = PBXGroup;
+			children = (
+				4654B2391DD510FB00AAFB31 /* ApiRestIssues.swift */,
+			);
+			path = issues;
+			sourceTree = "<group>";
+		};
+		4654B23F1DD51C2600AAFB31 /* support */ = {
+			isa = PBXGroup;
+			children = (
+				4654B2401DD51C4E00AAFB31 /* ProjectListCell.swift */,
+			);
+			path = support;
 			sourceTree = "<group>";
 		};
 		466565431DC4A68A00585D53 /* fonts */ = {
@@ -505,12 +526,13 @@
 		469375721D94799E00EE68C1 /* project */ = {
 			isa = PBXGroup;
 			children = (
-				46EC23CB1DBE80BB00F6C96C /* routers */,
 				46EC23CA1DBE80B700F6C96C /* presenters */,
 				46EC23C91DBE80B000F6C96C /* interactors */,
+				4654B23F1DD51C2600AAFB31 /* support */,
 				46EC23D01DBE81B800F6C96C /* Project.swift */,
 				46EC23CE1DBE80FD00F6C96C /* ProjectListLayoutInterface.swift */,
 				469375741D947A0A00EE68C1 /* ProjectListViewController.swift */,
+				4654B23B1DD519CF00AAFB31 /* ProjectDetailLayoutInterface.swift */,
 				469375761D947A2800EE68C1 /* ProjectDetailViewController.swift */,
 				46EC23D61DBE823500F6C96C /* ProjectListFactory.swift */,
 			);
@@ -520,7 +542,8 @@
 		469375731D9479BB00EE68C1 /* issue */ = {
 			isa = PBXGroup;
 			children = (
-				469375781D947A4000EE68C1 /* ATEIssueDetailViewController.swift */,
+				4654B23D1DD51BAF00AAFB31 /* Issue.swift */,
+				469375781D947A4000EE68C1 /* IssueDetailViewController.swift */,
 			);
 			path = issue;
 			sourceTree = "<group>";
@@ -589,15 +612,6 @@
 				46EC23D81DBE82B800F6C96C /* ProjectListPresenter.swift */,
 			);
 			path = presenters;
-			sourceTree = "<group>";
-		};
-		46EC23CB1DBE80BB00F6C96C /* routers */ = {
-			isa = PBXGroup;
-			children = (
-				46EC23D41DBE822B00F6C96C /* ProjectListRouterInterface.swift */,
-				46EC23E21DBE844A00F6C96C /* ProjectListRouter.swift */,
-			);
-			path = routers;
 			sourceTree = "<group>";
 		};
 		46FF4CD91DC499FD0013433E /* presenter */ = {
@@ -780,6 +794,7 @@
 			files = (
 				46EC23E11DBE838B00F6C96C /* GetLatestsProjectsInteractor.swift in Sources */,
 				464D81AB1DBFD5D30097AC6D /* AccountStorageCoreDataFactory.swift in Sources */,
+				4654B23E1DD51BAF00AAFB31 /* Issue.swift in Sources */,
 				469375751D947A0A00EE68C1 /* ProjectListViewController.swift in Sources */,
 				461955A91DB6921C007A790A /* SignUpFactory.swift in Sources */,
 				46EC23D71DBE823500F6C96C /* ProjectListFactory.swift in Sources */,
@@ -787,7 +802,6 @@
 				461955B41DB6964A007A790A /* AccountStorageCoreData.swift in Sources */,
 				4693756E1D94796300EE68C1 /* LoginViewController.swift in Sources */,
 				46EC23DB1DBE82F500F6C96C /* GetAllProjectsInterface.swift in Sources */,
-				46EC23E31DBE844A00F6C96C /* ProjectListRouter.swift in Sources */,
 				46EC23DF1DBE832400F6C96C /* GetAllProjectsInteractor.swift in Sources */,
 				46183D591DB94B9D00D121A0 /* SignUpAnimatedTextView.swift in Sources */,
 				46EC23D31DBE821900F6C96C /* ProjectListPresenterInterface.swift in Sources */,
@@ -795,12 +809,13 @@
 				469375771D947A2800EE68C1 /* ProjectDetailViewController.swift in Sources */,
 				462A132D1DBBF25D0036A371 /* ApiRestAccountEntity.swift in Sources */,
 				469E1D6A1D9C40D900FE5987 /* Model.xcdatamodeld in Sources */,
-				469375791D947A4000EE68C1 /* ATEIssueDetailViewController.swift in Sources */,
+				469375791D947A4000EE68C1 /* IssueDetailViewController.swift in Sources */,
 				46183D561DB9414900D121A0 /* Account.swift in Sources */,
 				461955B51DB6964A007A790A /* AccountStorageInterface.swift in Sources */,
 				461955B71DB69948007A790A /* LoginLayoutInterface.swift in Sources */,
 				4693753E1D94785A00EE68C1 /* AppDelegate.swift in Sources */,
 				46FF4CE01DC49A590013433E /* AccountPresenter.swift in Sources */,
+				4654B2411DD51C4E00AAFB31 /* ProjectListCell.swift in Sources */,
 				461955BD1DB69BB1007A790A /* LoginFactory.swift in Sources */,
 				46143D7B1DC135B900455533 /* ApiRestProject.swift in Sources */,
 				46FF4CE41DC49D930013433E /* AccountsInteractor.swift in Sources */,
@@ -812,7 +827,6 @@
 				46183D511DB9411900D121A0 /* SignUpCreateAccount.swift in Sources */,
 				462095F71DB7E303001AFB96 /* LoginReadAccounts.swift in Sources */,
 				462A13291DBBEE890036A371 /* ApiRestUser.swift in Sources */,
-				46EC23D51DBE822B00F6C96C /* ProjectListRouterInterface.swift in Sources */,
 				46183D4E1DB9410D00D121A0 /* SignUpPresenterInterface.swift in Sources */,
 				46EC23D91DBE82B800F6C96C /* ProjectListPresenter.swift in Sources */,
 				4605B9471D99947200F7B6B8 /* SignUpViewController.swift in Sources */,
@@ -824,6 +838,8 @@
 				46183D541DB9412300D121A0 /* SignUpRouter.swift in Sources */,
 				462095F51DB7D6C7001AFB96 /* LoginCheckInteractor.swift in Sources */,
 				462095FD1DB7E770001AFB96 /* LoginPresenterInterface.swift in Sources */,
+				4654B23C1DD519CF00AAFB31 /* ProjectDetailLayoutInterface.swift in Sources */,
+				4654B23A1DD510FB00AAFB31 /* ApiRestIssues.swift in Sources */,
 				46183D4D1DB9410D00D121A0 /* SignUpPresenter.swift in Sources */,
 				46BAFB051DA01A2500A39ECD /* SignUpLayoutInterface.swift in Sources */,
 				46EC23CF1DBE80FD00F6C96C /* ProjectListLayoutInterface.swift in Sources */,

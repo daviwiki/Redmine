@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ATEIssueDetailViewController: UIViewController {
+class IssueDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
