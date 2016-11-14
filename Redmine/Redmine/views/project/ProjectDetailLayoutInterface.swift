@@ -14,6 +14,7 @@ protocol ProjectDetailLayoutInterface : NSObjectProtocol {
     func setProject (project : Project)
     
     func showLoading ()
+    func reloadIssuesInfo (_ issues : [Issue])
     func showIssuesInfo (_ issues : [Issue])
     func showError (_ message : String)
     

@@ -11,6 +11,8 @@ import UIKit
 class ProjectListCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel : UILabel!
+
+    // TODO: Crear metodo publico y prohibir set directamente sobre la UI
     
     override func awakeFromNib() {
         super.awakeFromNib()

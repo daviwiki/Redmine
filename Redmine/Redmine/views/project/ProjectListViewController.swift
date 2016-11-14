@@ -42,6 +42,8 @@ UITableViewDataSource, UITableViewDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         presenter.loadProjects(account)
+        
+        // TODO: Avoid refresh in every pass of viewDidAppear
     }
     
     override func didReceiveMemoryWarning() {

@@ -10,4 +10,9 @@ import UIKit
 
 class Issue: NSObject {
 
+    var id : String = ""
+    var name : String = ""
+    var status : String = ""
+    var percent : Int = 0
+    
 }

@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		4605B9471D99947200F7B6B8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605B9461D99947200F7B6B8 /* SignUpViewController.swift */; };
 		4605B94B1D99A03000F7B6B8 /* pallette.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4605B94A1D99A03000F7B6B8 /* pallette.plist */; };
+		460D5D011DDA3DF1003F08F5 /* ProjectDetailPresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460D5D001DDA3DF1003F08F5 /* ProjectDetailPresenterInterface.swift */; };
+		460D5D031DDA3E8C003F08F5 /* ProjectDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460D5D021DDA3E8C003F08F5 /* ProjectDetailPresenter.swift */; };
+		460D5D051DDA3EB6003F08F5 /* GetIssuesInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460D5D041DDA3EB6003F08F5 /* GetIssuesInterface.swift */; };
+		460D5D071DDA3ED6003F08F5 /* GetIssuesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460D5D061DDA3ED6003F08F5 /* GetIssuesInteractor.swift */; };
+		460D5D091DDA3F23003F08F5 /* ProjectDetailFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460D5D081DDA3F23003F08F5 /* ProjectDetailFactory.swift */; };
+		460D5D0B1DDA40C7003F08F5 /* IssueListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460D5D0A1DDA40C7003F08F5 /* IssueListCell.swift */; };
 		460E56F51DC920A900241762 /* AccountStorageCoreDataTestUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E56F41DC920A900241762 /* AccountStorageCoreDataTestUnit.swift */; };
 		46143D7B1DC135B900455533 /* ApiRestProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46143D7A1DC135B900455533 /* ApiRestProject.swift */; };
 		46143D7D1DC13CC600455533 /* GetAllProjectsBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46143D7C1DC13CC600455533 /* GetAllProjectsBuilderTest.swift */; };
@@ -113,6 +119,12 @@
 /* Begin PBXFileReference section */
 		4605B9461D99947200F7B6B8 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4605B94A1D99A03000F7B6B8 /* pallette.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = pallette.plist; sourceTree = "<group>"; };
+		460D5D001DDA3DF1003F08F5 /* ProjectDetailPresenterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailPresenterInterface.swift; sourceTree = "<group>"; };
+		460D5D021DDA3E8C003F08F5 /* ProjectDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailPresenter.swift; sourceTree = "<group>"; };
+		460D5D041DDA3EB6003F08F5 /* GetIssuesInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetIssuesInterface.swift; sourceTree = "<group>"; };
+		460D5D061DDA3ED6003F08F5 /* GetIssuesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetIssuesInteractor.swift; sourceTree = "<group>"; };
+		460D5D081DDA3F23003F08F5 /* ProjectDetailFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailFactory.swift; sourceTree = "<group>"; };
+		460D5D0A1DDA40C7003F08F5 /* IssueListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueListCell.swift; sourceTree = "<group>"; };
 		460E56F41DC920A900241762 /* AccountStorageCoreDataTestUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountStorageCoreDataTestUnit.swift; sourceTree = "<group>"; };
 		46143D7A1DC135B900455533 /* ApiRestProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRestProject.swift; sourceTree = "<group>"; };
 		46143D7C1DC13CC600455533 /* GetAllProjectsBuilderTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAllProjectsBuilderTest.swift; sourceTree = "<group>"; };
@@ -393,6 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				4654B2401DD51C4E00AAFB31 /* ProjectListCell.swift */,
+				460D5D0A1DDA40C7003F08F5 /* IssueListCell.swift */,
 			);
 			path = support;
 			sourceTree = "<group>";
@@ -535,6 +548,7 @@
 				4654B23B1DD519CF00AAFB31 /* ProjectDetailLayoutInterface.swift */,
 				469375761D947A2800EE68C1 /* ProjectDetailViewController.swift */,
 				46EC23D61DBE823500F6C96C /* ProjectListFactory.swift */,
+				460D5D081DDA3F23003F08F5 /* ProjectDetailFactory.swift */,
 			);
 			path = project;
 			sourceTree = "<group>";
@@ -600,6 +614,8 @@
 				46EC23DE1DBE832400F6C96C /* GetAllProjectsInteractor.swift */,
 				46EC23DC1DBE830400F6C96C /* GetLatestsProjectsInterface.swift */,
 				46EC23E01DBE838B00F6C96C /* GetLatestsProjectsInteractor.swift */,
+				460D5D041DDA3EB6003F08F5 /* GetIssuesInterface.swift */,
+				460D5D061DDA3ED6003F08F5 /* GetIssuesInteractor.swift */,
 				46143D7C1DC13CC600455533 /* GetAllProjectsBuilderTest.swift */,
 			);
 			path = interactors;
@@ -610,6 +626,8 @@
 			children = (
 				46EC23D21DBE821900F6C96C /* ProjectListPresenterInterface.swift */,
 				46EC23D81DBE82B800F6C96C /* ProjectListPresenter.swift */,
+				460D5D001DDA3DF1003F08F5 /* ProjectDetailPresenterInterface.swift */,
+				460D5D021DDA3E8C003F08F5 /* ProjectDetailPresenter.swift */,
 			);
 			path = presenters;
 			sourceTree = "<group>";
@@ -794,6 +812,7 @@
 			files = (
 				46EC23E11DBE838B00F6C96C /* GetLatestsProjectsInteractor.swift in Sources */,
 				464D81AB1DBFD5D30097AC6D /* AccountStorageCoreDataFactory.swift in Sources */,
+				460D5D011DDA3DF1003F08F5 /* ProjectDetailPresenterInterface.swift in Sources */,
 				4654B23E1DD51BAF00AAFB31 /* Issue.swift in Sources */,
 				469375751D947A0A00EE68C1 /* ProjectListViewController.swift in Sources */,
 				461955A91DB6921C007A790A /* SignUpFactory.swift in Sources */,
@@ -810,16 +829,20 @@
 				462A132D1DBBF25D0036A371 /* ApiRestAccountEntity.swift in Sources */,
 				469E1D6A1D9C40D900FE5987 /* Model.xcdatamodeld in Sources */,
 				469375791D947A4000EE68C1 /* IssueDetailViewController.swift in Sources */,
+				460D5D091DDA3F23003F08F5 /* ProjectDetailFactory.swift in Sources */,
 				46183D561DB9414900D121A0 /* Account.swift in Sources */,
 				461955B51DB6964A007A790A /* AccountStorageInterface.swift in Sources */,
 				461955B71DB69948007A790A /* LoginLayoutInterface.swift in Sources */,
 				4693753E1D94785A00EE68C1 /* AppDelegate.swift in Sources */,
 				46FF4CE01DC49A590013433E /* AccountPresenter.swift in Sources */,
+				460D5D051DDA3EB6003F08F5 /* GetIssuesInterface.swift in Sources */,
 				4654B2411DD51C4E00AAFB31 /* ProjectListCell.swift in Sources */,
+				460D5D031DDA3E8C003F08F5 /* ProjectDetailPresenter.swift in Sources */,
 				461955BD1DB69BB1007A790A /* LoginFactory.swift in Sources */,
 				46143D7B1DC135B900455533 /* ApiRestProject.swift in Sources */,
 				46FF4CE41DC49D930013433E /* AccountsInteractor.swift in Sources */,
 				46EC23DD1DBE830400F6C96C /* GetLatestsProjectsInterface.swift in Sources */,
+				460D5D0B1DDA40C7003F08F5 /* IssueListCell.swift in Sources */,
 				462095FF1DB7E77C001AFB96 /* LoginRouterInterface.swift in Sources */,
 				46FF4CE21DC49D7B0013433E /* AccountsInteractorInterface.swift in Sources */,
 				46FF4CD81DC499F70013433E /* AccountViewController.swift in Sources */,
@@ -840,6 +863,7 @@
 				462095FD1DB7E770001AFB96 /* LoginPresenterInterface.swift in Sources */,
 				4654B23C1DD519CF00AAFB31 /* ProjectDetailLayoutInterface.swift in Sources */,
 				4654B23A1DD510FB00AAFB31 /* ApiRestIssues.swift in Sources */,
+				460D5D071DDA3ED6003F08F5 /* GetIssuesInteractor.swift in Sources */,
 				46183D4D1DB9410D00D121A0 /* SignUpPresenter.swift in Sources */,
 				46BAFB051DA01A2500A39ECD /* SignUpLayoutInterface.swift in Sources */,
 				46EC23CF1DBE80FD00F6C96C /* ProjectListLayoutInterface.swift in Sources */,
