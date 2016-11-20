@@ -21,7 +21,7 @@ class ProjectDetailPresenter: NSObject, ProjectDetailPresenterInterface {
         self.view = view
     }
     
-    func unbind() {
+    func unbind(_ view : ProjectDetailLayoutInterface) {
         self.view = nil
     }
     

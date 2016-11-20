@@ -11,9 +11,12 @@ import UIKit
 protocol ProjectListLayoutInterface : NSObjectProtocol {
     
     func setAccount (account : Account)
+    
     func showLoading()
     func showNoProjects()
-    func showLatestProjects(_ projects : [Project])
-    func showAllProjects(_ projects : [Project])
+    func cleanProjectList()
+    
+    func appendLatestProjects(_ projects : [Project])
+    func appendProjects(_ projects : [Project])
     
 }

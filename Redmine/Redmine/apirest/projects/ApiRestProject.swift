@@ -36,29 +36,48 @@ class ApiRestProject: NSObject {
     }
     
     // MARK: Services
-    func getProjectList (_ options : AdditionalOptions?, _ completion : @escaping (URL?, URLResponse?, ApiRestProjectError?) -> Void) {
+    func getProjectList (_ options : AdditionalOptions?, _ page : Int, _ completion : @escaping (URL?, URLResponse?, ApiRestProjectError?) -> Void) {
         let url = account.host + projectList
-        get(url, options, completion)
+        let limit = 20
+        let startOffset = "\(page*20)"
+        
+        var queryItems : [URLQueryItem] = []
+        queryItems.append(URLQueryItem(name: "offset", value: startOffset))
+        queryItems.append(URLQueryItem(name: "limit", value: "\(limit)"))
+        queryItems.append(URLQueryItem(name: "key", value: account.token))
+        
+        var urlComponents = URLComponents(string: url)
+        urlComponents?.queryItems = queryItems
+        
+        guard let finalUrl = urlComponents?.url else {
+            completion(nil, nil, ApiRestProjectError.cannotBuildUrl)
+            return
+        }
+        
+        get(finalUrl, options, completion)
     }
     
     func getProjectDetail (_ projectId : String, _ options : AdditionalOptions?, _ completion : @escaping (URL?, URLResponse?, ApiRestProjectError?) -> Void) {
         let path = String(format: projectDetail, projectId)
         let url = account.host + path
-        get(url, options, completion)
-    }
-    
-    private func get (_ url : String, _ options : AdditionalOptions?, _ completion : @escaping (URL?, URLResponse?, ApiRestProjectError?) -> Void) {
         
-        // TODO: Implements query with the AdditionalOptions given
+        var queryItems : [URLQueryItem] = []
+        queryItems.append(URLQueryItem(name: "key", value: account.token))
         
         var urlComponents = URLComponents(string: url)
-        let keyItem = URLQueryItem(name: "key", value: account.token)
-        urlComponents?.queryItems = [keyItem]
+        urlComponents?.queryItems = queryItems
         
-        guard let url = urlComponents?.url else {
+        guard let finalUrl = urlComponents?.url else {
             completion(nil, nil, ApiRestProjectError.cannotBuildUrl)
             return
         }
+        
+        get(finalUrl, options, completion)
+    }
+    
+    private func get (_ url : URL, _ options : AdditionalOptions?, _ completion : @escaping (URL?, URLResponse?, ApiRestProjectError?) -> Void) {
+        
+        // TODO: Implements query with the AdditionalOptions given
         
         let request = URLRequest(url: url)
         print("[PROJECT] Requesting \(request)")

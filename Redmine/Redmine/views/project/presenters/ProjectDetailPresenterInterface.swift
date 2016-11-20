@@ -11,7 +11,7 @@ import UIKit
 protocol ProjectDetailPresenterInterface : NSObjectProtocol {
     
     func bind (_ view : ProjectDetailLayoutInterface)
-    func unbind ()
+    func unbind (_ view : ProjectDetailLayoutInterface)
     
     func loadIssues (_ account : Account, _ project : Project!)
     func loadNextIssues (_ account : Account, _ project : Project)

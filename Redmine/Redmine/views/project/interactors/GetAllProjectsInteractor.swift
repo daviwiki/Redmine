@@ -10,7 +10,7 @@ import UIKit
 
 class GetAllProjectsInteractor: NSObject, GetAllProjectsInterface {
     
-    func getAllProjects(_ account : Account, _ completion: @escaping ([Project]) -> Void) {
+    func getAllProjects(_ account : Account, _ page : Int, _ completion: @escaping ([Project]) -> Void) {
         
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         guard let session = appDelegate?.defaultSession else {
@@ -25,7 +25,7 @@ class GetAllProjectsInteractor: NSObject, GetAllProjectsInterface {
         
         let restProject = ApiRestProject(session, accountEntity)
         let options : ApiRestProject.AdditionalOptions? = nil
-        restProject.getProjectList(options) { (responseUrl : URL?, response : URLResponse?, error : ApiRestProject.ApiRestProjectError?) in
+        restProject.getProjectList(options, page) { (responseUrl : URL?, response : URLResponse?, error : ApiRestProject.ApiRestProjectError?) in
             
             var projects : [Project] = []
             

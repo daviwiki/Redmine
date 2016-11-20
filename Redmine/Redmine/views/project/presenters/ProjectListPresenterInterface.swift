@@ -14,5 +14,7 @@ protocol ProjectListPresenterInterface : NSObjectProtocol {
     func unbind (_ view: ProjectListLayoutInterface)
     
     func loadProjects (_ account : Account)
+    func loadNextProjects (_ account : Account)
+    func refreshProjects (_ account : Account)
     
 }

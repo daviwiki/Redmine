@@ -37,13 +37,15 @@ UITableViewDataSource, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.bind(self)
+        presenter.loadProjects(account)
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(actionOnPullToRefresh), for: .valueChanged)
+        tableView.refreshControl = refreshControl
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        presenter.loadProjects(account)
-        
-        // TODO: Avoid refresh in every pass of viewDidAppear
     }
     
     override func didReceiveMemoryWarning() {
@@ -70,18 +72,28 @@ UITableViewDataSource, UITableViewDelegate {
         messageLabel.text = "No tiene ningún proyecto vinculado a su cuenta"
     }
     
-    func showLatestProjects(_ projects: [Project]) {
-        // TODO:
+    func cleanProjectList() {
+        projects.removeAll()
+        tableView.reloadData()
     }
     
-    func showAllProjects(_ projects: [Project]) {
+    func appendLatestProjects(_ projects: [Project]) {
+        // TODO: Mostrar los últimos proyectos a los que se ha accedido
+    }
+    
+    func appendProjects(_ projects: [Project]) {
         loadingView.isHidden = true
         tableView.isHidden = false
         messageView.isHidden = true
+        tableView.refreshControl?.endRefreshing()
         
-        self.projects.removeAll()
         self.projects.append(contentsOf: projects)
         tableView.reloadData()
+    }
+    
+    // MARK: Actions
+    @objc func actionOnPullToRefresh () {
+        presenter.refreshProjects(account)
     }
     
     // MARK: Internal
@@ -103,6 +115,10 @@ UITableViewDataSource, UITableViewDelegate {
         
         let project = projects[indexPath.row]
         cell.nameLabel.text = project.name
+        
+        if (indexPath.row == projects.count - 1) {
+            presenter.loadNextProjects(account)
+        }
         
         return cell
     }
