@@ -29,8 +29,21 @@ class ApiRestUser: NSObject {
     }
     
     // MARK : Lifecycle
+    override init() {
+        super.init()
+    }
+    
     init(_ session : URLSession, _ account : ApiRestAccountEntity) {
+        super.init()
         self.session = session
+        self.account = account
+    }
+    
+    func setSession (_ session : URLSession) {
+        self.session = session
+    }
+    
+    func setAccount (_ account : ApiRestAccountEntity) {
         self.account = account
     }
     

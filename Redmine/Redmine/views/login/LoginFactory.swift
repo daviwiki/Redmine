@@ -17,31 +17,37 @@ class LoginFactory: NSObject {
     private static let instance = LoginFactory()
     private weak var originController : UIViewController?
     
-    /**
-     Singletion
-    */
+    // MARK: Lifecycle
     static func getInstance () -> LoginFactory {
         return instance
     }
     
-    /**
-     Set the controller that will be used inside the factory for build the 
-     instances.
-     - Parameters:
-     controller : the controller where navigations starts
-    */
+    private override init() {
+        super.init()
+    }
+    
+    // MARK: Config
     func setOriginController(controller : UIViewController) {
         originController = controller
     }
-    
+
+    // MARK: Getters
     func getPresenter () -> LoginPresenterInterface {
-        return LoginPresenter()
+        let presenter = LoginPresenter()
+        
+        do {
+            let router = try getRouter()
+            presenter.setRouter(router)
+        } catch {
+            print(error)
+        }
+        
+        presenter.setLoginInteractor(getCheckSyncInteractor())
+        presenter.setReadAccountInteractor(getReadAccountInteractor())
+        
+        return presenter
     }
     
-    /**
-     Build the router class. Could throw an exception if the controller
-     defined for this factory is nil
-    */
     func getRouter () throws -> LoginRouterInterface {
         if (originController == nil) {
             throw FactoryError.NoController
@@ -50,18 +56,24 @@ class LoginFactory: NSObject {
     }
     
     func getCheckSyncInteractor () -> LoginCheckInteractorInterface {
-        return LoginCheckInteractor()
+        let interactor = LoginCheckInteractor()
+        let apiRest = ApiRestUser()
+        interactor.setApiRest(apiRest)
+        return interactor
     }
     
     func getReadAccountInteractor () -> LoginReadAccountsInterface {
-        return LoginReadAccounts()
+        let readAccounts = LoginReadAccounts()
+        
+        readAccounts.setAccountStorage { [weak self] (interactorCallback : @escaping (AccountStorageInterface) -> Void) in
+            self?.getLoginAccountStorage(interactorCallback)
+        }
+
+        return readAccounts
     }
     
     func getLoginAccountStorage (_ callback : @escaping (AccountStorageInterface) -> Void) {
         AccountStorageCoreDataFactory.getInstance().getAccountStorageManager(callback)
     }
     
-    private override init() {
-        super.init()
-    }
 }

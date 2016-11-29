@@ -28,7 +28,7 @@ class LoginViewController: UIViewController, LoginLayoutInterface {
         factory.setOriginController(controller: self)
         
         presenter = factory.getPresenter()
-        presenter.bind(view: self)
+        presenter.bind(self)
                 
         accountsContainer.isHidden = true
     }

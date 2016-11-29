@@ -10,16 +10,28 @@ import UIKit
 
 class LoginReadAccounts: NSObject, LoginReadAccountsInterface {
     
+    typealias StorageProvider = ( @escaping (_ storage : AccountStorageInterface) -> Void) -> ()
+    
+    private var storageProvider : StorageProvider!
+    
+    func setAccountStorage (_ storage : @escaping StorageProvider) {
+        storageProvider = storage
+    }
+    
     func readAccounts (callback : @escaping ([Account]) -> ()) {
-        LoginFactory.getInstance().getLoginAccountStorage { (storage : AccountStorageInterface) in
+        
+        func getStorage (storage : AccountStorageInterface) -> Void {
             let accounts = storage.getAccounts()
             callback(accounts)
         }
+        
+        storageProvider(getStorage)
     }
     
     func readSelectedAccount(callback: @escaping (Account?) -> ()) {
-        LoginFactory.getInstance().getLoginAccountStorage { (storage : AccountStorageInterface) in
-            let accounts = storage.getAccounts()
+        
+        func getStorage (storage : AccountStorageInterface) -> Void {
+            let accounts = storage      .getAccounts()
             for account in accounts {
                 if account.isSelected {
                     callback (account)
@@ -28,5 +40,7 @@ class LoginReadAccounts: NSObject, LoginReadAccountsInterface {
             }
             callback (nil)
         }
+        
+        storageProvider(getStorage)
     }
 }

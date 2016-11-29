@@ -15,8 +15,30 @@ class LoginPresenter: NSObject, LoginPresenterInterface {
     private var getLoginInteractor : LoginCheckInteractorInterface!
     private var readAccountsInteractor : LoginReadAccountsInterface!
     
-    func bind(view: LoginLayoutInterface) {
+    // MARK: Lifecycle
+    override init() {
+        super.init()
+    }
+    
+    func setLoginInteractor (_ loginInteractor : LoginCheckInteractorInterface) {
+        getLoginInteractor = loginInteractor
+    }
+    
+    func setReadAccountInteractor (_ readAccountInteractor : LoginReadAccountsInterface) {
+        self.readAccountsInteractor = readAccountInteractor
+    }
+    
+    func setRouter (_ router : LoginRouterInterface) {
+        self.router = router
+    }
+    
+    // MARK: LoginPresenterInterface
+    func bind(_ view: LoginLayoutInterface) {
         self.view = view
+    }
+    
+    func unbind(_ view: LoginLayoutInterface) {
+        self.view = nil
     }
     
     func onViewAppear() {
@@ -55,19 +77,6 @@ class LoginPresenter: NSObject, LoginPresenterInterface {
     
     func onManageAccounts() {
         router?.navigateToManageAccounts()
-    }
-    
-    override init() {
-        
-        let factory = LoginFactory.getInstance()
-        do {
-            router = try factory.getRouter()
-        } catch {
-            print(error)
-        }
-        
-        getLoginInteractor = factory.getCheckSyncInteractor()
-        readAccountsInteractor = factory.getReadAccountInteractor()
     }
     
 }
