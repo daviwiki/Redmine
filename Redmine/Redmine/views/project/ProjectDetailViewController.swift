@@ -39,7 +39,10 @@ UITableViewDataSource, UITableViewDelegate {
         presenter.loadIssues(account, project)
         
         self.title = project.name
-        // TODO: Pull to refresh
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(actionOnPullToRefresh), for: .valueChanged)
+        issuesTableView.refreshControl = refreshControl
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -48,6 +51,11 @@ UITableViewDataSource, UITableViewDelegate {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    // MARK: Actions
+    @objc func actionOnPullToRefresh () {
+        presenter.refreshIssues(account, project)
     }
     
     // MARK: ProjectDetailLayoutInterface
@@ -73,6 +81,8 @@ UITableViewDataSource, UITableViewDelegate {
         self.issues.removeAll()
         self.issues.append(contentsOf: issues)
         issuesTableView.reloadData()
+        
+        issuesTableView.refreshControl?.endRefreshing()
     }
     
     func showIssuesInfo (_ issues : [Issue]) {
@@ -82,6 +92,8 @@ UITableViewDataSource, UITableViewDelegate {
         
         self.issues.append(contentsOf: issues)
         issuesTableView.reloadData()
+        
+        issuesTableView.refreshControl?.endRefreshing()
     }
     
     func showError (_ message : String) {
@@ -90,6 +102,8 @@ UITableViewDataSource, UITableViewDelegate {
         issuesTableView.isHidden = true
         
         messageLabel.text = message
+        
+        issuesTableView.refreshControl?.endRefreshing()
     }
     
     // MARK: UITableView
