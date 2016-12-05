@@ -80,7 +80,7 @@ extension AppDelegate : URLSessionTaskDelegate {
     }
     
     func urlSession(_ session: URLSession, task: URLSessionTask, didFinishCollecting metrics: URLSessionTaskMetrics) {
-        print("\(metrics)")
+//        print("\(metrics)")
     }
 }
 
