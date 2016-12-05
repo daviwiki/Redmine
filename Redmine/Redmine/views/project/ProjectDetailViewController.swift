@@ -38,6 +38,7 @@ UITableViewDataSource, UITableViewDelegate {
         presenter.bind(self)
         presenter.loadIssues(account, project)
         
+        self.title = project.name
         // TODO: Pull to refresh
     }
     
