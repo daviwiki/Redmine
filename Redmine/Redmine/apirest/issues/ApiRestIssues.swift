@@ -48,7 +48,7 @@ class ApiRestIssues: NSObject {
         let url = account.host + issuesList
         
         var queryItems : [URLQueryItem] = []
-        queryItems.append(URLQueryItem(name: "projectId", value: projectId))
+        queryItems.append(URLQueryItem(name: "project_id", value: projectId))
         queryItems.append(URLQueryItem(name: "offset", value: startOffset))
         queryItems.append(URLQueryItem(name: "limit", value: "\(limit)"))
         queryItems.append(URLQueryItem(name: "key", value: account.token))
